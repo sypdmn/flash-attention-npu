@@ -110,6 +110,10 @@ test_cases = [
     (torch.bfloat16, 2, 6, 6, 64, 800, 80, 1, 128, True, "TND", True, 0, 256, 2.0, 1, False),
     (torch.bfloat16, 2, 6, 1, 1, 131072, 59, 1, 128, True, "TND", True, 542, 647, 2.0, 1, False),
     (torch.bfloat16, 2, 6, 3, 1, 339, 256, 1, 128, True, "TND", True, 542, 647, 0.0, 1, False),
+    # Flash Decode with the maximum supported head dim: minimum decode,
+    (torch.bfloat16, 1, 1, 1, 1, 4096, 256, 1, 128, False, "TND", True, -1, -1, 0.0, 0, False),
+    (torch.float16, 1, 8, 1, 16, 4096, 256, 1, 128, True, "TND", True, -1, -1, 0.0, 1, False),
+    (torch.bfloat16, 1, 8, 1, 1, 4096, 256, 1, 128, False, "TND", True, -1, -1, 0.0, 2, False),
     # Tiny head sizes: 1, 2, and 4
     (torch.bfloat16, 2, 6, 6, 256, 512, 1, 0, 128, True, "BSND", False, -1, -1, 0.0, 0, False),
     (torch.bfloat16, 2, 6, 6, 256, 512, 2, 0, 128, True, "BSND", False, -1, -1, 0.0, 0, False),
@@ -118,7 +122,18 @@ test_cases = [
     (torch.bfloat16, 2, 64, 8, 1, 2048, 128, 1, 128, True, "TND", True, -1, -1, 0.0, 0, False),
     (torch.bfloat16, 2, 128, 16, 1, 2048, 128, 1, 128, True, "TND", True, -1, -1, 0.0, 0, False),
     (torch.float16, 2, 512, 1, 1, 1024, 128, 1, 128, True, "TND", True, -1, -1, 0.0, 0, False),
-    # num_splits=2（paged+TND）
+    # Active FD with the same Q-head merge policy as normal FA.
+    # Full merged block: group_size=8, qNBlockTile=8.
+    (torch.bfloat16, 1, 8, 1, 4, 4096, 64, 1, 128, False, "TND", False, -1, -1, 0.0, 4, False),
+    # Tail merged block: group_size=5, qNBlockTile=4, block sizes are 4 and 1.
+    (torch.float16, 1, 10, 2, 3, 4096, 192, 1, 128, False, "TND", False, -1, -1, 0.0, 3, False),
+    # Non-16-aligned head dim exercises packed Partial O DMA.
+    (torch.float16, 1, 6, 1, 3, 4096, 59, 1, 128, False, "TND", False, -1, -1, 0.0, 4, False),
+    # Maximum merged-M tile: q_seqlen=16 * 8 Q heads = 128 rows.
+    (torch.bfloat16, 1, 8, 1, 16, 4096, 64, 1, 128, False, "TND", False, -1, -1, 0.0, 4, False),
+    # Auto-split FD with Q-head merging and causal masking.
+    (torch.float16, 1, 8, 1, 1, 4096, 128, 1, 128, True, "TND", False, -1, -1, 0.0, 0, False),
+    # num_splits=2（paged+TND; q_seqlen is outside the FD gate and falls back）
     (torch.bfloat16, 2, 6, 6, 1024, 1024, 128, 1, 128, True, "TND", True, -1, -1, 0.0, 2, False),
     (torch.float16, 2, 6, 6, 1024, 2048, 128, 1, 128, False, "TND", True, -1, -1, 0.0, 2, False),
     # Special SWA windows: (826,973), (127,0), (65,412), (59,571), (746,16), and (512,0)
@@ -166,8 +181,6 @@ def test_fa_kvcache_ops(data_type, batch_size, num_heads, kv_heads, q_seqlen, kv
     name = torch_npu.npu.get_device_name() if torch_npu.npu.device_count() > 0 else ""
     if num_splits > 1 and not (cache_mode == 1 and layout == "TND"):
         pytest.skip("num_splits>1 requires paged KV cache and TND (varlen-q) layout")
-    if "Ascend950" in name and num_splits > 1:
-        pytest.skip("Ascend950 does not support num_splits>1")
     if not (1 <= head_size <= 256):
         pytest.skip("head_size must be in [1, 256]")
     if "Ascend950" in name and (softcap != 0.0):

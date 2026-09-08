@@ -249,7 +249,10 @@ namespace SplitFuse {
                 totalQTokens = static_cast<uint32_t>(gActualQseqlen.GetValue(batch));
             }
 
-            if (flashDecodeFlag != 0U) {
+            const bool idleCoreFD = (flashDecodeFlag != 0U) &&
+                (fATilingData->needCoreNum != 0U) &&
+                (coreIdx >= fATilingData->needCoreNum);
+            if (flashDecodeFlag != 0U && !idleCoreFD) {
                 uint32_t startBIdx = fATilingData->coreInfo[coreIdx].startBIdx;
                 uint32_t startN1Idx = fATilingData->coreInfo[coreIdx].startN1Idx;
                 uint32_t startS1Idx = fATilingData->coreInfo[coreIdx].startS1Idx;
@@ -316,12 +319,11 @@ namespace SplitFuse {
                         }
                     }
                 }
-            } else {
+            } else if (flashDecodeFlag == 0U) {
+                uint32_t curBatchTmp = 0;
+                uint32_t preTotalTaskNumTmp = 0;
+                uint32_t curTotalTaskNumTmp = firstBatchTaskNum;
                 for (uint32_t taskIdx = coreIdx; taskIdx < totalTaskNum; taskIdx += uint32_t(coreNum)) {
-                    uint32_t curBatchTmp = 0;
-                    uint32_t preTotalTaskNumTmp = 0;
-                    uint32_t curTotalTaskNumTmp = firstBatchTaskNum;
-
                     while (taskIdx >= curTotalTaskNumTmp) {
                         ++curBatchTmp;
                         preTotalTaskNumTmp = curTotalTaskNumTmp;
@@ -481,11 +483,8 @@ namespace SplitFuse {
                 // BSND: Q/O/LSE per-batch storage step is maxQSeqlen.
                 prevQSeqlenSum = BIdx * maxQSeqlen;
                 if constexpr (!PAGED_CACHE_FLAG) {
-                    // Mirror mha_fwd_kvcache_2.cpp semantics: per-batch K/V step
-                    // uses each batch's actual kvSeqlen (prefix sum across batches).
-                    for (uint32_t b = 0; b < BIdx; b++) {
-                        prevKvSeqlenSum += static_cast<uint32_t>(gActualKvseqlen.GetValue(b));
-                    }
+                    // BSND K seqlens are not variable, just multiply by the batch index to get the offset.
+                    prevKvSeqlenSum = static_cast<uint32_t>(gActualKvseqlen.GetValue(0)) * BIdx;
                 }
             }
 
@@ -742,11 +741,16 @@ namespace SplitFuse {
                                     false);
                             }
                         } else {
-                            uint32_t noMaskStackSeqNum = (triUp + 1) / MAX_KV_STACK_LEN;
+                            uint32_t lastNoMaskTile;
+                            if (triUp + 1U == kvSeqlen) {
+                                lastNoMaskTile = kvSLoopNumTotal - 1U;
+                            } else {
+                                lastNoMaskTile = (triUp + 1U) / MAX_KV_STACK_LEN - 1U;
+                            }
                             Arch::CrossCoreWaitFlag(qkReady);
                             int32_t lastNoMaskStackId;
                             if (flashDecodeFlag != 0U) {
-                                lastNoMaskStackId = (int32_t)noMaskStackSeqNum - 1 - (int32_t)kvStart;
+                                lastNoMaskStackId = (int32_t)lastNoMaskTile - (int32_t)kvStart;
                                 epilogueOnlineSoftmax(
                                     gP[gmOffsetP],
                                     gS[gmOffsetS],
@@ -767,7 +771,7 @@ namespace SplitFuse {
                                     layOutS,
                                     actualBlockShapeQK,
                                     (stackSeqCount == 0),
-                                    (stackSeqCount == noMaskStackSeqNum - 1),
+                                    (stackSeqCount == lastNoMaskTile),
                                     qSBlockSize,
                                     qNBlockSize,
                                     curStackTileMod,
@@ -1067,7 +1071,7 @@ namespace SplitFuse {
         using LayoutO = layout::RowMajor;
         using ElementLse = float;
         using LayoutLse = layout::RowMajor;
-        using ElementMask = int8_t;
+        using ElementMask = uint8_t;
         using LayoutMask = layout::RowMajor;
         using ElementOTmp = IntermCalcPrec;
         using LayoutOTmp = layout::RowMajor;
