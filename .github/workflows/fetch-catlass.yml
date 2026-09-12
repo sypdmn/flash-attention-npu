@@ -1,0 +1,47 @@
+name: Fetch CATLASS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-catlass:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone CATLASS
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          git clone https://gitcode.com/cann/catlass.git catlass
+
+          cd catlass
+
+          git checkout 769cd40
+
+          echo "===== CATLASS COMMIT ====="
+          git rev-parse HEAD
+          git log -1 --oneline
+
+          echo "===== VERIFY HEADER ====="
+          test -f include/catlass/catlass.hpp
+
+          ls -l include/catlass/catlass.hpp
+
+          echo "CATLASS VERIFY: PASS"
+
+      - name: Package CATLASS
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          tar -czf catlass-769cd40.tar.gz catlass
+
+          ls -lh catlass-769cd40.tar.gz
+
+      - name: Upload CATLASS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: catlass-769cd40
+          path: catlass-769cd40.tar.gz
+          retention-days: 7
