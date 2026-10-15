@@ -5,45 +5,109 @@ on:
     inputs:
       arch:
         description: "Target NPU architecture"
-        required: true
+        required: false
         default: "both"
         type: choice
         options:
+          - "both"
           - "910"
           - "950"
-          - "both"
 
       fa_version:
         description: "FlashAttention version"
-        required: true
+        required: false
         default: "all"
         type: choice
         options:
           - "all"
-          - "FA2"
-          - "FA3"
-          - "FA4"
+          - "fa2"
+          - "fa3"
+          - "fa4"
 
       layout:
         description: "Input layout"
-        required: true
+        required: false
         default: "all"
         type: choice
         options:
           - "all"
           - "bsnd"
           - "tnd"
+
+      ref:
+        description: "git ref"
+        required: false
+        type: string
+        default: "main"
+
+  # 开发阶段临时使用
   push:
     branches:
       - syp
 
+permissions:
+  contents: read
+
 jobs:
-  show-config:
+  validate:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    steps:
+      - name: Validate workflow
+        run: echo "NPU Benchmark workflow parsed successfully"
+
+  benchmark:
+    if: github.event_name == 'workflow_dispatch'
+
+    name: Benchmark (${{ matrix.arch_label }})
+
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - arch_label: x86_64-950
+            runs_on: '["self-hosted", "linux", "x64", "npu", "flash-attention-npu"]'
+            docker_image: fa-npu-ci:950-cann9.1-torch2.9
+            require_healthy: "true"
+            max_tasks: "6"
+
+          - arch_label: aarch64-910B
+            runs_on: '["self-hosted", "linux", "arm64", "npu", "flash-attention-npu"]'
+            docker_image: fa-npu-ci:910b-cann9.1-torch2.9
+            require_healthy: "false"
+            max_tasks: "4"
+
+    runs-on: ${{ fromJSON(matrix.runs_on) }}
+
+    timeout-minutes: 600
+
+    env:
+      CI_DOCKER_IMAGE: ${{ matrix.docker_image }}
+      CI_REQUIRE_HEALTHY_NPU: ${{ matrix.require_healthy }}
+      CI_NPU_MAX_TASKS: ${{ matrix.max_tasks }}
+
+      CI_TASK: benchmark
+      CI_BENCHMARK_FA_VERSION: ${{ inputs.fa_version }}
+      CI_BENCHMARK_LAYOUT: ${{ inputs.layout }}
+      CI_REF: ${{ inputs.ref }}
+
+      CI_CONTAINER_SCOPE: >-
+        ${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch_label }}
 
     steps:
-      - name: Show benchmark configuration
+      - name: Check arch match
+        id: arch
         run: |
-          echo "arch=${{ inputs.arch }}"
-          echo "fa_version=${{ inputs.fa_version }}"
-          echo "layout=${{ inputs.layout }}"
+          arch="${{ inputs.arch }}"
+          label="${{ matrix.arch_label }}"
+
+          if [ "$arch" = "both" ] ||
+            { [ "$arch" = "910" ] && [ "$label" = "aarch64-910B" ]; } ||
+            { [ "$arch" = "950" ] && [ "$label" = "x86_64-950" ]; }; then
+            echo "match=true" >> "$GITHUB_OUTPUT"
+            echo "arch matches ($arch / $label), proceeding"
+          else
+            echo "match=false" >> "$GITHUB_OUTPUT"
+            echo "arch mismatch ($arch / $label), skipping"
+          fi

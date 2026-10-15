@@ -37,6 +37,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 CI_MODE="${CI_MODE:-quick}"
+CI_TASK="${CI_TASK:-test}"
+CI_BENCHMARK_FA_VERSION="${CI_BENCHMARK_FA_VERSION:-all}"
+CI_BENCHMARK_LAYOUT="${CI_BENCHMARK_LAYOUT:-all}"
 CI_RUN_EXAMPLE_ST="${CI_RUN_EXAMPLE_ST:-true}"
 CI_CONTAINER_DEVICE="${CI_CONTAINER_DEVICE:-0}"
 CI_DOCKER_PRIVILEGED="${CI_DOCKER_PRIVILEGED:-true}"
@@ -147,7 +150,17 @@ get_candidates() {
     | sed -n 's/^  - id=\([0-9]\+\) .*/\1/p' || true
 }
 
-run_docker_test() {
+run_docker_task() {
+  local entry_script
+
+case "$CI_TASK" in
+  test)
+    entry_script="ci/run_ci_test.sh"
+    ;;
+  benchmark)
+    entry_script="ci/run_ci_benchmark.sh"
+    ;;
+esac
   local device_id="$1"
   local rc
   local mount_args=()
@@ -155,7 +168,7 @@ run_docker_test() {
     [ -n "$m" ] && mount_args+=("$m")
   done < <(docker_mount_args)
 
-  log "starting test container: image=$CI_DOCKER_IMAGE physical_device=$device_id -> container_device=$CI_CONTAINER_DEVICE mode=$CI_MODE"
+  log "starting $CI_TASK container: image=$CI_DOCKER_IMAGE physical_device=$device_id -> container_device=$CI_CONTAINER_DEVICE"
   # 创建宿主机日志目录并开放权限 (容器内 root 写, 宿主机 runner 用户读)
   mkdir -p "$CI_TEST_LOG_DIR_HOST"
   chmod 777 "$CI_TEST_LOG_DIR_HOST" 2>/dev/null || true
@@ -185,6 +198,10 @@ run_docker_test() {
     "${mount_args[@]}" \
     -e ASCEND_RT_VISIBLE_DEVICES="$device_id" \
     -e CI_MODE="$CI_MODE" \
+    -e CI_TASK="$CI_TASK" \
+    -e CI_BENCHMARK_FA_VERSION="$CI_BENCHMARK_FA_VERSION" \
+    -e CI_BENCHMARK_LAYOUT="$CI_BENCHMARK_LAYOUT" \
+    -e CI_ENTRY_SCRIPT="$entry_script" \
     -e CI_RUN_EXAMPLE_ST="$CI_RUN_EXAMPLE_ST" \
     -e CI_TEST_WORKERS="${CI_TEST_WORKERS:-}" \
     -e CI_TEST_DIRECT_FILE="${CI_TEST_DIRECT_FILE:-}" \
@@ -203,7 +220,7 @@ run_docker_test() {
     -e GIT_CONFIG_GLOBAL=/tmp/gitconfig \
     -w /workspace/flash-attention-npu \
     "$CI_DOCKER_IMAGE" \
-    bash -lc 'git config --global --add safe.directory /workspace/flash-attention-npu && bash ci/run_ci_test.sh' &
+    bash -lc 'git config --global --add safe.directory /workspace/flash-attention-npu && bash "$CI_ENTRY_SCRIPT"'
   CURRENT_DOCKER_PID=$!
   if wait "$CURRENT_DOCKER_PID"; then
     rc=0
@@ -214,7 +231,7 @@ run_docker_test() {
   return "$rc"
 }
 
-acquire_lock_and_run_test() {
+acquire_lock_and_run_task() {
   # 动态选卡模式 (不持 flock 长期锁, 允许多 runner 共享卡, 靠 task_count 阈值软限流)。
   # 返回码: 0=测试成功; 1=无可用卡 (全部超阈值, 不计重试, 等待后重探); 2=测试失败 (直接报错)
   local selected line
@@ -224,7 +241,7 @@ acquire_lock_and_run_test() {
     return 1
   fi
   log "selected NPU device=$selected (re-probed, no lock held)"
-  if run_docker_test "$selected"; then
+  if run_docker_task "$selected"; then
     return 0
   fi
   return 2
@@ -248,8 +265,12 @@ main() {
     log "=== Phase 1 done (build=${build_seconds}s) ==="
   fi
 
-  # 阶段2: 动态选卡 + 测试 (无卡时等待重试, 测试失败直接报错)
+  # 阶段2: 动态选卡 + benchmark/test分流 (无卡时等待重试, 测试失败直接报错)
+  if [ "$CI_TASK" = "benchmark" ]; then
+  log "=== Phase 2: benchmark (dynamic device selection) ==="
+else
   log "=== Phase 2: test (dynamic device selection) ==="
+fi
   test_start="$(date +%s)"
 
   # 首次探测, 确认机器上有 NPU
