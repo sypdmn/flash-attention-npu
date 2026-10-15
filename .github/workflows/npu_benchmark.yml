@@ -1,0 +1,46 @@
+name: NPU Benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      arch:
+        description: "Target NPU architecture"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - "910"
+          - "950"
+          - "both"
+
+      fa_version:
+        description: "FlashAttention version"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - "all"
+          - "FA2"
+          - "FA3"
+          - "FA4"
+
+      layout:
+        description: "Input layout"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - "all"
+          - "bsnd"
+          - "tnd"
+
+jobs:
+  show-config:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show benchmark configuration
+        run: |
+          echo "arch=${{ inputs.arch }}"
+          echo "fa_version=${{ inputs.fa_version }}"
+          echo "layout=${{ inputs.layout }}"
