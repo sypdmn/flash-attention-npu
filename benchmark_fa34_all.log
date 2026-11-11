@@ -1,0 +1,2093 @@
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+decode 用例 686 条（q_s=1）,来自 /data1/songyp/flash-attention-npu/3.2-性能场景.md
+device=Ascend910B4-1 dtype=float16 timing=event warmup=20 torch=2.9.0+cpu torch_npu=2.9.0
+>>> [001/686] case 0 llama2-70B/qwen2-72b B1 kv256 H8/1
+    fa3=1.004ms fa4=0.902ms fia=0.237ms
+>>> [002/686] case 1 llama2-70B/qwen2-72b B1 kv263 H8/1
+    fa3=0.986ms fa4=0.868ms fia=0.231ms
+>>> [003/686] case 2 llama2-70B/qwen2-72b B1 kv512 H8/1
+    fa3=0.954ms fa4=0.869ms fia=0.227ms
+>>> [004/686] case 3 llama2-70B/qwen2-72b B1 kv519 H8/1
+    fa3=0.979ms fa4=0.889ms fia=0.222ms
+>>> [005/686] case 4 llama2-70B/qwen2-72b B1 kv1024 H8/1
+    fa3=0.963ms fa4=0.869ms fia=0.226ms
+>>> [006/686] case 5 llama2-70B/qwen2-72b B1 kv1031 H8/1
+    fa3=0.950ms fa4=0.893ms fia=0.230ms
+>>> [007/686] case 6 llama2-70B/qwen2-72b B1 kv2048 H8/1
+    fa3=0.973ms fa4=0.881ms fia=0.228ms
+>>> [008/686] case 7 llama2-70B/qwen2-72b B1 kv2055 H8/1
+    fa3=1.001ms fa4=0.911ms fia=0.250ms
+>>> [009/686] case 8 llama2-70B/qwen2-72b B1 kv4096 H8/1
+    fa3=0.963ms fa4=0.877ms fia=0.229ms
+>>> [010/686] case 9 llama2-70B/qwen2-72b B1 kv5120 H8/1
+    fa3=0.986ms fa4=0.877ms fia=0.232ms
+>>> [011/686] case 10 llama2-70B/qwen2-72b B16 kv256 H8/1
+    fa3=0.995ms fa4=0.884ms fia=0.243ms
+>>> [012/686] case 11 llama2-70B/qwen2-72b B16 kv263 H8/1
+    fa3=0.987ms fa4=0.919ms fia=0.250ms
+>>> [013/686] case 12 llama2-70B/qwen2-72b B16 kv512 H8/1
+    fa3=0.965ms fa4=0.892ms fia=0.236ms
+>>> [014/686] case 13 llama2-70B/qwen2-72b B16 kv519 H8/1
+    fa3=0.949ms fa4=0.877ms fia=0.243ms
+>>> [015/686] case 14 llama2-70B/qwen2-72b B16 kv1024 H8/1
+    fa3=0.952ms fa4=0.889ms fia=0.241ms
+>>> [016/686] case 15 llama2-70B/qwen2-72b B16 kv1031 H8/1
+    fa3=0.969ms fa4=0.897ms fia=0.244ms
+>>> [017/686] case 16 llama2-70B/qwen2-72b B16 kv2048 H8/1
+    fa3=0.974ms fa4=0.906ms fia=0.248ms
+>>> [018/686] case 17 llama2-70B/qwen2-72b B16 kv2055 H8/1
+    fa3=0.987ms fa4=0.904ms fia=0.244ms
+>>> [019/686] case 18 llama2-70B/qwen2-72b B16 kv4096 H8/1
+    fa3=0.979ms fa4=0.945ms fia=0.235ms
+>>> [020/686] case 19 llama2-70B/qwen2-72b B16 kv5120 H8/1
+    fa3=0.937ms fa4=0.865ms fia=0.239ms
+>>> [021/686] case 20 llama2-70B/qwen2-72b B32 kv256 H8/1
+    fa3=0.954ms fa4=0.964ms fia=0.254ms
+>>> [022/686] case 21 llama2-70B/qwen2-72b B32 kv263 H8/1
+    fa3=0.933ms fa4=0.861ms fia=0.255ms
+>>> [023/686] case 22 llama2-70B/qwen2-72b B32 kv512 H8/1
+    fa3=1.048ms fa4=0.941ms fia=0.282ms
+>>> [024/686] case 23 llama2-70B/qwen2-72b B32 kv519 H8/1
+    fa3=1.017ms fa4=0.920ms fia=0.255ms
+>>> [025/686] case 24 llama2-70B/qwen2-72b B32 kv1024 H8/1
+    fa3=0.946ms fa4=0.866ms fia=0.253ms
+>>> [026/686] case 25 llama2-70B/qwen2-72b B32 kv1031 H8/1
+    fa3=0.950ms fa4=0.871ms fia=0.256ms
+>>> [027/686] case 26 llama2-70B/qwen2-72b B32 kv2048 H8/1
+    fa3=0.962ms fa4=0.933ms fia=0.262ms
+>>> [028/686] case 27 llama2-70B/qwen2-72b B32 kv2055 H8/1
+    fa3=0.987ms fa4=0.895ms fia=0.276ms
+>>> [029/686] case 28 llama2-70B/qwen2-72b B32 kv4096 H8/1
+    fa3=0.946ms fa4=0.872ms fia=0.251ms
+>>> [030/686] case 29 llama2-70B/qwen2-72b B32 kv5120 H8/1
+    fa3=0.959ms fa4=0.870ms fia=0.260ms
+>>> [031/686] case 30 llama2-70B/qwen2-72b B64 kv256 H8/1
+    fa3=0.982ms fa4=0.868ms fia=0.272ms
+>>> [032/686] case 31 llama2-70B/qwen2-72b B64 kv263 H8/1
+    fa3=0.964ms fa4=0.878ms fia=0.283ms
+>>> [033/686] case 32 llama2-70B/qwen2-72b B64 kv512 H8/1
+    fa3=1.016ms fa4=0.934ms fia=0.308ms
+>>> [034/686] case 33 llama2-70B/qwen2-72b B64 kv519 H8/1
+    fa3=1.015ms fa4=0.916ms fia=0.280ms
+>>> [035/686] case 34 llama2-70B/qwen2-72b B64 kv1024 H8/1
+    fa3=0.959ms fa4=0.909ms fia=0.278ms
+>>> [036/686] case 35 llama2-70B/qwen2-72b B64 kv1031 H8/1
+    fa3=0.953ms fa4=0.881ms fia=0.284ms
+>>> [037/686] case 36 llama2-70B/qwen2-72b B64 kv2048 H8/1
+    fa3=1.049ms fa4=0.960ms fia=0.337ms
+>>> [038/686] case 37 llama2-70B/qwen2-72b B64 kv2055 H8/1
+    fa3=1.094ms fa4=0.905ms fia=0.283ms
+>>> [039/686] case 38 llama2-70B/qwen2-72b B64 kv4096 H8/1
+    fa3=0.991ms fa4=0.914ms fia=0.339ms
+>>> [040/686] case 39 llama2-70B/qwen2-72b B64 kv5120 H8/1
+    fa3=0.990ms fa4=0.914ms fia=0.360ms
+>>> [041/686] case 40 llama-65B/Qwen-72B B1 kv256 H8/8
+    fa3=1.061ms fa4=0.951ms fia=0.232ms
+>>> [042/686] case 41 llama-65B/Qwen-72B B1 kv263 H8/8
+    fa3=1.042ms fa4=0.977ms fia=0.287ms
+>>> [043/686] case 42 llama-65B/Qwen-72B B1 kv512 H8/8
+    fa3=1.036ms fa4=0.887ms fia=0.232ms
+>>> [044/686] case 43 llama-65B/Qwen-72B B1 kv519 H8/8
+    fa3=0.971ms fa4=0.901ms fia=0.240ms
+>>> [045/686] case 44 llama-65B/Qwen-72B B1 kv1024 H8/8
+    fa3=0.979ms fa4=0.935ms fia=0.284ms
+>>> [046/686] case 45 llama-65B/Qwen-72B B1 kv1031 H8/8
+    fa3=1.046ms fa4=0.889ms fia=0.231ms
+>>> [047/686] case 46 llama-65B/Qwen-72B B1 kv2048 H8/8
+    fa3=1.037ms fa4=0.908ms fia=0.279ms
+>>> [048/686] case 47 llama-65B/Qwen-72B B1 kv2055 H8/8
+    fa3=1.035ms fa4=0.942ms fia=0.282ms
+>>> [049/686] case 48 llama-65B/Qwen-72B B1 kv4096 H8/8
+    fa3=0.981ms fa4=0.880ms fia=0.228ms
+>>> [050/686] case 49 llama-65B/Qwen-72B B1 kv5120 H8/8
+    fa3=1.025ms fa4=0.959ms fia=0.217ms
+>>> [051/686] case 50 llama-65B/Qwen-72B B16 kv256 H8/8
+    fa3=0.964ms fa4=0.891ms fia=0.237ms
+>>> [052/686] case 51 llama-65B/Qwen-72B B16 kv263 H8/8
+    fa3=0.969ms fa4=0.915ms fia=0.266ms
+>>> [053/686] case 52 llama-65B/Qwen-72B B16 kv512 H8/8
+    fa3=0.990ms fa4=0.906ms fia=0.248ms
+>>> [054/686] case 53 llama-65B/Qwen-72B B16 kv519 H8/8
+    fa3=0.997ms fa4=0.878ms fia=0.247ms
+>>> [055/686] case 54 llama-65B/Qwen-72B B16 kv1024 H8/8
+    fa3=0.950ms fa4=0.881ms fia=0.244ms
+>>> [056/686] case 55 llama-65B/Qwen-72B B16 kv1031 H8/8
+    fa3=0.959ms fa4=0.903ms fia=0.256ms
+>>> [057/686] case 56 llama-65B/Qwen-72B B16 kv2048 H8/8
+    fa3=0.970ms fa4=0.888ms fia=0.312ms
+>>> [058/686] case 57 llama-65B/Qwen-72B B16 kv2055 H8/8
+    fa3=0.950ms fa4=0.879ms fia=0.311ms
+>>> [059/686] case 58 llama-65B/Qwen-72B B16 kv4096 H8/8
+    fa3=1.009ms fa4=1.022ms fia=0.483ms
+>>> [060/686] case 59 llama-65B/Qwen-72B B16 kv5120 H8/8
+    fa3=1.086ms fa4=1.102ms fia=0.561ms
+>>> [061/686] case 60 llama-65B/Qwen-72B B32 kv256 H8/8
+    fa3=0.966ms fa4=0.849ms fia=0.255ms
+>>> [062/686] case 61 llama-65B/Qwen-72B B32 kv263 H8/8
+    fa3=0.953ms fa4=0.909ms fia=0.265ms
+>>> [063/686] case 62 llama-65B/Qwen-72B B32 kv512 H8/8
+    fa3=0.951ms fa4=0.887ms fia=0.259ms
+>>> [064/686] case 63 llama-65B/Qwen-72B B32 kv519 H8/8
+    fa3=1.058ms fa4=0.845ms fia=0.279ms
+>>> [065/686] case 64 llama-65B/Qwen-72B B32 kv1024 H8/8
+    fa3=0.937ms fa4=0.902ms fia=0.338ms
+>>> [066/686] case 65 llama-65B/Qwen-72B B32 kv1031 H8/8
+    fa3=0.988ms fa4=0.882ms fia=0.338ms
+>>> [067/686] case 66 llama-65B/Qwen-72B B32 kv2048 H8/8
+    fa3=0.993ms fa4=1.127ms fia=0.563ms
+>>> [068/686] case 67 llama-65B/Qwen-72B B32 kv2055 H8/8
+    fa3=1.033ms fa4=1.052ms fia=0.502ms
+>>> [069/686] case 68 llama-65B/Qwen-72B B32 kv4096 H8/8
+    fa3=1.287ms fa4=1.306ms fia=0.780ms
+>>> [070/686] case 69 llama-65B/Qwen-72B B32 kv5120 H8/8
+    fa3=1.431ms fa4=1.448ms fia=0.921ms
+>>> [071/686] case 70 llama-65B/Qwen-72B B64 kv256 H8/8
+    fa3=0.992ms fa4=0.887ms fia=0.298ms
+>>> [072/686] case 71 llama-65B/Qwen-72B B64 kv263 H8/8
+    fa3=0.969ms fa4=0.945ms fia=0.310ms
+>>> [073/686] case 72 llama-65B/Qwen-72B B64 kv512 H8/8
+    fa3=0.947ms fa4=0.876ms fia=0.355ms
+>>> [074/686] case 73 llama-65B/Qwen-72B B64 kv519 H8/8
+    fa3=0.999ms fa4=0.934ms fia=0.378ms
+>>> [075/686] case 74 llama-65B/Qwen-72B B64 kv1024 H8/8
+    fa3=0.972ms fa4=1.062ms fia=0.559ms
+>>> [076/686] case 75 llama-65B/Qwen-72B B64 kv1031 H8/8
+    fa3=1.045ms fa4=1.043ms fia=0.542ms
+>>> [077/686] case 76 llama-65B/Qwen-72B B64 kv2048 H8/8
+    fa3=1.280ms fa4=1.315ms fia=0.824ms
+>>> [078/686] case 77 llama-65B/Qwen-72B B64 kv2055 H8/8
+    fa3=1.308ms fa4=1.347ms fia=0.845ms
+>>> [079/686] case 78 llama-65B/Qwen-72B B64 kv4096 H8/8
+    fa3=1.873ms fa4=1.921ms fia=1.401ms
+>>> [080/686] case 79 llama-65B/Qwen-72B B64 kv5120 H8/8
+    fa3=2.150ms fa4=2.230ms fia=1.713ms
+>>> [081/686] case 80 llama2-13B/baichuan2-13B/Qwen-14B B1 kv256 H5/5
+    fa3=0.937ms fa4=0.859ms fia=0.224ms
+>>> [082/686] case 81 llama2-13B/baichuan2-13B/Qwen-14B B1 kv263 H5/5
+    fa3=0.951ms fa4=0.876ms fia=0.230ms
+>>> [083/686] case 82 llama2-13B/baichuan2-13B/Qwen-14B B1 kv512 H5/5
+    fa3=1.040ms fa4=0.875ms fia=0.221ms
+>>> [084/686] case 83 llama2-13B/baichuan2-13B/Qwen-14B B1 kv519 H5/5
+    fa3=0.962ms fa4=0.876ms fia=0.220ms
+>>> [085/686] case 84 llama2-13B/baichuan2-13B/Qwen-14B B1 kv1024 H5/5
+    fa3=0.938ms fa4=0.861ms fia=0.232ms
+>>> [086/686] case 85 llama2-13B/baichuan2-13B/Qwen-14B B1 kv1031 H5/5
+    fa3=0.981ms fa4=0.884ms fia=0.226ms
+>>> [087/686] case 86 llama2-13B/baichuan2-13B/Qwen-14B B1 kv2048 H5/5
+    fa3=0.941ms fa4=0.886ms fia=0.235ms
+>>> [088/686] case 87 llama2-13B/baichuan2-13B/Qwen-14B B1 kv2055 H5/5
+    fa3=0.954ms fa4=0.880ms fia=0.247ms
+>>> [089/686] case 88 llama2-13B/baichuan2-13B/Qwen-14B B1 kv4096 H5/5
+    fa3=0.975ms fa4=0.864ms fia=0.223ms
+>>> [090/686] case 89 llama2-13B/baichuan2-13B/Qwen-14B B1 kv5120 H5/5
+    fa3=0.959ms fa4=0.888ms fia=0.222ms
+>>> [091/686] case 90 llama2-13B/baichuan2-13B/Qwen-14B B16 kv256 H5/5
+    fa3=0.954ms fa4=0.868ms fia=0.236ms
+>>> [092/686] case 91 llama2-13B/baichuan2-13B/Qwen-14B B16 kv263 H5/5
+    fa3=0.953ms fa4=0.882ms fia=0.294ms
+>>> [093/686] case 92 llama2-13B/baichuan2-13B/Qwen-14B B16 kv512 H5/5
+    fa3=1.021ms fa4=0.916ms fia=0.244ms
+>>> [094/686] case 93 llama2-13B/baichuan2-13B/Qwen-14B B16 kv519 H5/5
+    fa3=0.959ms fa4=0.889ms fia=0.245ms
+>>> [095/686] case 94 llama2-13B/baichuan2-13B/Qwen-14B B16 kv1024 H5/5
+    fa3=0.999ms fa4=0.910ms fia=0.250ms
+>>> [096/686] case 95 llama2-13B/baichuan2-13B/Qwen-14B B16 kv1031 H5/5
+    fa3=1.024ms fa4=0.908ms fia=0.247ms
+>>> [097/686] case 96 llama2-13B/baichuan2-13B/Qwen-14B B16 kv2048 H5/5
+    fa3=0.977ms fa4=0.886ms fia=0.263ms
+>>> [098/686] case 97 llama2-13B/baichuan2-13B/Qwen-14B B16 kv2055 H5/5
+    fa3=0.984ms fa4=0.898ms fia=0.245ms
+>>> [099/686] case 98 llama2-13B/baichuan2-13B/Qwen-14B B16 kv4096 H5/5
+    fa3=0.990ms fa4=0.909ms fia=0.330ms
+>>> [100/686] case 99 llama2-13B/baichuan2-13B/Qwen-14B B16 kv5120 H5/5
+    fa3=0.972ms fa4=0.946ms fia=0.377ms
+>>> [101/686] case 100 llama2-13B/baichuan2-13B/Qwen-14B B32 kv256 H5/5
+    fa3=0.987ms fa4=0.874ms fia=0.254ms
+>>> [102/686] case 101 llama2-13B/baichuan2-13B/Qwen-14B B32 kv263 H5/5
+    fa3=0.976ms fa4=0.903ms fia=0.258ms
+>>> [103/686] case 102 llama2-13B/baichuan2-13B/Qwen-14B B32 kv512 H5/5
+    fa3=0.995ms fa4=0.881ms fia=0.260ms
+>>> [104/686] case 103 llama2-13B/baichuan2-13B/Qwen-14B B32 kv519 H5/5
+    fa3=0.974ms fa4=0.886ms fia=0.259ms
+>>> [105/686] case 104 llama2-13B/baichuan2-13B/Qwen-14B B32 kv1024 H5/5
+    fa3=0.986ms fa4=0.891ms fia=0.259ms
+>>> [106/686] case 105 llama2-13B/baichuan2-13B/Qwen-14B B32 kv1031 H5/5
+    fa3=1.000ms fa4=0.924ms fia=0.262ms
+>>> [107/686] case 106 llama2-13B/baichuan2-13B/Qwen-14B B32 kv2048 H5/5
+    fa3=0.973ms fa4=0.911ms fia=0.342ms
+>>> [108/686] case 107 llama2-13B/baichuan2-13B/Qwen-14B B32 kv2055 H5/5
+    fa3=0.989ms fa4=0.907ms fia=0.342ms
+>>> [109/686] case 108 llama2-13B/baichuan2-13B/Qwen-14B B32 kv4096 H5/5
+    fa3=1.050ms fa4=1.078ms fia=0.543ms
+>>> [110/686] case 109 llama2-13B/baichuan2-13B/Qwen-14B B32 kv5120 H5/5
+    fa3=1.123ms fa4=1.198ms fia=0.632ms
+>>> [111/686] case 110 llama2-13B/baichuan2-13B/Qwen-14B B64 kv256 H5/5
+    fa3=0.964ms fa4=0.886ms fia=0.274ms
+>>> [112/686] case 111 llama2-13B/baichuan2-13B/Qwen-14B B64 kv263 H5/5
+    fa3=0.950ms fa4=0.992ms fia=0.303ms
+>>> [113/686] case 112 llama2-13B/baichuan2-13B/Qwen-14B B64 kv512 H5/5
+    fa3=1.040ms fa4=0.939ms fia=0.314ms
+>>> [114/686] case 113 llama2-13B/baichuan2-13B/Qwen-14B B64 kv519 H5/5
+    fa3=0.958ms fa4=0.846ms fia=0.277ms
+>>> [115/686] case 114 llama2-13B/baichuan2-13B/Qwen-14B B64 kv1024 H5/5
+    fa3=0.945ms fa4=0.880ms fia=0.366ms
+>>> [116/686] case 115 llama2-13B/baichuan2-13B/Qwen-14B B64 kv1031 H5/5
+    fa3=0.977ms fa4=0.982ms fia=0.409ms
+>>> [117/686] case 116 llama2-13B/baichuan2-13B/Qwen-14B B64 kv2048 H5/5
+    fa3=1.066ms fa4=1.116ms fia=0.590ms
+>>> [118/686] case 117 llama2-13B/baichuan2-13B/Qwen-14B B64 kv2055 H5/5
+    fa3=1.091ms fa4=1.142ms fia=0.590ms
+>>> [119/686] case 118 llama2-13B/baichuan2-13B/Qwen-14B B64 kv4096 H5/5
+    fa3=1.466ms fa4=1.498ms fia=0.955ms
+>>> [120/686] case 119 llama2-13B/baichuan2-13B/Qwen-14B B64 kv5120 H5/5
+    fa3=1.630ms fa4=1.660ms fia=1.117ms
+>>> [121/686] case 120 llama2-7B/baichuan2-7B B1 kv256 H4/4
+    fa3=1.010ms fa4=0.941ms fia=0.240ms
+>>> [122/686] case 121 llama2-7B/baichuan2-7B B1 kv263 H4/4
+    fa3=1.005ms fa4=0.941ms fia=0.244ms
+>>> [123/686] case 122 llama2-7B/baichuan2-7B B1 kv512 H4/4
+    fa3=1.026ms fa4=0.927ms fia=0.242ms
+>>> [124/686] case 123 llama2-7B/baichuan2-7B B1 kv519 H4/4
+    fa3=0.980ms fa4=0.902ms fia=0.241ms
+>>> [125/686] case 124 llama2-7B/baichuan2-7B B1 kv1024 H4/4
+    fa3=1.001ms fa4=0.902ms fia=0.234ms
+>>> [126/686] case 125 llama2-7B/baichuan2-7B B1 kv1031 H4/4
+    fa3=0.954ms fa4=0.889ms fia=0.233ms
+>>> [127/686] case 126 llama2-7B/baichuan2-7B B1 kv2048 H4/4
+    fa3=0.914ms fa4=0.931ms fia=0.229ms
+>>> [128/686] case 127 llama2-7B/baichuan2-7B B1 kv2055 H4/4
+    fa3=0.966ms fa4=0.893ms fia=0.238ms
+>>> [129/686] case 128 llama2-7B/baichuan2-7B B1 kv4096 H4/4
+    fa3=1.014ms fa4=0.914ms fia=0.239ms
+>>> [130/686] case 129 llama2-7B/baichuan2-7B B1 kv5120 H4/4
+    fa3=0.961ms fa4=0.897ms fia=0.228ms
+>>> [131/686] case 130 llama2-7B/baichuan2-7B B16 kv256 H4/4
+    fa3=0.982ms fa4=0.900ms fia=0.245ms
+>>> [132/686] case 131 llama2-7B/baichuan2-7B B16 kv263 H4/4
+    fa3=1.050ms fa4=0.958ms fia=0.269ms
+>>> [133/686] case 132 llama2-7B/baichuan2-7B B16 kv512 H4/4
+    fa3=1.047ms fa4=0.973ms fia=0.273ms
+>>> [134/686] case 133 llama2-7B/baichuan2-7B B16 kv519 H4/4
+    fa3=0.968ms fa4=0.911ms fia=0.251ms
+>>> [135/686] case 134 llama2-7B/baichuan2-7B B16 kv1024 H4/4
+    fa3=0.983ms fa4=0.888ms fia=0.243ms
+>>> [136/686] case 135 llama2-7B/baichuan2-7B B16 kv1031 H4/4
+    fa3=0.996ms fa4=0.913ms fia=0.259ms
+>>> [137/686] case 136 llama2-7B/baichuan2-7B B16 kv2048 H4/4
+    fa3=1.003ms fa4=0.912ms fia=0.250ms
+>>> [138/686] case 137 llama2-7B/baichuan2-7B B16 kv2055 H4/4
+    fa3=0.985ms fa4=0.873ms fia=0.244ms
+>>> [139/686] case 138 llama2-7B/baichuan2-7B B16 kv4096 H4/4
+    fa3=0.995ms fa4=0.918ms fia=0.316ms
+>>> [140/686] case 139 llama2-7B/baichuan2-7B B16 kv5120 H4/4
+    fa3=0.990ms fa4=0.902ms fia=0.365ms
+>>> [141/686] case 140 llama2-7B/baichuan2-7B B32 kv256 H4/4
+    fa3=0.962ms fa4=0.877ms fia=0.261ms
+>>> [142/686] case 141 llama2-7B/baichuan2-7B B32 kv263 H4/4
+    fa3=0.969ms fa4=0.894ms fia=0.264ms
+>>> [143/686] case 142 llama2-7B/baichuan2-7B B32 kv512 H4/4
+    fa3=1.026ms fa4=0.974ms fia=0.280ms
+>>> [144/686] case 143 llama2-7B/baichuan2-7B B32 kv519 H4/4
+    fa3=1.012ms fa4=0.957ms fia=0.264ms
+>>> [145/686] case 144 llama2-7B/baichuan2-7B B32 kv1024 H4/4
+    fa3=1.001ms fa4=0.922ms fia=0.263ms
+>>> [146/686] case 145 llama2-7B/baichuan2-7B B32 kv1031 H4/4
+    fa3=0.999ms fa4=0.908ms fia=0.265ms
+>>> [147/686] case 146 llama2-7B/baichuan2-7B B32 kv2048 H4/4
+    fa3=0.996ms fa4=0.904ms fia=0.319ms
+>>> [148/686] case 147 llama2-7B/baichuan2-7B B32 kv2055 H4/4
+    fa3=1.003ms fa4=0.920ms fia=0.325ms
+>>> [149/686] case 148 llama2-7B/baichuan2-7B B32 kv4096 H4/4
+    fa3=1.019ms fa4=1.059ms fia=0.500ms
+>>> [150/686] case 149 llama2-7B/baichuan2-7B B32 kv5120 H4/4
+    fa3=1.119ms fa4=1.166ms fia=0.602ms
+>>> [151/686] case 150 llama2-7B/baichuan2-7B B64 kv256 H4/4
+    fa3=0.980ms fa4=0.920ms fia=0.293ms
+>>> [152/686] case 151 llama2-7B/baichuan2-7B B64 kv263 H4/4
+    fa3=0.999ms fa4=0.911ms fia=0.298ms
+>>> [153/686] case 152 llama2-7B/baichuan2-7B B64 kv512 H4/4
+    fa3=0.954ms fa4=0.898ms fia=0.279ms
+>>> [154/686] case 153 llama2-7B/baichuan2-7B B64 kv519 H4/4
+    fa3=0.961ms fa4=0.880ms fia=0.279ms
+>>> [155/686] case 154 llama2-7B/baichuan2-7B B64 kv1024 H4/4
+    fa3=0.953ms fa4=0.862ms fia=0.338ms
+>>> [156/686] case 155 llama2-7B/baichuan2-7B B64 kv1031 H4/4
+    fa3=1.010ms fa4=0.929ms fia=0.357ms
+>>> [157/686] case 156 llama2-7B/baichuan2-7B B64 kv2048 H4/4
+    fa3=1.014ms fa4=1.038ms fia=0.547ms
+>>> [158/686] case 157 llama2-7B/baichuan2-7B B64 kv2055 H4/4
+    fa3=0.998ms fa4=1.047ms fia=0.528ms
+>>> [159/686] case 158 llama2-7B/baichuan2-7B B64 kv4096 H4/4
+    fa3=1.305ms fa4=1.322ms fia=0.809ms
+>>> [160/686] case 159 llama2-7B/baichuan2-7B B64 kv5120 H4/4
+    fa3=1.410ms fa4=1.430ms fia=0.955ms
+>>> [161/686] case 160 chatglm2-6B/CodeGeeX-2-6B B1 kv256 H4/1
+    fa3=0.932ms fa4=0.855ms fia=0.228ms
+>>> [162/686] case 161 chatglm2-6B/CodeGeeX-2-6B B1 kv263 H4/1
+    fa3=0.957ms fa4=0.876ms fia=0.235ms
+>>> [163/686] case 162 chatglm2-6B/CodeGeeX-2-6B B1 kv512 H4/1
+    fa3=0.948ms fa4=0.849ms fia=0.226ms
+>>> [164/686] case 163 chatglm2-6B/CodeGeeX-2-6B B1 kv519 H4/1
+    fa3=0.947ms fa4=0.861ms fia=0.233ms
+>>> [165/686] case 164 chatglm2-6B/CodeGeeX-2-6B B1 kv1024 H4/1
+    fa3=0.962ms fa4=0.872ms fia=0.222ms
+>>> [166/686] case 165 chatglm2-6B/CodeGeeX-2-6B B1 kv1031 H4/1
+    fa3=0.961ms fa4=0.870ms fia=0.225ms
+>>> [167/686] case 166 chatglm2-6B/CodeGeeX-2-6B B1 kv2048 H4/1
+    fa3=0.935ms fa4=0.866ms fia=0.222ms
+>>> [168/686] case 167 chatglm2-6B/CodeGeeX-2-6B B1 kv2055 H4/1
+    fa3=0.941ms fa4=0.907ms fia=0.236ms
+>>> [169/686] case 168 chatglm2-6B/CodeGeeX-2-6B B1 kv4096 H4/1
+    fa3=0.965ms fa4=0.909ms fia=0.238ms
+>>> [170/686] case 169 chatglm2-6B/CodeGeeX-2-6B B1 kv5120 H4/1
+    fa3=0.995ms fa4=0.894ms fia=0.254ms
+>>> [171/686] case 170 chatglm2-6B/CodeGeeX-2-6B B16 kv256 H4/1
+    fa3=0.966ms fa4=0.881ms fia=0.249ms
+>>> [172/686] case 171 chatglm2-6B/CodeGeeX-2-6B B16 kv263 H4/1
+    fa3=0.966ms fa4=0.868ms fia=0.248ms
+>>> [173/686] case 172 chatglm2-6B/CodeGeeX-2-6B B16 kv512 H4/1
+    fa3=0.964ms fa4=0.863ms fia=0.248ms
+>>> [174/686] case 173 chatglm2-6B/CodeGeeX-2-6B B16 kv519 H4/1
+    fa3=0.980ms fa4=0.856ms fia=0.253ms
+>>> [175/686] case 174 chatglm2-6B/CodeGeeX-2-6B B16 kv1024 H4/1
+    fa3=0.968ms fa4=0.888ms fia=0.253ms
+>>> [176/686] case 175 chatglm2-6B/CodeGeeX-2-6B B16 kv1031 H4/1
+    fa3=0.947ms fa4=0.864ms fia=0.246ms
+>>> [177/686] case 176 chatglm2-6B/CodeGeeX-2-6B B16 kv2048 H4/1
+    fa3=0.989ms fa4=0.880ms fia=0.251ms
+>>> [178/686] case 177 chatglm2-6B/CodeGeeX-2-6B B16 kv2055 H4/1
+    fa3=0.990ms fa4=0.884ms fia=0.240ms
+>>> [179/686] case 178 chatglm2-6B/CodeGeeX-2-6B B16 kv4096 H4/1
+    fa3=0.944ms fa4=0.864ms fia=0.236ms
+>>> [180/686] case 179 chatglm2-6B/CodeGeeX-2-6B B16 kv5120 H4/1
+    fa3=0.972ms fa4=0.895ms fia=0.250ms
+>>> [181/686] case 180 chatglm2-6B/CodeGeeX-2-6B B32 kv256 H4/1
+    fa3=1.062ms fa4=0.930ms fia=0.261ms
+>>> [182/686] case 181 chatglm2-6B/CodeGeeX-2-6B B32 kv263 H4/1
+    fa3=1.071ms fa4=0.962ms fia=0.281ms
+>>> [183/686] case 182 chatglm2-6B/CodeGeeX-2-6B B32 kv512 H4/1
+    fa3=1.006ms fa4=0.970ms fia=0.265ms
+>>> [184/686] case 183 chatglm2-6B/CodeGeeX-2-6B B32 kv519 H4/1
+    fa3=1.011ms fa4=0.918ms fia=0.277ms
+>>> [185/686] case 184 chatglm2-6B/CodeGeeX-2-6B B32 kv1024 H4/1
+    fa3=1.020ms fa4=0.950ms fia=0.269ms
+>>> [186/686] case 185 chatglm2-6B/CodeGeeX-2-6B B32 kv1031 H4/1
+    fa3=1.050ms fa4=0.962ms fia=0.272ms
+>>> [187/686] case 186 chatglm2-6B/CodeGeeX-2-6B B32 kv2048 H4/1
+    fa3=0.994ms fa4=0.888ms fia=0.263ms
+>>> [188/686] case 187 chatglm2-6B/CodeGeeX-2-6B B32 kv2055 H4/1
+    fa3=1.008ms fa4=0.888ms fia=0.255ms
+>>> [189/686] case 188 chatglm2-6B/CodeGeeX-2-6B B32 kv4096 H4/1
+    fa3=1.017ms fa4=0.926ms fia=0.270ms
+>>> [190/686] case 189 chatglm2-6B/CodeGeeX-2-6B B32 kv5120 H4/1
+    fa3=1.004ms fa4=0.882ms fia=0.270ms
+>>> [191/686] case 190 chatglm2-6B/CodeGeeX-2-6B B64 kv256 H4/1
+    fa3=1.015ms fa4=0.904ms fia=0.284ms
+>>> [192/686] case 191 chatglm2-6B/CodeGeeX-2-6B B64 kv263 H4/1
+    fa3=0.977ms fa4=0.888ms fia=0.285ms
+>>> [193/686] case 192 chatglm2-6B/CodeGeeX-2-6B B64 kv512 H4/1
+    fa3=1.010ms fa4=0.910ms fia=0.286ms
+>>> [194/686] case 193 chatglm2-6B/CodeGeeX-2-6B B64 kv519 H4/1
+    fa3=0.974ms fa4=0.910ms fia=0.295ms
+>>> [195/686] case 194 chatglm2-6B/CodeGeeX-2-6B B64 kv1024 H4/1
+    fa3=1.032ms fa4=0.932ms fia=0.302ms
+>>> [196/686] case 195 chatglm2-6B/CodeGeeX-2-6B B64 kv1031 H4/1
+    fa3=1.051ms fa4=0.953ms fia=0.282ms
+>>> [197/686] case 196 chatglm2-6B/CodeGeeX-2-6B B64 kv2048 H4/1
+    fa3=0.978ms fa4=0.896ms fia=0.291ms
+>>> [198/686] case 197 chatglm2-6B/CodeGeeX-2-6B B64 kv2055 H4/1
+    fa3=0.965ms fa4=0.868ms fia=0.272ms
+>>> [199/686] case 198 chatglm2-6B/CodeGeeX-2-6B B64 kv4096 H4/1
+    fa3=0.950ms fa4=0.860ms fia=0.323ms
+>>> [200/686] case 199 chatglm2-6B/CodeGeeX-2-6B B64 kv5120 H4/1
+    fa3=0.964ms fa4=0.867ms fia=0.354ms
+>>> [201/686] case 200 starcoder-15.5B B1 kv256 H6/1
+    fa3=0.956ms fa4=0.875ms fia=0.228ms
+>>> [202/686] case 201 starcoder-15.5B B1 kv263 H6/1
+    fa3=0.983ms fa4=0.879ms fia=0.235ms
+>>> [203/686] case 202 starcoder-15.5B B1 kv512 H6/1
+    fa3=0.948ms fa4=0.878ms fia=0.234ms
+>>> [204/686] case 203 starcoder-15.5B B1 kv519 H6/1
+    fa3=0.966ms fa4=0.865ms fia=0.222ms
+>>> [205/686] case 204 starcoder-15.5B B1 kv1024 H6/1
+    fa3=0.935ms fa4=0.865ms fia=0.223ms
+>>> [206/686] case 205 starcoder-15.5B B1 kv1031 H6/1
+    fa3=1.102ms fa4=1.015ms fia=0.255ms
+>>> [207/686] case 206 starcoder-15.5B B1 kv2048 H6/1
+    fa3=1.142ms fa4=0.987ms fia=0.254ms
+>>> [208/686] case 207 starcoder-15.5B B1 kv2055 H6/1
+    fa3=1.123ms fa4=0.965ms fia=0.240ms
+>>> [209/686] case 208 starcoder-15.5B B1 kv4096 H6/1
+    fa3=1.079ms fa4=0.978ms fia=0.245ms
+>>> [210/686] case 209 starcoder-15.5B B1 kv5120 H6/1
+    fa3=1.025ms fa4=0.986ms fia=0.250ms
+>>> [211/686] case 210 starcoder-15.5B B16 kv256 H6/1
+    fa3=1.166ms fa4=1.006ms fia=0.243ms
+>>> [212/686] case 211 starcoder-15.5B B16 kv263 H6/1
+    fa3=0.969ms fa4=0.870ms fia=0.244ms
+>>> [213/686] case 212 starcoder-15.5B B16 kv512 H6/1
+    fa3=1.022ms fa4=0.894ms fia=0.252ms
+>>> [214/686] case 213 starcoder-15.5B B16 kv519 H6/1
+    fa3=1.027ms fa4=0.931ms fia=0.258ms
+>>> [215/686] case 214 starcoder-15.5B B16 kv1024 H6/1
+    fa3=1.022ms fa4=0.933ms fia=0.256ms
+>>> [216/686] case 215 starcoder-15.5B B16 kv1031 H6/1
+    fa3=1.031ms fa4=0.912ms fia=0.252ms
+>>> [217/686] case 216 starcoder-15.5B B16 kv2048 H6/1
+    fa3=1.002ms fa4=0.902ms fia=0.253ms
+>>> [218/686] case 217 starcoder-15.5B B16 kv2055 H6/1
+    fa3=1.011ms fa4=0.889ms fia=0.252ms
+>>> [219/686] case 218 starcoder-15.5B B16 kv4096 H6/1
+    fa3=1.032ms fa4=0.915ms fia=0.249ms
+>>> [220/686] case 219 starcoder-15.5B B16 kv5120 H6/1
+    fa3=0.948ms fa4=0.897ms fia=0.240ms
+>>> [221/686] case 220 starcoder-15.5B B32 kv256 H6/1
+    fa3=0.955ms fa4=0.879ms fia=0.260ms
+>>> [222/686] case 221 starcoder-15.5B B32 kv263 H6/1
+    fa3=0.955ms fa4=0.879ms fia=0.255ms
+>>> [223/686] case 222 starcoder-15.5B B32 kv512 H6/1
+    fa3=0.983ms fa4=0.883ms fia=0.257ms
+>>> [224/686] case 223 starcoder-15.5B B32 kv519 H6/1
+    fa3=0.980ms fa4=0.893ms fia=0.254ms
+>>> [225/686] case 224 starcoder-15.5B B32 kv1024 H6/1
+    fa3=0.975ms fa4=0.882ms fia=0.265ms
+>>> [226/686] case 225 starcoder-15.5B B32 kv1031 H6/1
+    fa3=0.991ms fa4=0.914ms fia=0.261ms
+>>> [227/686] case 226 starcoder-15.5B B32 kv2048 H6/1
+    fa3=1.007ms fa4=0.953ms fia=0.269ms
+>>> [228/686] case 227 starcoder-15.5B B32 kv2055 H6/1
+    fa3=1.026ms fa4=0.889ms fia=0.265ms
+>>> [229/686] case 228 starcoder-15.5B B32 kv4096 H6/1
+    fa3=1.003ms fa4=0.923ms fia=0.265ms
+>>> [230/686] case 229 starcoder-15.5B B32 kv5120 H6/1
+    fa3=1.020ms fa4=0.937ms fia=0.271ms
+>>> [231/686] case 230 starcoder-15.5B B64 kv256 H6/1
+    fa3=1.039ms fa4=0.943ms fia=0.314ms
+>>> [232/686] case 231 starcoder-15.5B B64 kv263 H6/1
+    fa3=1.002ms fa4=0.930ms fia=0.278ms
+>>> [233/686] case 232 starcoder-15.5B B64 kv512 H6/1
+    fa3=0.964ms fa4=0.863ms fia=0.304ms
+>>> [234/686] case 233 starcoder-15.5B B64 kv519 H6/1
+    fa3=1.051ms fa4=0.963ms fia=0.306ms
+>>> [235/686] case 234 starcoder-15.5B B64 kv1024 H6/1
+    fa3=1.049ms fa4=0.941ms fia=0.304ms
+>>> [236/686] case 235 starcoder-15.5B B64 kv1031 H6/1
+    fa3=1.044ms fa4=0.960ms fia=0.310ms
+>>> [237/686] case 236 starcoder-15.5B B64 kv2048 H6/1
+    fa3=1.058ms fa4=0.967ms fia=0.314ms
+>>> [238/686] case 237 starcoder-15.5B B64 kv2055 H6/1
+    fa3=1.050ms fa4=0.973ms fia=0.308ms
+>>> [239/686] case 238 starcoder-15.5B B64 kv4096 H6/1
+    fa3=1.052ms fa4=0.959ms fia=0.348ms
+>>> [240/686] case 239 starcoder-15.5B B64 kv5120 H6/1
+    fa3=1.047ms fa4=0.968ms fia=0.390ms
+>>> [241/686] case 240 JYXH B1 kv2060 H12/1
+    fa3=1.044ms fa4=0.925ms fia=0.257ms
+>>> [242/686] case 241 JYXH B2 kv2060 H12/1
+    fa3=1.045ms fa4=0.963ms fia=0.260ms
+>>> [243/686] case 242 JYXH B4 kv2060 H12/1
+    fa3=1.036ms fa4=0.933ms fia=0.253ms
+>>> [244/686] case 243 JYXH B8 kv2060 H12/1
+    fa3=1.049ms fa4=0.951ms fia=0.266ms
+>>> [245/686] case 244 JYXH B12 kv2060 H12/1
+    fa3=1.043ms fa4=0.968ms fia=0.286ms
+>>> [246/686] case 245 JYXH B16 kv2060 H12/1
+    fa3=1.045ms fa4=0.892ms fia=0.249ms
+>>> [247/686] case 246 JYXH B20 kv2060 H12/1
+    fa3=0.982ms fa4=0.914ms fia=0.246ms
+>>> [248/686] case 247 JYXH B24 kv2060 H12/1
+    fa3=0.981ms fa4=0.887ms fia=0.254ms
+>>> [249/686] case 248 JYXH B28 kv2060 H12/1
+    fa3=1.026ms fa4=0.949ms fia=0.253ms
+>>> [250/686] case 249 JYXH B32 kv2060 H12/1
+    fa3=0.980ms fa4=0.901ms fia=0.292ms
+>>> [251/686] case 250 JYXH B1 kv18384 H12/1
+    fa3=0.995ms fa4=0.965ms fia=0.254ms
+>>> [252/686] case 251 JYXH B2 kv18384 H12/1
+    fa3=1.053ms fa4=0.898ms fia=0.236ms
+>>> [253/686] case 252 JYXH B3 kv18384 H12/1
+    fa3=1.009ms fa4=0.974ms fia=0.258ms
+>>> [254/686] case 253 JYXH B4 kv18384 H12/1
+    fa3=1.060ms fa4=0.921ms fia=0.242ms
+>>> [255/686] case 254 JYXH B1 kv34768 H12/1
+    fa3=0.989ms fa4=0.901ms fia=0.314ms
+>>> [256/686] case 255 JYXH B2 kv34768 H12/1
+    fa3=1.003ms fa4=0.950ms fia=0.313ms
+>>> [257/686] case 256 JYXH B3 kv34768 H12/1
+    fa3=1.057ms fa4=0.976ms fia=0.313ms
+>>> [258/686] case 257 JYXH B4 kv34768 H12/1
+    fa3=0.981ms fa4=0.919ms fia=0.304ms
+>>> [259/686] case 258 JYXH B5 kv34768 H12/1
+    fa3=0.996ms fa4=0.915ms fia=0.321ms
+>>> [260/686] case 259 JYXH B6 kv34768 H12/1
+    fa3=1.003ms fa4=0.909ms fia=0.344ms
+>>> [261/686] case 260 JYXH B7 kv34768 H12/1
+    fa3=0.998ms fa4=0.900ms fia=0.359ms
+>>> [262/686] case 261 JYXH B8 kv34768 H12/1
+    fa3=0.996ms fa4=0.927ms fia=0.366ms
+>>> [263/686] case 262 JYXH B9 kv34768 H12/1
+    fa3=0.950ms fa4=0.873ms fia=0.369ms
+>>> [264/686] case 263 JYXH B10 kv34768 H12/1
+    fa3=0.985ms fa4=0.901ms fia=0.378ms
+>>> [265/686] case 264 JYXH B11 kv34768 H12/1
+    fa3=0.986ms fa4=0.905ms fia=0.392ms
+>>> [266/686] case 265 JYXH B12 kv34768 H12/1
+    fa3=1.030ms fa4=0.910ms fia=0.391ms
+>>> [267/686] case 266 JYXH B13 kv34768 H12/1
+    fa3=0.998ms fa4=0.931ms fia=0.403ms
+>>> [268/686] case 267 JYXH B14 kv34768 H12/1
+    fa3=1.025ms fa4=0.945ms fia=0.412ms
+>>> [269/686] case 268 JYXH B15 kv34768 H12/1
+    fa3=1.007ms fa4=0.990ms fia=0.414ms
+>>> [270/686] case 269 JYXH B16 kv34768 H12/1
+    fa3=0.990ms fa4=0.958ms fia=0.417ms
+>>> [271/686] case 270 JYXH B17 kv34768 H12/1
+    fa3=1.002ms fa4=1.009ms fia=0.435ms
+>>> [272/686] case 271 JYXH B18 kv34768 H12/1
+    fa3=1.022ms fa4=1.031ms fia=0.445ms
+>>> [273/686] case 272 JYXH B19 kv34768 H12/1
+    fa3=1.067ms fa4=1.064ms fia=0.451ms
+>>> [274/686] case 273 JYXH B20 kv34768 H12/1
+    fa3=1.017ms fa4=1.048ms fia=0.461ms
+>>> [275/686] case 274 JYXH B21 kv34768 H12/1
+    fa3=1.247ms fa4=1.244ms fia=0.682ms
+>>> [276/686] case 275 JYXH B22 kv34768 H12/1
+    fa3=1.215ms fa4=1.257ms fia=0.680ms
+>>> [277/686] case 276 JYXH B23 kv34768 H12/1
+    fa3=1.190ms fa4=1.245ms fia=0.681ms
+>>> [278/686] case 277 JYXH B24 kv34768 H12/1
+    fa3=1.189ms fa4=1.215ms fia=0.673ms
+>>> [279/686] case 278 JYXH B25 kv34768 H12/1
+    fa3=1.211ms fa4=1.241ms fia=0.678ms
+>>> [280/686] case 279 JYXH B26 kv34768 H12/1
+    fa3=1.178ms fa4=1.221ms fia=0.677ms
+>>> [281/686] case 280 JYXH B27 kv34768 H12/1
+    fa3=1.190ms fa4=1.271ms fia=0.692ms
+>>> [282/686] case 281 JYXH B28 kv34768 H12/1
+    fa3=1.259ms fa4=1.292ms fia=0.695ms
+>>> [283/686] case 282 JYXH B1 kv133072 H12/1
+    fa3=1.286ms fa4=0.958ms fia=0.679ms
+>>> [284/686] case 283 JYXH B2 kv133072 H12/1
+    fa3=1.462ms fa4=0.935ms fia=0.870ms
+>>> [285/686] case 284 JYXH B3 kv133072 H12/1
+    fa3=1.515ms fa4=0.883ms fia=0.948ms
+>>> [286/686] case 285 JYXH B4 kv133072 H12/1
+    fa3=1.586ms fa4=1.042ms fia=1.012ms
+>>> [287/686] case 286 JYXH B1 kv264144 H12/1
+    fa3=2.163ms fa4=0.886ms fia=1.559ms
+>>> [288/686] case 287 JYXH B2 kv264144 H12/1
+    fa3=2.411ms fa4=0.927ms fia=1.801ms
+>>> [289/686] case 288 JYXH B3 kv264144 H12/1
+    fa3=2.433ms fa4=1.079ms fia=1.872ms
+>>> [290/686] case 289 JYXH B4 kv264144 H12/1
+    fa3=2.436ms fa4=1.199ms fia=1.989ms
+>>> [291/686] case 290 llama3.1-70b B1 kv256 H16/4
+    fa3=1.070ms fa4=0.883ms fia=0.238ms
+>>> [292/686] case 291 llama3.1-70b B1 kv263 H16/4
+    fa3=1.038ms fa4=0.927ms fia=0.241ms
+>>> [293/686] case 292 llama3.1-70b B1 kv512 H16/4
+    fa3=0.997ms fa4=0.902ms fia=0.234ms
+>>> [294/686] case 293 llama3.1-70b B1 kv519 H16/4
+    fa3=0.984ms fa4=0.872ms fia=0.229ms
+>>> [295/686] case 294 llama3.1-70b B1 kv1024 H16/4
+    fa3=0.976ms fa4=0.880ms fia=0.237ms
+>>> [296/686] case 295 llama3.1-70b B1 kv1031 H16/4
+    fa3=1.026ms fa4=0.890ms fia=0.231ms
+>>> [297/686] case 296 llama3.1-70b B1 kv2048 H16/4
+    fa3=1.037ms fa4=0.969ms fia=0.282ms
+>>> [298/686] case 297 llama3.1-70b B1 kv2055 H16/4
+    fa3=1.082ms fa4=0.988ms fia=0.274ms
+>>> [299/686] case 298 llama3.1-70b B1 kv4096 H16/4
+    fa3=0.993ms fa4=0.989ms fia=0.281ms
+>>> [300/686] case 299 llama3.1-70b B1 kv5120 H16/4
+    fa3=1.047ms fa4=0.920ms fia=0.256ms
+>>> [301/686] case 300 llama3.1-70b B16 kv256 H16/4
+    fa3=0.983ms fa4=0.879ms fia=0.245ms
+>>> [302/686] case 301 llama3.1-70b B16 kv263 H16/4
+    fa3=0.960ms fa4=0.881ms fia=0.250ms
+>>> [303/686] case 302 llama3.1-70b B16 kv512 H16/4
+    fa3=0.972ms fa4=0.894ms fia=0.248ms
+>>> [304/686] case 303 llama3.1-70b B16 kv519 H16/4
+    fa3=0.966ms fa4=0.884ms fia=0.250ms
+>>> [305/686] case 304 llama3.1-70b B16 kv1024 H16/4
+    fa3=1.017ms fa4=0.938ms fia=0.303ms
+>>> [306/686] case 305 llama3.1-70b B16 kv1031 H16/4
+    fa3=1.108ms fa4=0.999ms fia=0.304ms
+>>> [307/686] case 306 llama3.1-70b B16 kv2048 H16/4
+    fa3=1.113ms fa4=1.033ms fia=0.301ms
+>>> [308/686] case 307 llama3.1-70b B16 kv2055 H16/4
+    fa3=1.102ms fa4=1.008ms fia=0.300ms
+>>> [309/686] case 308 llama3.1-70b B16 kv4096 H16/4
+    fa3=1.102ms fa4=0.999ms fia=0.349ms
+>>> [310/686] case 309 llama3.1-70b B16 kv5120 H16/4
+    fa3=1.083ms fa4=0.997ms fia=0.373ms
+>>> [311/686] case 310 llama3.1-70b B32 kv256 H16/4
+    fa3=1.003ms fa4=0.921ms fia=0.268ms
+>>> [312/686] case 311 llama3.1-70b B32 kv263 H16/4
+    fa3=1.022ms fa4=0.939ms fia=0.274ms
+>>> [313/686] case 312 llama3.1-70b B32 kv512 H16/4
+    fa3=1.033ms fa4=0.984ms fia=0.274ms
+>>> [314/686] case 313 llama3.1-70b B32 kv519 H16/4
+    fa3=1.155ms fa4=1.047ms fia=0.314ms
+>>> [315/686] case 314 llama3.1-70b B32 kv1024 H16/4
+    fa3=1.039ms fa4=1.038ms fia=0.269ms
+>>> [316/686] case 315 llama3.1-70b B32 kv1031 H16/4
+    fa3=1.061ms fa4=1.039ms fia=0.300ms
+>>> [317/686] case 316 llama3.1-70b B32 kv2048 H16/4
+    fa3=1.050ms fa4=0.947ms fia=0.346ms
+>>> [318/686] case 317 llama3.1-70b B32 kv2055 H16/4
+    fa3=1.053ms fa4=1.009ms fia=0.358ms
+>>> [319/686] case 318 llama3.1-70b B32 kv4096 H16/4
+    fa3=1.061ms fa4=1.101ms fia=0.515ms
+>>> [320/686] case 319 llama3.1-70b B32 kv5120 H16/4
+    fa3=1.147ms fa4=1.166ms fia=0.591ms
+>>> [321/686] case 320 llama3.1-70b B64 kv256 H16/4
+    fa3=1.003ms fa4=0.904ms fia=0.287ms
+>>> [322/686] case 321 llama3.1-70b B64 kv263 H16/4
+    fa3=0.997ms fa4=0.917ms fia=0.326ms
+>>> [323/686] case 322 llama3.1-70b B64 kv512 H16/4
+    fa3=1.001ms fa4=0.912ms fia=0.286ms
+>>> [324/686] case 323 llama3.1-70b B64 kv519 H16/4
+    fa3=1.024ms fa4=0.923ms fia=0.288ms
+>>> [325/686] case 324 llama3.1-70b B64 kv1024 H16/4
+    fa3=1.024ms fa4=0.916ms fia=0.344ms
+>>> [326/686] case 325 llama3.1-70b B64 kv1031 H16/4
+    fa3=0.997ms fa4=0.946ms fia=0.397ms
+>>> [327/686] case 326 llama3.1-70b B64 kv2048 H16/4
+    fa3=1.032ms fa4=1.148ms fia=0.549ms
+>>> [328/686] case 327 llama3.1-70b B64 kv2055 H16/4
+    fa3=1.041ms fa4=1.118ms fia=0.550ms
+>>> [329/686] case 328 llama3.1-70b B64 kv4096 H16/4
+    fa3=1.314ms fa4=1.399ms fia=0.839ms
+>>> [330/686] case 329 llama3.1-70b B64 kv5120 H16/2
+    fa3=1.184ms fa4=1.228ms fia=0.640ms
+>>> [331/686] case 330 codellama-34b B1 kv512 H16/2
+    fa3=1.024ms fa4=0.914ms fia=0.259ms
+>>> [332/686] case 331 codellama-34b B1 kv513 H16/2
+    fa3=1.053ms fa4=0.931ms fia=0.249ms
+>>> [333/686] case 332 codellama-34b B1 kv1024 H16/2
+    fa3=0.999ms fa4=0.924ms fia=0.252ms
+>>> [334/686] case 333 codellama-34b B1 kv1025 H16/2
+    fa3=1.007ms fa4=0.945ms fia=0.249ms
+>>> [335/686] case 334 codellama-34b B1 kv2048 H16/2
+    fa3=1.005ms fa4=0.936ms fia=0.257ms
+>>> [336/686] case 335 codellama-34b B1 kv2049 H16/2
+    fa3=1.054ms fa4=0.931ms fia=0.251ms
+>>> [337/686] case 336 codellama-34b B1 kv4096 H16/2
+    fa3=1.018ms fa4=0.940ms fia=0.251ms
+>>> [338/686] case 337 codellama-34b B1 kv5120 H16/2
+    fa3=1.012ms fa4=0.923ms fia=0.250ms
+>>> [339/686] case 338 codellama-34b B16 kv512 H16/2
+    fa3=1.042ms fa4=0.939ms fia=0.266ms
+>>> [340/686] case 339 codellama-34b B16 kv513 H16/2
+    fa3=1.022ms fa4=0.920ms fia=0.261ms
+>>> [341/686] case 340 codellama-34b B16 kv1024 H16/2
+    fa3=1.021ms fa4=0.922ms fia=0.259ms
+>>> [342/686] case 341 codellama-34b B16 kv1025 H16/2
+    fa3=1.014ms fa4=0.921ms fia=0.268ms
+>>> [343/686] case 342 codellama-34b B16 kv2048 H16/2
+    fa3=1.021ms fa4=0.930ms fia=0.269ms
+>>> [344/686] case 343 codellama-34b B16 kv2049 H16/2
+    fa3=1.042ms fa4=0.948ms fia=0.287ms
+>>> [345/686] case 344 codellama-34b B16 kv4096 H16/2
+    fa3=1.099ms fa4=1.007ms fia=0.282ms
+>>> [346/686] case 345 codellama-34b B16 kv5120 H16/2
+    fa3=0.938ms fa4=0.897ms fia=0.253ms
+>>> [347/686] case 346 codellama-34b B32 kv256 H16/2
+    fa3=1.011ms fa4=0.923ms fia=0.272ms
+>>> [348/686] case 347 codellama-34b B32 kv257 H16/2
+    fa3=1.025ms fa4=0.919ms fia=0.266ms
+>>> [349/686] case 348 codellama-34b B32 kv512 H16/2
+    fa3=0.999ms fa4=0.912ms fia=0.267ms
+>>> [350/686] case 349 codellama-34b B32 kv513 H16/2
+    fa3=0.987ms fa4=0.910ms fia=0.263ms
+>>> [351/686] case 350 codellama-34b B32 kv1024 H16/2
+    fa3=1.007ms fa4=0.900ms fia=0.267ms
+>>> [352/686] case 351 codellama-34b B32 kv1025 H16/2
+    fa3=0.979ms fa4=0.913ms fia=0.276ms
+>>> [353/686] case 352 codellama-34b B32 kv2048 H16/2
+    fa3=0.991ms fa4=0.895ms fia=0.269ms
+>>> [354/686] case 353 codellama-34b B32 kv2049 H16/2
+    fa3=0.991ms fa4=0.888ms fia=0.258ms
+>>> [355/686] case 354 codellama-34b B32 kv4096 H16/2
+    fa3=0.983ms fa4=0.914ms fia=0.324ms
+>>> [356/686] case 355 codellama-34b B32 kv5120 H16/2
+    fa3=1.005ms fa4=0.956ms fia=0.383ms
+>>> [357/686] case 356 codellama-34b B64 kv256 H16/2
+    fa3=0.972ms fa4=0.883ms fia=0.283ms
+>>> [358/686] case 357 codellama-34b B64 kv257 H16/2
+    fa3=0.975ms fa4=0.885ms fia=0.284ms
+>>> [359/686] case 358 codellama-34b B64 kv512 H16/2
+    fa3=1.000ms fa4=0.922ms fia=0.288ms
+>>> [360/686] case 359 codellama-34b B64 kv513 H16/2
+    fa3=1.009ms fa4=0.939ms fia=0.287ms
+>>> [361/686] case 360 codellama-34b B64 kv1024 H16/2
+    fa3=1.008ms fa4=0.953ms fia=0.297ms
+>>> [362/686] case 361 codellama-34b B64 kv1025 H16/2
+    fa3=1.013ms fa4=0.922ms fia=0.296ms
+>>> [363/686] case 362 codellama-34b B64 kv2048 H16/2
+    fa3=1.030ms fa4=0.907ms fia=0.357ms
+>>> [364/686] case 363 codellama-34b B64 kv2049 H16/2
+    fa3=0.988ms fa4=0.902ms fia=0.357ms
+>>> [365/686] case 364 codellama-34b B64 kv4096 H16/2
+    fa3=1.015ms fa4=1.099ms fia=0.549ms
+>>> [366/686] case 365 codellama-34b B64 kv5120 H16/2
+    fa3=1.111ms fa4=1.177ms fia=0.628ms
+>>> [367/686] case 366 llama2-7B/baichuan2-7B B1 kv256 H16/16
+    fa3=1.011ms fa4=0.912ms fia=0.247ms
+>>> [368/686] case 367 llama2-7B/baichuan2-7B B1 kv263 H16/16
+    fa3=1.045ms fa4=0.939ms fia=0.244ms
+>>> [369/686] case 368 llama2-7B/baichuan2-7B B1 kv512 H16/16
+    fa3=0.997ms fa4=0.909ms fia=0.246ms
+>>> [370/686] case 369 llama2-7B/baichuan2-7B B1 kv519 H16/16
+    fa3=1.013ms fa4=0.880ms fia=0.227ms
+>>> [371/686] case 370 llama2-7B/baichuan2-7B B1 kv1024 H16/16
+    fa3=0.976ms fa4=0.896ms fia=0.234ms
+>>> [372/686] case 371 llama2-7B/baichuan2-7B B1 kv1031 H16/16
+    fa3=1.021ms fa4=0.909ms fia=0.246ms
+>>> [373/686] case 372 llama2-7B/baichuan2-7B B1 kv2048 H16/16
+    fa3=0.982ms fa4=0.867ms fia=0.236ms
+>>> [374/686] case 373 llama2-7B/baichuan2-7B B1 kv2055 H16/16
+    fa3=0.995ms fa4=0.870ms fia=0.236ms
+>>> [375/686] case 374 llama2-7B/baichuan2-7B B1 kv4096 H16/16
+    fa3=1.001ms fa4=0.887ms fia=0.234ms
+>>> [376/686] case 375 llama2-7B/baichuan2-7B B1 kv5120 H16/16
+    fa3=0.985ms fa4=0.932ms fia=0.236ms
+>>> [377/686] case 376 llama2-7B/baichuan2-7B B16 kv256 H16/16
+    fa3=0.977ms fa4=0.863ms fia=0.248ms
+>>> [378/686] case 377 llama2-7B/baichuan2-7B B16 kv263 H16/16
+    fa3=0.986ms fa4=0.896ms fia=0.255ms
+>>> [379/686] case 378 llama2-7B/baichuan2-7B B16 kv512 H16/16
+    fa3=0.995ms fa4=0.908ms fia=0.249ms
+>>> [380/686] case 379 llama2-7B/baichuan2-7B B16 kv519 H16/16
+    fa3=1.003ms fa4=0.962ms fia=0.252ms
+>>> [381/686] case 380 llama2-7B/baichuan2-7B B16 kv1024 H16/16
+    fa3=0.982ms fa4=0.876ms fia=0.291ms
+>>> [382/686] case 381 llama2-7B/baichuan2-7B B16 kv1031 H16/16
+    fa3=0.978ms fa4=0.870ms fia=0.300ms
+>>> [383/686] case 382 llama2-7B/baichuan2-7B B16 kv2048 H16/16
+    fa3=0.973ms fa4=1.010ms fia=0.476ms
+>>> [384/686] case 383 llama2-7B/baichuan2-7B B16 kv2055 H16/16
+    fa3=1.028ms fa4=1.058ms fia=0.481ms
+>>> [385/686] case 384 llama2-7B/baichuan2-7B B16 kv4096 H16/16
+    fa3=1.278ms fa4=1.330ms fia=0.770ms
+>>> [386/686] case 385 llama2-7B/baichuan2-7B B16 kv5120 H16/16
+    fa3=1.453ms fa4=1.475ms fia=0.910ms
+>>> [387/686] case 386 llama2-7B/baichuan2-7B B32 kv256 H16/16
+    fa3=1.091ms fa4=0.940ms fia=0.295ms
+>>> [388/686] case 387 llama2-7B/baichuan2-7B B32 kv263 H16/16
+    fa3=0.995ms fa4=0.904ms fia=0.283ms
+>>> [389/686] case 388 llama2-7B/baichuan2-7B B32 kv512 H16/16
+    fa3=0.991ms fa4=0.895ms fia=0.317ms
+>>> [390/686] case 389 llama2-7B/baichuan2-7B B32 kv519 H16/16
+    fa3=1.044ms fa4=0.965ms fia=0.345ms
+>>> [391/686] case 390 llama2-7B/baichuan2-7B B32 kv1024 H16/16
+    fa3=1.211ms fa4=1.142ms fia=0.520ms
+>>> [392/686] case 391 llama2-7B/baichuan2-7B B32 kv1031 H16/16
+    fa3=1.038ms fa4=1.047ms fia=0.509ms
+>>> [393/686] case 392 llama2-7B/baichuan2-7B B32 kv2048 H16/16
+    fa3=1.283ms fa4=1.322ms fia=0.799ms
+>>> [394/686] case 393 llama2-7B/baichuan2-7B B32 kv2055 H16/16
+    fa3=1.316ms fa4=1.338ms fia=0.800ms
+>>> [395/686] case 394 llama2-7B/baichuan2-7B B32 kv4096 H16/16
+    fa3=1.830ms fa4=1.904ms fia=1.379ms
+>>> [396/686] case 395 llama2-7B/baichuan2-7B B32 kv5120 H16/16
+    fa3=2.130ms fa4=2.178ms fia=1.652ms
+>>> [397/686] case 396 llama2-7B/baichuan2-7B B64 kv256 H16/16
+    fa3=0.940ms fa4=0.872ms fia=0.398ms
+>>> [398/686] case 397 llama2-7B/baichuan2-7B B64 kv263 H16/16
+    fa3=0.955ms fa4=0.916ms fia=0.431ms
+>>> [399/686] case 398 llama2-7B/baichuan2-7B B64 kv512 H16/16
+    fa3=0.983ms fa4=1.022ms fia=0.535ms
+>>> [400/686] case 399 llama2-7B/baichuan2-7B B64 kv519 H16/16
+    fa3=1.044ms fa4=1.077ms fia=0.559ms
+>>> [401/686] case 400 llama2-7B/baichuan2-7B B64 kv1024 H16/16
+    fa3=1.271ms fa4=1.378ms fia=0.843ms
+>>> [402/686] case 401 llama2-7B/baichuan2-7B B64 kv1031 H16/16
+    fa3=1.325ms fa4=1.406ms fia=0.879ms
+>>> [403/686] case 402 llama2-7B/baichuan2-7B B64 kv2048 H16/16
+    fa3=1.884ms fa4=1.950ms fia=1.446ms
+>>> [404/686] case 403 llama2-7B/baichuan2-7B B64 kv2055 H16/16
+    fa3=1.942ms fa4=1.991ms fia=1.468ms
+>>> [405/686] case 404 llama2-7B/baichuan2-7B B64 kv4096 H16/16
+    fa3=3.007ms fa4=3.098ms fia=2.596ms
+>>> [406/686] case 405 llama2-7B/baichuan2-7B B64 kv5120 H16/16
+    fa3=3.613ms fa4=3.700ms fia=3.187ms
+>>> [407/686] case 406 llama2-13B/baichuan2-13B/Qwen-14B B1 kv256 H10/10
+    fa3=0.997ms fa4=0.878ms fia=0.234ms
+>>> [408/686] case 407 llama2-13B/baichuan2-13B/Qwen-14B B1 kv263 H10/10
+    fa3=1.029ms fa4=0.965ms fia=0.252ms
+>>> [409/686] case 408 llama2-13B/baichuan2-13B/Qwen-14B B1 kv512 H10/10
+    fa3=1.019ms fa4=0.937ms fia=0.245ms
+>>> [410/686] case 409 llama2-13B/baichuan2-13B/Qwen-14B B1 kv519 H10/10
+    fa3=0.985ms fa4=0.933ms fia=0.245ms
+>>> [411/686] case 410 llama2-13B/baichuan2-13B/Qwen-14B B1 kv1024 H10/10
+    fa3=1.019ms fa4=0.938ms fia=0.245ms
+>>> [412/686] case 411 llama2-13B/baichuan2-13B/Qwen-14B B1 kv1031 H10/10
+    fa3=1.041ms fa4=0.944ms fia=0.244ms
+>>> [413/686] case 412 llama2-13B/baichuan2-13B/Qwen-14B B1 kv2048 H10/10
+    fa3=1.016ms fa4=0.944ms fia=0.287ms
+>>> [414/686] case 413 llama2-13B/baichuan2-13B/Qwen-14B B1 kv2055 H10/10
+    fa3=1.070ms fa4=0.967ms fia=0.247ms
+>>> [415/686] case 414 llama2-13B/baichuan2-13B/Qwen-14B B1 kv4096 H10/10
+    fa3=1.049ms fa4=0.939ms fia=0.244ms
+>>> [416/686] case 415 llama2-13B/baichuan2-13B/Qwen-14B B1 kv5120 H10/10
+    fa3=1.031ms fa4=0.933ms fia=0.238ms
+>>> [417/686] case 416 llama2-13B/baichuan2-13B/Qwen-14B B16 kv256 H10/10
+    fa3=1.037ms fa4=0.936ms fia=0.252ms
+>>> [418/686] case 417 llama2-13B/baichuan2-13B/Qwen-14B B16 kv263 H10/10
+    fa3=1.041ms fa4=0.958ms fia=0.258ms
+>>> [419/686] case 418 llama2-13B/baichuan2-13B/Qwen-14B B16 kv512 H10/10
+    fa3=1.044ms fa4=0.946ms fia=0.262ms
+>>> [420/686] case 419 llama2-13B/baichuan2-13B/Qwen-14B B16 kv519 H10/10
+    fa3=1.049ms fa4=0.955ms fia=0.260ms
+>>> [421/686] case 420 llama2-13B/baichuan2-13B/Qwen-14B B16 kv1024 H10/10
+    fa3=1.005ms fa4=0.921ms fia=0.256ms
+>>> [422/686] case 421 llama2-13B/baichuan2-13B/Qwen-14B B16 kv1031 H10/10
+    fa3=1.039ms fa4=0.937ms fia=0.262ms
+>>> [423/686] case 422 llama2-13B/baichuan2-13B/Qwen-14B B16 kv2048 H10/10
+    fa3=1.009ms fa4=0.915ms fia=0.337ms
+>>> [424/686] case 423 llama2-13B/baichuan2-13B/Qwen-14B B16 kv2055 H10/10
+    fa3=0.991ms fa4=0.904ms fia=0.339ms
+>>> [425/686] case 424 llama2-13B/baichuan2-13B/Qwen-14B B16 kv4096 H10/10
+    fa3=1.091ms fa4=1.108ms fia=0.557ms
+>>> [426/686] case 425 llama2-13B/baichuan2-13B/Qwen-14B B16 kv5120 H10/10
+    fa3=1.181ms fa4=1.210ms fia=0.658ms
+>>> [427/686] case 426 llama2-13B/baichuan2-13B/Qwen-14B B32 kv256 H10/10
+    fa3=0.985ms fa4=0.884ms fia=0.264ms
+>>> [428/686] case 427 llama2-13B/baichuan2-13B/Qwen-14B B32 kv263 H10/10
+    fa3=0.996ms fa4=0.917ms fia=0.270ms
+>>> [429/686] case 428 llama2-13B/baichuan2-13B/Qwen-14B B32 kv512 H10/10
+    fa3=1.066ms fa4=0.956ms fia=0.271ms
+>>> [430/686] case 429 llama2-13B/baichuan2-13B/Qwen-14B B32 kv519 H10/10
+    fa3=1.031ms fa4=0.964ms fia=0.283ms
+>>> [431/686] case 430 llama2-13B/baichuan2-13B/Qwen-14B B32 kv1024 H10/10
+    fa3=1.070ms fa4=1.000ms fia=0.365ms
+>>> [432/686] case 431 llama2-13B/baichuan2-13B/Qwen-14B B32 kv1031 H10/10
+    fa3=1.064ms fa4=0.978ms fia=0.371ms
+>>> [433/686] case 432 llama2-13B/baichuan2-13B/Qwen-14B B32 kv2048 H10/10
+    fa3=1.134ms fa4=1.171ms fia=0.600ms
+>>> [434/686] case 433 llama2-13B/baichuan2-13B/Qwen-14B B32 kv2055 H10/10
+    fa3=1.137ms fa4=1.158ms fia=0.599ms
+>>> [435/686] case 434 llama2-13B/baichuan2-13B/Qwen-14B B32 kv4096 H10/10
+    fa3=1.520ms fa4=1.537ms fia=0.973ms
+>>> [436/686] case 435 llama2-13B/baichuan2-13B/Qwen-14B B32 kv5120 H10/10
+    fa3=1.744ms fa4=1.744ms fia=1.162ms
+>>> [437/686] case 436 llama2-13B/baichuan2-13B/Qwen-14B B64 kv256 H10/10
+    fa3=1.040ms fa4=0.993ms fia=0.346ms
+>>> [438/686] case 437 llama2-13B/baichuan2-13B/Qwen-14B B64 kv263 H10/10
+    fa3=1.013ms fa4=0.998ms fia=0.357ms
+>>> [439/686] case 438 llama2-13B/baichuan2-13B/Qwen-14B B64 kv512 H10/10
+    fa3=1.040ms fa4=0.954ms fia=0.396ms
+>>> [440/686] case 439 llama2-13B/baichuan2-13B/Qwen-14B B64 kv519 H10/10
+    fa3=1.002ms fa4=0.918ms fia=0.408ms
+>>> [441/686] case 440 llama2-13B/baichuan2-13B/Qwen-14B B64 kv1024 H10/10
+    fa3=1.109ms fa4=1.134ms fia=0.633ms
+>>> [442/686] case 441 llama2-13B/baichuan2-13B/Qwen-14B B64 kv1031 H10/10
+    fa3=1.160ms fa4=1.190ms fia=0.670ms
+>>> [443/686] case 442 llama2-13B/baichuan2-13B/Qwen-14B B64 kv2048 H10/10
+    fa3=1.548ms fa4=1.539ms fia=1.030ms
+>>> [444/686] case 443 llama2-13B/baichuan2-13B/Qwen-14B B64 kv2055 H10/10
+    fa3=1.563ms fa4=1.609ms fia=1.058ms
+>>> [445/686] case 444 llama2-13B/baichuan2-13B/Qwen-14B B64 kv4096 H10/10
+    fa3=2.280ms fa4=2.361ms fia=1.810ms
+>>> [446/686] case 445 llama2-13B/baichuan2-13B/Qwen-14B B64 kv5120 H10/10
+    fa3=2.644ms fa4=2.726ms fia=2.190ms
+>>> [447/686] case 446 Qwen3-235B/Qwen3-32B B1 kv256 H10/2
+    fa3=1.058ms fa4=0.968ms fia=0.266ms
+>>> [448/686] case 447 Qwen3-235B/Qwen3-32B B1 kv263 H10/2
+    fa3=1.058ms fa4=0.970ms fia=0.265ms
+>>> [449/686] case 448 Qwen3-235B/Qwen3-32B B1 kv512 H10/2
+    fa3=1.077ms fa4=0.977ms fia=0.266ms
+>>> [450/686] case 449 Qwen3-235B/Qwen3-32B B1 kv519 H10/2
+    fa3=1.080ms fa4=0.999ms fia=0.265ms
+>>> [451/686] case 450 Qwen3-235B/Qwen3-32B B1 kv1024 H10/2
+    fa3=1.086ms fa4=0.953ms fia=0.264ms
+>>> [452/686] case 451 Qwen3-235B/Qwen3-32B B1 kv1031 H10/2
+    fa3=1.069ms fa4=0.971ms fia=0.266ms
+>>> [453/686] case 452 Qwen3-235B/Qwen3-32B B1 kv2048 H10/2
+    fa3=1.059ms fa4=0.943ms fia=0.259ms
+>>> [454/686] case 453 Qwen3-235B/Qwen3-32B B1 kv2055 H10/2
+    fa3=1.049ms fa4=0.953ms fia=0.254ms
+>>> [455/686] case 454 Qwen3-235B/Qwen3-32B B1 kv4096 H10/2
+    fa3=1.036ms fa4=0.940ms fia=0.264ms
+>>> [456/686] case 455 Qwen3-235B/Qwen3-32B B1 kv5120 H10/2
+    fa3=1.063ms fa4=0.967ms fia=0.255ms
+>>> [457/686] case 456 Qwen3-235B/Qwen3-32B B16 kv256 H10/2
+    fa3=1.028ms fa4=0.958ms fia=0.268ms
+>>> [458/686] case 457 Qwen3-235B/Qwen3-32B B16 kv263 H10/2
+    fa3=1.064ms fa4=0.940ms fia=0.275ms
+>>> [459/686] case 458 Qwen3-235B/Qwen3-32B B16 kv512 H10/2
+    fa3=1.041ms fa4=0.933ms fia=0.270ms
+>>> [460/686] case 459 Qwen3-235B/Qwen3-32B B16 kv519 H10/2
+    fa3=1.079ms fa4=0.972ms fia=0.284ms
+>>> [461/686] case 460 Qwen3-235B/Qwen3-32B B16 kv1024 H10/2
+    fa3=1.054ms fa4=0.943ms fia=0.256ms
+>>> [462/686] case 461 Qwen3-235B/Qwen3-32B B16 kv1031 H10/2
+    fa3=0.978ms fa4=0.878ms fia=0.247ms
+>>> [463/686] case 462 Qwen3-235B/Qwen3-32B B16 kv2048 H10/2
+    fa3=0.979ms fa4=0.898ms fia=0.249ms
+>>> [464/686] case 463 Qwen3-235B/Qwen3-32B B16 kv2055 H10/2
+    fa3=1.007ms fa4=0.931ms fia=0.263ms
+>>> [465/686] case 464 Qwen3-235B/Qwen3-32B B16 kv4096 H10/2
+    fa3=1.026ms fa4=0.921ms fia=0.255ms
+>>> [466/686] case 465 Qwen3-235B/Qwen3-32B B16 kv5120 H10/2
+    fa3=1.013ms fa4=0.910ms fia=0.249ms
+>>> [467/686] case 466 Qwen3-235B/Qwen3-32B B32 kv256 H10/2
+    fa3=1.007ms fa4=0.882ms fia=0.262ms
+>>> [468/686] case 467 Qwen3-235B/Qwen3-32B B32 kv263 H10/2
+    fa3=0.996ms fa4=0.917ms fia=0.264ms
+>>> [469/686] case 468 Qwen3-235B/Qwen3-32B B32 kv512 H10/2
+    fa3=1.009ms fa4=0.904ms fia=0.266ms
+>>> [470/686] case 469 Qwen3-235B/Qwen3-32B B32 kv519 H10/2
+    fa3=1.001ms fa4=0.911ms fia=0.264ms
+>>> [471/686] case 470 Qwen3-235B/Qwen3-32B B32 kv1024 H10/2
+    fa3=1.000ms fa4=0.923ms fia=0.265ms
+>>> [472/686] case 471 Qwen3-235B/Qwen3-32B B32 kv1031 H10/2
+    fa3=1.007ms fa4=0.906ms fia=0.263ms
+>>> [473/686] case 472 Qwen3-235B/Qwen3-32B B32 kv2048 H10/2
+    fa3=1.013ms fa4=0.922ms fia=0.263ms
+>>> [474/686] case 473 Qwen3-235B/Qwen3-32B B32 kv2055 H10/2
+    fa3=1.010ms fa4=0.928ms fia=0.269ms
+>>> [475/686] case 474 Qwen3-235B/Qwen3-32B B32 kv4096 H10/2
+    fa3=1.040ms fa4=0.888ms fia=0.342ms
+>>> [476/686] case 475 Qwen3-235B/Qwen3-32B B32 kv5120 H10/2
+    fa3=1.002ms fa4=0.966ms fia=0.389ms
+>>> [477/686] case 476 Qwen3-235B/Qwen3-32B B64 kv256 H10/2
+    fa3=1.010ms fa4=0.895ms fia=0.288ms
+>>> [478/686] case 477 Qwen3-235B/Qwen3-32B B64 kv263 H10/2
+    fa3=1.000ms fa4=0.890ms fia=0.284ms
+>>> [479/686] case 478 Qwen3-235B/Qwen3-32B B64 kv512 H10/2
+    fa3=0.997ms fa4=0.919ms fia=0.296ms
+>>> [480/686] case 479 Qwen3-235B/Qwen3-32B B64 kv519 H10/2
+    fa3=1.010ms fa4=0.873ms fia=0.287ms
+>>> [481/686] case 480 Qwen3-235B/Qwen3-32B B64 kv1024 H10/2
+    fa3=1.005ms fa4=0.897ms fia=0.283ms
+>>> [482/686] case 481 Qwen3-235B/Qwen3-32B B64 kv1031 H10/2
+    fa3=1.030ms fa4=0.952ms fia=0.312ms
+>>> [483/686] case 482 Qwen3-235B/Qwen3-32B B64 kv2048 H10/2
+    fa3=1.095ms fa4=0.907ms fia=0.361ms
+>>> [484/686] case 483 Qwen3-235B/Qwen3-32B B64 kv2055 H10/2
+    fa3=1.009ms fa4=1.034ms fia=0.357ms
+>>> [485/686] case 484 Qwen3-235B/Qwen3-32B B64 kv4096 H10/2
+    fa3=1.028ms fa4=1.100ms fia=0.543ms
+>>> [486/686] case 485 Qwen3-235B/Qwen3-32B B64 kv5120 H10/2
+    fa3=1.146ms fa4=1.216ms fia=0.628ms
+>>> [487/686] case 486 Qwen3-235B/Qwen3-32B B1 kv256 H5/1
+    fa3=0.995ms fa4=0.910ms fia=0.237ms
+>>> [488/686] case 487 Qwen3-235B/Qwen3-32B B1 kv263 H5/1
+    fa3=1.010ms fa4=0.886ms fia=0.243ms
+>>> [489/686] case 488 Qwen3-235B/Qwen3-32B B1 kv512 H5/1
+    fa3=1.025ms fa4=0.920ms fia=0.235ms
+>>> [490/686] case 489 Qwen3-235B/Qwen3-32B B1 kv519 H5/1
+    fa3=0.983ms fa4=0.882ms fia=0.236ms
+>>> [491/686] case 490 Qwen3-235B/Qwen3-32B B1 kv1024 H5/1
+    fa3=0.949ms fa4=0.884ms fia=0.238ms
+>>> [492/686] case 491 Qwen3-235B/Qwen3-32B B1 kv1031 H5/1
+    fa3=1.005ms fa4=0.895ms fia=0.231ms
+>>> [493/686] case 492 Qwen3-235B/Qwen3-32B B1 kv2048 H5/1
+    fa3=0.959ms fa4=0.880ms fia=0.237ms
+>>> [494/686] case 493 Qwen3-235B/Qwen3-32B B1 kv2055 H5/1
+    fa3=0.999ms fa4=0.906ms fia=0.237ms
+>>> [495/686] case 494 Qwen3-235B/Qwen3-32B B1 kv4096 H5/1
+    fa3=0.983ms fa4=0.869ms fia=0.226ms
+>>> [496/686] case 495 Qwen3-235B/Qwen3-32B B1 kv5120 H5/1
+    fa3=0.982ms fa4=0.879ms fia=0.229ms
+>>> [497/686] case 496 Qwen3-235B/Qwen3-32B B16 kv256 H5/1
+    fa3=0.951ms fa4=0.893ms fia=0.243ms
+>>> [498/686] case 497 Qwen3-235B/Qwen3-32B B16 kv263 H5/1
+    fa3=0.971ms fa4=0.988ms fia=0.252ms
+>>> [499/686] case 498 Qwen3-235B/Qwen3-32B B16 kv512 H5/1
+    fa3=1.007ms fa4=0.925ms fia=0.260ms
+>>> [500/686] case 499 Qwen3-235B/Qwen3-32B B16 kv519 H5/1
+    fa3=0.997ms fa4=0.895ms fia=0.250ms
+>>> [501/686] case 500 Qwen3-235B/Qwen3-32B B16 kv1024 H5/1
+    fa3=0.963ms fa4=0.939ms fia=0.259ms
+>>> [502/686] case 501 Qwen3-235B/Qwen3-32B B16 kv1031 H5/1
+    fa3=1.011ms fa4=0.909ms fia=0.250ms
+>>> [503/686] case 502 Qwen3-235B/Qwen3-32B B16 kv2048 H5/1
+    fa3=0.992ms fa4=0.962ms fia=0.265ms
+>>> [504/686] case 503 Qwen3-235B/Qwen3-32B B16 kv2055 H5/1
+    fa3=1.023ms fa4=0.973ms fia=0.256ms
+>>> [505/686] case 504 Qwen3-235B/Qwen3-32B B16 kv4096 H5/1
+    fa3=1.060ms fa4=0.934ms fia=0.263ms
+>>> [506/686] case 505 Qwen3-235B/Qwen3-32B B16 kv5120 H5/1
+    fa3=1.028ms fa4=0.960ms fia=0.261ms
+>>> [507/686] case 506 Qwen3-235B/Qwen3-32B B32 kv256 H5/1
+    fa3=1.031ms fa4=0.946ms fia=0.272ms
+>>> [508/686] case 507 Qwen3-235B/Qwen3-32B B32 kv263 H5/1
+    fa3=1.036ms fa4=0.939ms fia=0.259ms
+>>> [509/686] case 508 Qwen3-235B/Qwen3-32B B32 kv512 H5/1
+    fa3=1.043ms fa4=0.903ms fia=0.276ms
+>>> [510/686] case 509 Qwen3-235B/Qwen3-32B B32 kv519 H5/1
+    fa3=1.031ms fa4=0.940ms fia=0.274ms
+>>> [511/686] case 510 Qwen3-235B/Qwen3-32B B32 kv1024 H5/1
+    fa3=0.997ms fa4=0.907ms fia=0.278ms
+>>> [512/686] case 511 Qwen3-235B/Qwen3-32B B32 kv1031 H5/1
+    fa3=1.013ms fa4=0.915ms fia=0.276ms
+>>> [513/686] case 512 Qwen3-235B/Qwen3-32B B32 kv2048 H5/1
+    fa3=0.996ms fa4=0.906ms fia=0.264ms
+>>> [514/686] case 513 Qwen3-235B/Qwen3-32B B32 kv2055 H5/1
+    fa3=1.002ms fa4=0.932ms fia=0.264ms
+>>> [515/686] case 514 Qwen3-235B/Qwen3-32B B32 kv4096 H5/1
+    fa3=0.987ms fa4=0.886ms fia=0.264ms
+>>> [516/686] case 515 Qwen3-235B/Qwen3-32B B32 kv5120 H5/1
+    fa3=1.018ms fa4=0.925ms fia=0.264ms
+>>> [517/686] case 516 Qwen3-235B/Qwen3-32B B64 kv256 H5/1
+    fa3=1.091ms fa4=1.030ms fia=0.344ms
+>>> [518/686] case 517 Qwen3-235B/Qwen3-32B B64 kv263 H5/1
+    fa3=1.066ms fa4=0.981ms fia=0.302ms
+>>> [519/686] case 518 Qwen3-235B/Qwen3-32B B64 kv512 H5/1
+    fa3=1.072ms fa4=0.977ms fia=0.300ms
+>>> [520/686] case 519 Qwen3-235B/Qwen3-32B B64 kv519 H5/1
+    fa3=1.061ms fa4=1.032ms fia=0.339ms
+>>> [521/686] case 520 Qwen3-235B/Qwen3-32B B64 kv1024 H5/1
+    fa3=1.100ms fa4=1.021ms fia=0.303ms
+>>> [522/686] case 521 Qwen3-235B/Qwen3-32B B64 kv1031 H5/1
+    fa3=1.024ms fa4=0.930ms fia=0.295ms
+>>> [523/686] case 522 Qwen3-235B/Qwen3-32B B64 kv2048 H5/1
+    fa3=1.048ms fa4=0.935ms fia=0.293ms
+>>> [524/686] case 523 Qwen3-235B/Qwen3-32B B64 kv2055 H5/1
+    fa3=1.053ms fa4=0.958ms fia=0.295ms
+>>> [525/686] case 524 Qwen3-235B/Qwen3-32B B64 kv4096 H5/1
+    fa3=0.988ms fa4=0.894ms fia=0.321ms
+>>> [526/686] case 525 Qwen3-235B/Qwen3-32B B64 kv5120 H5/1
+    fa3=0.983ms fa4=0.888ms fia=0.359ms
+>>> [527/686] case 526 Qwen3-30B B1 kv256 H32/4
+    fa3=0.981ms fa4=0.869ms fia=0.236ms
+>>> [528/686] case 527 Qwen3-30B B1 kv263 H32/4
+    fa3=0.966ms fa4=0.882ms fia=0.228ms
+>>> [529/686] case 528 Qwen3-30B B1 kv512 H32/4
+    fa3=0.995ms fa4=0.895ms fia=0.237ms
+>>> [530/686] case 529 Qwen3-30B B1 kv519 H32/4
+    fa3=0.985ms fa4=0.884ms fia=0.239ms
+>>> [531/686] case 530 Qwen3-30B B1 kv1024 H32/4
+    fa3=1.016ms fa4=0.880ms fia=0.234ms
+>>> [532/686] case 531 Qwen3-30B B1 kv1031 H32/4
+    fa3=0.990ms fa4=0.896ms fia=0.232ms
+>>> [533/686] case 532 Qwen3-30B B1 kv2048 H32/4
+    fa3=0.978ms fa4=0.915ms fia=0.239ms
+>>> [534/686] case 533 Qwen3-30B B1 kv2055 H32/4
+    fa3=0.976ms fa4=0.909ms fia=0.232ms
+>>> [535/686] case 534 Qwen3-30B B1 kv4096 H32/4
+    fa3=0.985ms fa4=0.866ms fia=0.234ms
+>>> [536/686] case 535 Qwen3-30B B1 kv5120 H32/4
+    fa3=0.984ms fa4=0.958ms fia=0.240ms
+>>> [537/686] case 536 Qwen3-30B B16 kv256 H32/4
+    fa3=0.985ms fa4=0.903ms fia=0.287ms
+>>> [538/686] case 537 Qwen3-30B B16 kv263 H32/4
+    fa3=0.942ms fa4=0.857ms fia=0.248ms
+>>> [539/686] case 538 Qwen3-30B B16 kv512 H32/4
+    fa3=0.985ms fa4=0.862ms fia=0.242ms
+>>> [540/686] case 539 Qwen3-30B B16 kv519 H32/4
+    fa3=0.964ms fa4=0.885ms fia=0.242ms
+>>> [541/686] case 540 Qwen3-30B B16 kv1024 H32/4
+    fa3=0.978ms fa4=0.884ms fia=0.248ms
+>>> [542/686] case 541 Qwen3-30B B16 kv1031 H32/4
+    fa3=0.971ms fa4=0.931ms fia=0.241ms
+>>> [543/686] case 542 Qwen3-30B B16 kv2048 H32/4
+    fa3=0.953ms fa4=0.903ms fia=0.246ms
+>>> [544/686] case 543 Qwen3-30B B16 kv2055 H32/4
+    fa3=0.951ms fa4=0.881ms fia=0.248ms
+>>> [545/686] case 544 Qwen3-30B B16 kv4096 H32/4
+    fa3=1.005ms fa4=0.925ms fia=0.315ms
+>>> [546/686] case 545 Qwen3-30B B16 kv5120 H32/4
+    fa3=1.011ms fa4=0.959ms fia=0.371ms
+>>> [547/686] case 546 Qwen3-30B B32 kv256 H32/4
+    fa3=1.005ms fa4=0.886ms fia=0.259ms
+>>> [548/686] case 547 Qwen3-30B B32 kv263 H32/4
+    fa3=1.003ms fa4=0.877ms fia=0.263ms
+>>> [549/686] case 548 Qwen3-30B B32 kv512 H32/4
+    fa3=1.005ms fa4=0.894ms fia=0.263ms
+>>> [550/686] case 549 Qwen3-30B B32 kv519 H32/4
+    fa3=1.022ms fa4=0.938ms fia=0.264ms
+>>> [551/686] case 550 Qwen3-30B B32 kv1024 H32/4
+    fa3=1.017ms fa4=0.932ms fia=0.269ms
+>>> [552/686] case 551 Qwen3-30B B32 kv1031 H32/4
+    fa3=1.066ms fa4=0.968ms fia=0.291ms
+>>> [553/686] case 552 Qwen3-30B B32 kv2048 H32/4
+    fa3=1.031ms fa4=0.942ms fia=0.350ms
+>>> [554/686] case 553 Qwen3-30B B32 kv2055 H32/4
+    fa3=1.046ms fa4=0.959ms fia=0.350ms
+>>> [555/686] case 554 Qwen3-30B B32 kv4096 H32/4
+    fa3=1.068ms fa4=1.113ms fia=0.544ms
+>>> [556/686] case 555 Qwen3-30B B32 kv5120 H32/4
+    fa3=1.110ms fa4=1.195ms fia=0.606ms
+>>> [557/686] case 556 Qwen3-30B B64 kv256 H32/4
+    fa3=0.973ms fa4=0.873ms fia=0.286ms
+>>> [558/686] case 557 Qwen3-30B B64 kv263 H32/4
+    fa3=0.993ms fa4=0.905ms fia=0.316ms
+>>> [559/686] case 558 Qwen3-30B B64 kv512 H32/4
+    fa3=1.005ms fa4=0.929ms fia=0.284ms
+>>> [560/686] case 559 Qwen3-30B B64 kv519 H32/4
+    fa3=1.009ms fa4=0.901ms fia=0.287ms
+>>> [561/686] case 560 Qwen3-30B B64 kv1024 H32/4
+    fa3=0.995ms fa4=0.920ms fia=0.356ms
+>>> [562/686] case 561 Qwen3-30B B64 kv1031 H32/4
+    fa3=0.969ms fa4=0.927ms fia=0.386ms
+>>> [563/686] case 562 Qwen3-30B B64 kv2048 H32/4
+    fa3=0.990ms fa4=1.128ms fia=0.530ms
+>>> [564/686] case 563 Qwen3-30B B64 kv2055 H32/4
+    fa3=1.013ms fa4=1.070ms fia=0.536ms
+>>> [565/686] case 564 Qwen3-30B B64 kv4096 H32/4
+    fa3=1.270ms fa4=1.358ms fia=0.826ms
+>>> [566/686] case 565 Qwen3-30B B64 kv5120 H32/4
+    fa3=1.441ms fa4=1.622ms fia=0.984ms
+>>> [567/686] case 566 Qwen3-30B B1 kv256 H32/4
+    fa3=0.999ms fa4=0.892ms fia=0.298ms
+>>> [568/686] case 567 Qwen3-30B B1 kv263 H32/4
+    fa3=1.036ms fa4=1.007ms fia=0.257ms
+>>> [569/686] case 568 Qwen3-30B B1 kv512 H32/4
+    fa3=1.136ms fa4=0.988ms fia=0.234ms
+>>> [570/686] case 569 Qwen3-30B B1 kv519 H32/4
+    fa3=1.194ms fa4=1.054ms fia=0.273ms
+>>> [571/686] case 570 Qwen3-30B B1 kv1024 H32/4
+    fa3=1.112ms fa4=0.973ms fia=0.235ms
+>>> [572/686] case 571 Qwen3-30B B1 kv1031 H32/4
+    fa3=1.064ms fa4=0.951ms fia=0.241ms
+>>> [573/686] case 572 Qwen3-30B B1 kv2048 H32/4
+    fa3=1.050ms fa4=0.927ms fia=0.242ms
+>>> [574/686] case 573 Qwen3-30B B1 kv2055 H32/4
+    fa3=1.040ms fa4=0.967ms fia=0.246ms
+>>> [575/686] case 574 Qwen3-30B B1 kv4096 H32/4
+    fa3=1.025ms fa4=0.978ms fia=0.239ms
+>>> [576/686] case 575 Qwen3-30B B1 kv5120 H32/4
+    fa3=1.006ms fa4=0.934ms fia=0.240ms
+>>> [577/686] case 576 Qwen3-30B B16 kv256 H32/4
+    fa3=1.024ms fa4=0.942ms fia=0.271ms
+>>> [578/686] case 577 Qwen3-30B B16 kv263 H32/4
+    fa3=0.995ms fa4=0.910ms fia=0.250ms
+>>> [579/686] case 578 Qwen3-30B B16 kv512 H32/4
+    fa3=1.007ms fa4=0.873ms fia=0.245ms
+>>> [580/686] case 579 Qwen3-30B B16 kv519 H32/4
+    fa3=0.980ms fa4=0.896ms fia=0.245ms
+>>> [581/686] case 580 Qwen3-30B B16 kv1024 H32/4
+    fa3=0.971ms fa4=0.879ms fia=0.241ms
+>>> [582/686] case 581 Qwen3-30B B16 kv1031 H32/4
+    fa3=1.007ms fa4=0.891ms fia=0.250ms
+>>> [583/686] case 582 Qwen3-30B B16 kv2048 H32/4
+    fa3=1.010ms fa4=0.914ms fia=0.255ms
+>>> [584/686] case 583 Qwen3-30B B16 kv2055 H32/4
+    fa3=1.016ms fa4=0.917ms fia=0.261ms
+>>> [585/686] case 584 Qwen3-30B B16 kv4096 H32/4
+    fa3=0.966ms fa4=0.909ms fia=0.326ms
+>>> [586/686] case 585 Qwen3-30B B16 kv5120 H32/4
+    fa3=1.013ms fa4=0.992ms fia=0.378ms
+>>> [587/686] case 586 Qwen3-30B B32 kv256 H32/4
+    fa3=1.024ms fa4=0.953ms fia=0.272ms
+>>> [588/686] case 587 Qwen3-30B B32 kv263 H32/4
+    fa3=1.050ms fa4=0.964ms fia=0.275ms
+>>> [589/686] case 588 Qwen3-30B B32 kv512 H32/4
+    fa3=1.078ms fa4=0.964ms fia=0.280ms
+>>> [590/686] case 589 Qwen3-30B B32 kv519 H32/4
+    fa3=1.056ms fa4=0.961ms fia=0.275ms
+>>> [591/686] case 590 Qwen3-30B B32 kv1024 H32/4
+    fa3=1.055ms fa4=0.955ms fia=0.269ms
+>>> [592/686] case 591 Qwen3-30B B32 kv1031 H32/4
+    fa3=1.019ms fa4=0.927ms fia=0.268ms
+>>> [593/686] case 592 Qwen3-30B B32 kv2048 H32/4
+    fa3=1.053ms fa4=0.960ms fia=0.338ms
+>>> [594/686] case 593 Qwen3-30B B32 kv2055 H32/4
+    fa3=1.050ms fa4=0.946ms fia=0.331ms
+>>> [595/686] case 594 Qwen3-30B B32 kv4096 H32/4
+    fa3=1.028ms fa4=1.077ms fia=0.514ms
+>>> [596/686] case 595 Qwen3-30B B32 kv5120 H32/4
+    fa3=1.110ms fa4=1.150ms fia=0.595ms
+>>> [597/686] case 596 Qwen3-30B B64 kv256 H32/4
+    fa3=0.996ms fa4=0.888ms fia=0.287ms
+>>> [598/686] case 597 Qwen3-30B B64 kv263 H32/4
+    fa3=1.031ms fa4=0.936ms fia=0.315ms
+>>> [599/686] case 598 Qwen3-30B B64 kv512 H32/4
+    fa3=1.047ms fa4=0.929ms fia=0.298ms
+>>> [600/686] case 599 Qwen3-30B B64 kv519 H32/4
+    fa3=1.005ms fa4=0.929ms fia=0.292ms
+>>> [601/686] case 600 Qwen3-30B B64 kv1024 H32/4
+    fa3=1.027ms fa4=0.925ms fia=0.362ms
+>>> [602/686] case 601 Qwen3-30B B64 kv1031 H32/4
+    fa3=0.999ms fa4=0.888ms fia=0.401ms
+>>> [603/686] case 602 Qwen3-30B B64 kv2048 H32/4
+    fa3=1.030ms fa4=1.090ms fia=0.533ms
+>>> [604/686] case 603 Qwen3-30B B64 kv2055 H32/4
+    fa3=1.053ms fa4=1.101ms fia=0.547ms
+>>> [605/686] case 604 Qwen3-30B B64 kv4096 H32/4
+    fa3=1.320ms fa4=1.366ms fia=0.827ms
+>>> [606/686] case 605 Qwen3-30B B64 kv5120 H32/4
+    fa3=1.492ms fa4=1.499ms fia=0.971ms
+>>> [607/686] case 606 Qwen3-30B B1 kv256 H8/1
+    fa3=0.950ms fa4=0.854ms fia=0.232ms
+>>> [608/686] case 607 Qwen3-30B B1 kv263 H8/1
+    fa3=0.949ms fa4=0.851ms fia=0.223ms
+>>> [609/686] case 608 Qwen3-30B B1 kv512 H8/1
+    fa3=0.949ms fa4=0.866ms fia=0.230ms
+>>> [610/686] case 609 Qwen3-30B B1 kv519 H8/1
+    fa3=0.937ms fa4=0.839ms fia=0.225ms
+>>> [611/686] case 610 Qwen3-30B B1 kv1024 H8/1
+    fa3=0.940ms fa4=0.880ms fia=0.227ms
+>>> [612/686] case 611 Qwen3-30B B1 kv1031 H8/1
+    fa3=0.947ms fa4=0.860ms fia=0.232ms
+>>> [613/686] case 612 Qwen3-30B B1 kv2048 H8/1
+    fa3=0.954ms fa4=0.876ms fia=0.241ms
+>>> [614/686] case 613 Qwen3-30B B1 kv2055 H8/1
+    fa3=0.979ms fa4=0.868ms fia=0.237ms
+>>> [615/686] case 614 Qwen3-30B B1 kv4096 H8/1
+    fa3=0.950ms fa4=0.864ms fia=0.231ms
+>>> [616/686] case 615 Qwen3-30B B1 kv5120 H8/1
+    fa3=0.953ms fa4=0.900ms fia=0.237ms
+>>> [617/686] case 616 Qwen3-30B B16 kv256 H8/1
+    fa3=0.963ms fa4=0.879ms fia=0.246ms
+>>> [618/686] case 617 Qwen3-30B B16 kv263 H8/1
+    fa3=0.948ms fa4=0.873ms fia=0.247ms
+>>> [619/686] case 618 Qwen3-30B B16 kv512 H8/1
+    fa3=0.977ms fa4=0.908ms fia=0.252ms
+>>> [620/686] case 619 Qwen3-30B B16 kv519 H8/1
+    fa3=0.991ms fa4=0.877ms fia=0.249ms
+>>> [621/686] case 620 Qwen3-30B B16 kv1024 H8/1
+    fa3=0.981ms fa4=0.930ms fia=0.258ms
+>>> [622/686] case 621 Qwen3-30B B16 kv1031 H8/1
+    fa3=0.996ms fa4=0.888ms fia=0.246ms
+>>> [623/686] case 622 Qwen3-30B B16 kv2048 H8/1
+    fa3=0.972ms fa4=0.895ms fia=0.247ms
+>>> [624/686] case 623 Qwen3-30B B16 kv2055 H8/1
+    fa3=0.973ms fa4=0.887ms fia=0.246ms
+>>> [625/686] case 624 Qwen3-30B B16 kv4096 H8/1
+    fa3=0.979ms fa4=0.906ms fia=0.250ms
+>>> [626/686] case 625 Qwen3-30B B16 kv5120 H8/1
+    fa3=1.020ms fa4=0.935ms fia=0.254ms
+>>> [627/686] case 626 Qwen3-30B B32 kv256 H8/1
+    fa3=0.985ms fa4=0.927ms fia=0.291ms
+>>> [628/686] case 627 Qwen3-30B B32 kv263 H8/1
+    fa3=0.989ms fa4=0.931ms fia=0.285ms
+>>> [629/686] case 628 Qwen3-30B B32 kv512 H8/1
+    fa3=1.040ms fa4=0.883ms fia=0.257ms
+>>> [630/686] case 629 Qwen3-30B B32 kv519 H8/1
+    fa3=0.972ms fa4=0.855ms fia=0.249ms
+>>> [631/686] case 630 Qwen3-30B B32 kv1024 H8/1
+    fa3=1.038ms fa4=0.916ms fia=0.277ms
+>>> [632/686] case 631 Qwen3-30B B32 kv1031 H8/1
+    fa3=1.027ms fa4=1.026ms fia=0.282ms
+>>> [633/686] case 632 Qwen3-30B B32 kv2048 H8/1
+    fa3=1.108ms fa4=0.958ms fia=0.309ms
+>>> [634/686] case 633 Qwen3-30B B32 kv2055 H8/1
+    fa3=1.166ms fa4=1.002ms fia=0.308ms
+>>> [635/686] case 634 Qwen3-30B B32 kv4096 H8/1
+    fa3=0.945ms fa4=0.879ms fia=0.251ms
+>>> [636/686] case 635 Qwen3-30B B32 kv5120 H8/1
+    fa3=0.965ms fa4=0.923ms fia=0.284ms
+>>> [637/686] case 636 Qwen3-30B B64 kv256 H8/1
+    fa3=0.982ms fa4=0.938ms fia=0.293ms
+>>> [638/686] case 637 Qwen3-30B B64 kv263 H8/1
+    fa3=0.997ms fa4=0.914ms fia=0.289ms
+>>> [639/686] case 638 Qwen3-30B B64 kv512 H8/1
+    fa3=1.017ms fa4=0.961ms fia=0.290ms
+>>> [640/686] case 639 Qwen3-30B B64 kv519 H8/1
+    fa3=0.997ms fa4=0.877ms fia=0.284ms
+>>> [641/686] case 640 Qwen3-30B B64 kv1024 H8/1
+    fa3=0.953ms fa4=0.860ms fia=0.288ms
+>>> [642/686] case 641 Qwen3-30B B64 kv1031 H8/1
+    fa3=0.955ms fa4=0.900ms fia=0.285ms
+>>> [643/686] case 642 Qwen3-30B B64 kv2048 H8/1
+    fa3=0.962ms fa4=0.894ms fia=0.279ms
+>>> [644/686] case 643 Qwen3-30B B64 kv2055 H8/1
+    fa3=0.950ms fa4=0.859ms fia=0.282ms
+>>> [645/686] case 644 Qwen3-30B B64 kv4096 H8/1
+    fa3=0.948ms fa4=0.862ms fia=0.320ms
+>>> [646/686] case 645 Qwen3-30B B64 kv5120 H8/1
+    fa3=0.972ms fa4=0.921ms fia=0.369ms
+>>> [647/686] case 646 Qwen3-30B B1 kv256 H8/1
+    fa3=0.976ms fa4=0.882ms fia=0.236ms
+>>> [648/686] case 647 Qwen3-30B B1 kv263 H8/1
+    fa3=1.002ms fa4=0.899ms fia=0.227ms
+>>> [649/686] case 648 Qwen3-30B B1 kv512 H8/1
+    fa3=0.949ms fa4=0.889ms fia=0.240ms
+>>> [650/686] case 649 Qwen3-30B B1 kv519 H8/1
+    fa3=0.977ms fa4=0.889ms fia=0.232ms
+>>> [651/686] case 650 Qwen3-30B B1 kv1024 H8/1
+    fa3=0.940ms fa4=0.857ms fia=0.237ms
+>>> [652/686] case 651 Qwen3-30B B1 kv1031 H8/1
+    fa3=0.965ms fa4=0.854ms fia=0.245ms
+>>> [653/686] case 652 Qwen3-30B B1 kv2048 H8/1
+    fa3=1.013ms fa4=0.932ms fia=0.233ms
+>>> [654/686] case 653 Qwen3-30B B1 kv2055 H8/1
+    fa3=1.010ms fa4=0.888ms fia=0.242ms
+>>> [655/686] case 654 Qwen3-30B B1 kv4096 H8/1
+    fa3=0.974ms fa4=0.888ms fia=0.234ms
+>>> [656/686] case 655 Qwen3-30B B1 kv5120 H8/1
+    fa3=0.984ms fa4=0.898ms fia=0.235ms
+>>> [657/686] case 656 Qwen3-30B B16 kv256 H8/1
+    fa3=0.983ms fa4=0.895ms fia=0.252ms
+>>> [658/686] case 657 Qwen3-30B B16 kv263 H8/1
+    fa3=1.021ms fa4=0.923ms fia=0.254ms
+>>> [659/686] case 658 Qwen3-30B B16 kv512 H8/1
+    fa3=0.995ms fa4=0.913ms fia=0.250ms
+>>> [660/686] case 659 Qwen3-30B B16 kv519 H8/1
+    fa3=0.957ms fa4=0.882ms fia=0.243ms
+>>> [661/686] case 660 Qwen3-30B B16 kv1024 H8/1
+    fa3=0.958ms fa4=0.916ms fia=0.279ms
+>>> [662/686] case 661 Qwen3-30B B16 kv1031 H8/1
+    fa3=0.940ms fa4=0.854ms fia=0.241ms
+>>> [663/686] case 662 Qwen3-30B B16 kv2048 H8/1
+    fa3=0.961ms fa4=0.856ms fia=0.238ms
+>>> [664/686] case 663 Qwen3-30B B16 kv2055 H8/1
+    fa3=0.955ms fa4=0.934ms fia=0.238ms
+>>> [665/686] case 664 Qwen3-30B B16 kv4096 H8/1
+    fa3=0.951ms fa4=0.869ms fia=0.245ms
+>>> [666/686] case 665 Qwen3-30B B16 kv5120 H8/1
+    fa3=0.953ms fa4=0.883ms fia=0.251ms
+>>> [667/686] case 666 Qwen3-30B B32 kv256 H8/1
+    fa3=0.999ms fa4=0.935ms fia=0.259ms
+>>> [668/686] case 667 Qwen3-30B B32 kv263 H8/1
+    fa3=0.986ms fa4=0.904ms fia=0.255ms
+>>> [669/686] case 668 Qwen3-30B B32 kv512 H8/1
+    fa3=0.969ms fa4=0.978ms fia=0.281ms
+>>> [670/686] case 669 Qwen3-30B B32 kv519 H8/1
+    fa3=0.954ms fa4=0.876ms fia=0.249ms
+>>> [671/686] case 670 Qwen3-30B B32 kv1024 H8/1
+    fa3=0.970ms fa4=0.879ms fia=0.254ms
+>>> [672/686] case 671 Qwen3-30B B32 kv1031 H8/1
+    fa3=0.970ms fa4=0.886ms fia=0.260ms
+>>> [673/686] case 672 Qwen3-30B B32 kv2048 H8/1
+    fa3=0.984ms fa4=0.910ms fia=0.244ms
+>>> [674/686] case 673 Qwen3-30B B32 kv2055 H8/1
+    fa3=0.957ms fa4=0.885ms fia=0.254ms
+>>> [675/686] case 674 Qwen3-30B B32 kv4096 H8/1
+    fa3=0.972ms fa4=0.891ms fia=0.258ms
+>>> [676/686] case 675 Qwen3-30B B32 kv5120 H8/1
+    fa3=0.972ms fa4=0.900ms fia=0.257ms
+>>> [677/686] case 676 Qwen3-30B B64 kv256 H8/1
+    fa3=0.989ms fa4=0.906ms fia=0.287ms
+>>> [678/686] case 677 Qwen3-30B B64 kv263 H8/1
+    fa3=1.009ms fa4=0.912ms fia=0.291ms
+>>> [679/686] case 678 Qwen3-30B B64 kv512 H8/1
+    fa3=0.997ms fa4=0.909ms fia=0.288ms
+>>> [680/686] case 679 Qwen3-30B B64 kv519 H8/1
+    fa3=1.007ms fa4=0.930ms fia=0.305ms
+>>> [681/686] case 680 Qwen3-30B B64 kv1024 H8/1
+    fa3=0.999ms fa4=0.917ms fia=0.288ms
+>>> [682/686] case 681 Qwen3-30B B64 kv1031 H8/1
+    fa3=1.000ms fa4=0.920ms fia=0.295ms
+>>> [683/686] case 682 Qwen3-30B B64 kv2048 H8/1
+    fa3=1.017ms fa4=0.910ms fia=0.289ms
+>>> [684/686] case 683 Qwen3-30B B64 kv2055 H8/1
+    fa3=1.006ms fa4=0.972ms fia=0.286ms
+>>> [685/686] case 684 Qwen3-30B B64 kv4096 H8/1
+    fa3=1.013ms fa4=0.933ms fia=0.321ms
+>>> [686/686] case 685 Qwen3-30B B64 kv5120 H8/1
+    fa3=1.101ms fa4=1.017ms fia=0.377ms
+
+============================================================================================================
+3.2 decode TND：NPU event device time；性能比 = FIA耗时 / FA耗时（>1 表示 FA 快于 FIA）
+============================================================================================================
+三路都成功: 686/686
+  fa3/FIA: geomean=0.301x median=0.265x min=0.206x max=0.882x
+  fa4/FIA: geomean=0.326x median=0.291x min=0.226x max=1.942x
+
+model                                         n    FA3/FIA    FA4/FIA
+llama2-70B/qwen2-72b                         40     0.263x     0.287x
+llama-65B/Qwen-72B                           40     0.347x     0.366x
+llama2-13B/baichuan2-13B/Qwen-14B            80     0.328x     0.348x
+llama2-7B/baichuan2-7B                       80     0.345x     0.364x
+chatglm2-6B/CodeGeeX-2-6B                    40     0.264x     0.291x
+starcoder-15.5B                              40     0.261x     0.287x
+JYXH                                         50     0.393x     0.455x
+llama3.1-70b                                 40     0.304x     0.325x
+codellama-34b                                36     0.285x     0.309x
+Qwen3-235B/Qwen3-32B                         80     0.271x     0.296x
+Qwen3-30B                                   160     0.283x     0.306x
+
+  id model                             B      kv       FA3       FA4       FIA      P3      P4
+   0 llama2-70B/qwen2-72b              1     256     1.004     0.902     0.237    0.24    0.26
+   1 llama2-70B/qwen2-72b              1     263     0.986     0.868     0.231    0.23    0.27
+   2 llama2-70B/qwen2-72b              1     512     0.954     0.869     0.227    0.24    0.26
+   3 llama2-70B/qwen2-72b              1     519     0.979     0.889     0.222    0.23    0.25
+   4 llama2-70B/qwen2-72b              1    1024     0.963     0.869     0.226    0.23    0.26
+   5 llama2-70B/qwen2-72b              1    1031     0.950     0.893     0.230    0.24    0.26
+   6 llama2-70B/qwen2-72b              1    2048     0.973     0.881     0.228    0.23    0.26
+   7 llama2-70B/qwen2-72b              1    2055     1.001     0.911     0.250    0.25    0.27
+   8 llama2-70B/qwen2-72b              1    4096     0.963     0.877     0.229    0.24    0.26
+   9 llama2-70B/qwen2-72b              1    5120     0.986     0.877     0.232    0.23    0.26
+  10 llama2-70B/qwen2-72b             16     256     0.995     0.884     0.243    0.24    0.27
+  11 llama2-70B/qwen2-72b             16     263     0.987     0.919     0.250    0.25    0.27
+  12 llama2-70B/qwen2-72b             16     512     0.965     0.892     0.236    0.24    0.26
+  13 llama2-70B/qwen2-72b             16     519     0.949     0.877     0.243    0.26    0.28
+  14 llama2-70B/qwen2-72b             16    1024     0.952     0.889     0.241    0.25    0.27
+  15 llama2-70B/qwen2-72b             16    1031     0.969     0.897     0.244    0.25    0.27
+  16 llama2-70B/qwen2-72b             16    2048     0.974     0.906     0.248    0.25    0.27
+  17 llama2-70B/qwen2-72b             16    2055     0.987     0.904     0.244    0.25    0.27
+  18 llama2-70B/qwen2-72b             16    4096     0.979     0.945     0.235    0.24    0.25
+  19 llama2-70B/qwen2-72b             16    5120     0.937     0.865     0.239    0.25    0.28
+  20 llama2-70B/qwen2-72b             32     256     0.954     0.964     0.254    0.27    0.26
+  21 llama2-70B/qwen2-72b             32     263     0.933     0.861     0.255    0.27    0.30
+  22 llama2-70B/qwen2-72b             32     512     1.048     0.941     0.282    0.27    0.30
+  23 llama2-70B/qwen2-72b             32     519     1.017     0.920     0.255    0.25    0.28
+  24 llama2-70B/qwen2-72b             32    1024     0.946     0.866     0.253    0.27    0.29
+  25 llama2-70B/qwen2-72b             32    1031     0.950     0.871     0.256    0.27    0.29
+  26 llama2-70B/qwen2-72b             32    2048     0.962     0.933     0.262    0.27    0.28
+  27 llama2-70B/qwen2-72b             32    2055     0.987     0.895     0.276    0.28    0.31
+  28 llama2-70B/qwen2-72b             32    4096     0.946     0.872     0.251    0.27    0.29
+  29 llama2-70B/qwen2-72b             32    5120     0.959     0.870     0.260    0.27    0.30
+  30 llama2-70B/qwen2-72b             64     256     0.982     0.868     0.272    0.28    0.31
+  31 llama2-70B/qwen2-72b             64     263     0.964     0.878     0.283    0.29    0.32
+  32 llama2-70B/qwen2-72b             64     512     1.016     0.934     0.308    0.30    0.33
+  33 llama2-70B/qwen2-72b             64     519     1.015     0.916     0.280    0.28    0.31
+  34 llama2-70B/qwen2-72b             64    1024     0.959     0.909     0.278    0.29    0.31
+  35 llama2-70B/qwen2-72b             64    1031     0.953     0.881     0.284    0.30    0.32
+  36 llama2-70B/qwen2-72b             64    2048     1.049     0.960     0.337    0.32    0.35
+  37 llama2-70B/qwen2-72b             64    2055     1.094     0.905     0.283    0.26    0.31
+  38 llama2-70B/qwen2-72b             64    4096     0.991     0.914     0.339    0.34    0.37
+  39 llama2-70B/qwen2-72b             64    5120     0.990     0.914     0.360    0.36    0.39
+  40 llama-65B/Qwen-72B                1     256     1.061     0.951     0.232    0.22    0.24
+  41 llama-65B/Qwen-72B                1     263     1.042     0.977     0.287    0.28    0.29
+  42 llama-65B/Qwen-72B                1     512     1.036     0.887     0.232    0.22    0.26
+  43 llama-65B/Qwen-72B                1     519     0.971     0.901     0.240    0.25    0.27
+  44 llama-65B/Qwen-72B                1    1024     0.979     0.935     0.284    0.29    0.30
+  45 llama-65B/Qwen-72B                1    1031     1.046     0.889     0.231    0.22    0.26
+  46 llama-65B/Qwen-72B                1    2048     1.037     0.908     0.279    0.27    0.31
+  47 llama-65B/Qwen-72B                1    2055     1.035     0.942     0.282    0.27    0.30
+  48 llama-65B/Qwen-72B                1    4096     0.981     0.880     0.228    0.23    0.26
+  49 llama-65B/Qwen-72B                1    5120     1.025     0.959     0.217    0.21    0.23
+  50 llama-65B/Qwen-72B               16     256     0.964     0.891     0.237    0.25    0.27
+  51 llama-65B/Qwen-72B               16     263     0.969     0.915     0.266    0.27    0.29
+  52 llama-65B/Qwen-72B               16     512     0.990     0.906     0.248    0.25    0.27
+  53 llama-65B/Qwen-72B               16     519     0.997     0.878     0.247    0.25    0.28
+  54 llama-65B/Qwen-72B               16    1024     0.950     0.881     0.244    0.26    0.28
+  55 llama-65B/Qwen-72B               16    1031     0.959     0.903     0.256    0.27    0.28
+  56 llama-65B/Qwen-72B               16    2048     0.970     0.888     0.312    0.32    0.35
+  57 llama-65B/Qwen-72B               16    2055     0.950     0.879     0.311    0.33    0.35
+  58 llama-65B/Qwen-72B               16    4096     1.009     1.022     0.483    0.48    0.47
+  59 llama-65B/Qwen-72B               16    5120     1.086     1.102     0.561    0.52    0.51
+  60 llama-65B/Qwen-72B               32     256     0.966     0.849     0.255    0.26    0.30
+  61 llama-65B/Qwen-72B               32     263     0.953     0.909     0.265    0.28    0.29
+  62 llama-65B/Qwen-72B               32     512     0.951     0.887     0.259    0.27    0.29
+  63 llama-65B/Qwen-72B               32     519     1.058     0.845     0.279    0.26    0.33
+  64 llama-65B/Qwen-72B               32    1024     0.937     0.902     0.338    0.36    0.37
+  65 llama-65B/Qwen-72B               32    1031     0.988     0.882     0.338    0.34    0.38
+  66 llama-65B/Qwen-72B               32    2048     0.993     1.127     0.563    0.57    0.50
+  67 llama-65B/Qwen-72B               32    2055     1.033     1.052     0.502    0.49    0.48
+  68 llama-65B/Qwen-72B               32    4096     1.287     1.306     0.780    0.61    0.60
+  69 llama-65B/Qwen-72B               32    5120     1.431     1.448     0.921    0.64    0.64
+  70 llama-65B/Qwen-72B               64     256     0.992     0.887     0.298    0.30    0.34
+  71 llama-65B/Qwen-72B               64     263     0.969     0.945     0.310    0.32    0.33
+  72 llama-65B/Qwen-72B               64     512     0.947     0.876     0.355    0.37    0.41
+  73 llama-65B/Qwen-72B               64     519     0.999     0.934     0.378    0.38    0.40
+  74 llama-65B/Qwen-72B               64    1024     0.972     1.062     0.559    0.58    0.53
+  75 llama-65B/Qwen-72B               64    1031     1.045     1.043     0.542    0.52    0.52
+  76 llama-65B/Qwen-72B               64    2048     1.280     1.315     0.824    0.64    0.63
+  77 llama-65B/Qwen-72B               64    2055     1.308     1.347     0.845    0.65    0.63
+  78 llama-65B/Qwen-72B               64    4096     1.873     1.921     1.401    0.75    0.73
+  79 llama-65B/Qwen-72B               64    5120     2.150     2.230     1.713    0.80    0.77
+  80 llama2-13B/baichuan2-13B/Qwen-    1     256     0.937     0.859     0.224    0.24    0.26
+  81 llama2-13B/baichuan2-13B/Qwen-    1     263     0.951     0.876     0.230    0.24    0.26
+  82 llama2-13B/baichuan2-13B/Qwen-    1     512     1.040     0.875     0.221    0.21    0.25
+  83 llama2-13B/baichuan2-13B/Qwen-    1     519     0.962     0.876     0.220    0.23    0.25
+  84 llama2-13B/baichuan2-13B/Qwen-    1    1024     0.938     0.861     0.232    0.25    0.27
+  85 llama2-13B/baichuan2-13B/Qwen-    1    1031     0.981     0.884     0.226    0.23    0.26
+  86 llama2-13B/baichuan2-13B/Qwen-    1    2048     0.941     0.886     0.235    0.25    0.26
+  87 llama2-13B/baichuan2-13B/Qwen-    1    2055     0.954     0.880     0.247    0.26    0.28
+  88 llama2-13B/baichuan2-13B/Qwen-    1    4096     0.975     0.864     0.223    0.23    0.26
+  89 llama2-13B/baichuan2-13B/Qwen-    1    5120     0.959     0.888     0.222    0.23    0.25
+  90 llama2-13B/baichuan2-13B/Qwen-   16     256     0.954     0.868     0.236    0.25    0.27
+  91 llama2-13B/baichuan2-13B/Qwen-   16     263     0.953     0.882     0.294    0.31    0.33
+  92 llama2-13B/baichuan2-13B/Qwen-   16     512     1.021     0.916     0.244    0.24    0.27
+  93 llama2-13B/baichuan2-13B/Qwen-   16     519     0.959     0.889     0.245    0.26    0.28
+  94 llama2-13B/baichuan2-13B/Qwen-   16    1024     0.999     0.910     0.250    0.25    0.28
+  95 llama2-13B/baichuan2-13B/Qwen-   16    1031     1.024     0.908     0.247    0.24    0.27
+  96 llama2-13B/baichuan2-13B/Qwen-   16    2048     0.977     0.886     0.263    0.27    0.30
+  97 llama2-13B/baichuan2-13B/Qwen-   16    2055     0.984     0.898     0.245    0.25    0.27
+  98 llama2-13B/baichuan2-13B/Qwen-   16    4096     0.990     0.909     0.330    0.33    0.36
+  99 llama2-13B/baichuan2-13B/Qwen-   16    5120     0.972     0.946     0.377    0.39    0.40
+ 100 llama2-13B/baichuan2-13B/Qwen-   32     256     0.987     0.874     0.254    0.26    0.29
+ 101 llama2-13B/baichuan2-13B/Qwen-   32     263     0.976     0.903     0.258    0.26    0.29
+ 102 llama2-13B/baichuan2-13B/Qwen-   32     512     0.995     0.881     0.260    0.26    0.29
+ 103 llama2-13B/baichuan2-13B/Qwen-   32     519     0.974     0.886     0.259    0.27    0.29
+ 104 llama2-13B/baichuan2-13B/Qwen-   32    1024     0.986     0.891     0.259    0.26    0.29
+ 105 llama2-13B/baichuan2-13B/Qwen-   32    1031     1.000     0.924     0.262    0.26    0.28
+ 106 llama2-13B/baichuan2-13B/Qwen-   32    2048     0.973     0.911     0.342    0.35    0.38
+ 107 llama2-13B/baichuan2-13B/Qwen-   32    2055     0.989     0.907     0.342    0.35    0.38
+ 108 llama2-13B/baichuan2-13B/Qwen-   32    4096     1.050     1.078     0.543    0.52    0.50
+ 109 llama2-13B/baichuan2-13B/Qwen-   32    5120     1.123     1.198     0.632    0.56    0.53
+ 110 llama2-13B/baichuan2-13B/Qwen-   64     256     0.964     0.886     0.274    0.28    0.31
+ 111 llama2-13B/baichuan2-13B/Qwen-   64     263     0.950     0.992     0.303    0.32    0.31
+ 112 llama2-13B/baichuan2-13B/Qwen-   64     512     1.040     0.939     0.314    0.30    0.33
+ 113 llama2-13B/baichuan2-13B/Qwen-   64     519     0.958     0.846     0.277    0.29    0.33
+ 114 llama2-13B/baichuan2-13B/Qwen-   64    1024     0.945     0.880     0.366    0.39    0.42
+ 115 llama2-13B/baichuan2-13B/Qwen-   64    1031     0.977     0.982     0.409    0.42    0.42
+ 116 llama2-13B/baichuan2-13B/Qwen-   64    2048     1.066     1.116     0.590    0.55    0.53
+ 117 llama2-13B/baichuan2-13B/Qwen-   64    2055     1.091     1.142     0.590    0.54    0.52
+ 118 llama2-13B/baichuan2-13B/Qwen-   64    4096     1.466     1.498     0.955    0.65    0.64
+ 119 llama2-13B/baichuan2-13B/Qwen-   64    5120     1.630     1.660     1.117    0.69    0.67
+ 120 llama2-7B/baichuan2-7B            1     256     1.010     0.941     0.240    0.24    0.25
+ 121 llama2-7B/baichuan2-7B            1     263     1.005     0.941     0.244    0.24    0.26
+ 122 llama2-7B/baichuan2-7B            1     512     1.026     0.927     0.242    0.24    0.26
+ 123 llama2-7B/baichuan2-7B            1     519     0.980     0.902     0.241    0.25    0.27
+ 124 llama2-7B/baichuan2-7B            1    1024     1.001     0.902     0.234    0.23    0.26
+ 125 llama2-7B/baichuan2-7B            1    1031     0.954     0.889     0.233    0.24    0.26
+ 126 llama2-7B/baichuan2-7B            1    2048     0.914     0.931     0.229    0.25    0.25
+ 127 llama2-7B/baichuan2-7B            1    2055     0.966     0.893     0.238    0.25    0.27
+ 128 llama2-7B/baichuan2-7B            1    4096     1.014     0.914     0.239    0.24    0.26
+ 129 llama2-7B/baichuan2-7B            1    5120     0.961     0.897     0.228    0.24    0.25
+ 130 llama2-7B/baichuan2-7B           16     256     0.982     0.900     0.245    0.25    0.27
+ 131 llama2-7B/baichuan2-7B           16     263     1.050     0.958     0.269    0.26    0.28
+ 132 llama2-7B/baichuan2-7B           16     512     1.047     0.973     0.273    0.26    0.28
+ 133 llama2-7B/baichuan2-7B           16     519     0.968     0.911     0.251    0.26    0.28
+ 134 llama2-7B/baichuan2-7B           16    1024     0.983     0.888     0.243    0.25    0.27
+ 135 llama2-7B/baichuan2-7B           16    1031     0.996     0.913     0.259    0.26    0.28
+ 136 llama2-7B/baichuan2-7B           16    2048     1.003     0.912     0.250    0.25    0.27
+ 137 llama2-7B/baichuan2-7B           16    2055     0.985     0.873     0.244    0.25    0.28
+ 138 llama2-7B/baichuan2-7B           16    4096     0.995     0.918     0.316    0.32    0.34
+ 139 llama2-7B/baichuan2-7B           16    5120     0.990     0.902     0.365    0.37    0.40
+ 140 llama2-7B/baichuan2-7B           32     256     0.962     0.877     0.261    0.27    0.30
+ 141 llama2-7B/baichuan2-7B           32     263     0.969     0.894     0.264    0.27    0.29
+ 142 llama2-7B/baichuan2-7B           32     512     1.026     0.974     0.280    0.27    0.29
+ 143 llama2-7B/baichuan2-7B           32     519     1.012     0.957     0.264    0.26    0.28
+ 144 llama2-7B/baichuan2-7B           32    1024     1.001     0.922     0.263    0.26    0.29
+ 145 llama2-7B/baichuan2-7B           32    1031     0.999     0.908     0.265    0.27    0.29
+ 146 llama2-7B/baichuan2-7B           32    2048     0.996     0.904     0.319    0.32    0.35
+ 147 llama2-7B/baichuan2-7B           32    2055     1.003     0.920     0.325    0.32    0.35
+ 148 llama2-7B/baichuan2-7B           32    4096     1.019     1.059     0.500    0.49    0.47
+ 149 llama2-7B/baichuan2-7B           32    5120     1.119     1.166     0.602    0.54    0.52
+ 150 llama2-7B/baichuan2-7B           64     256     0.980     0.920     0.293    0.30    0.32
+ 151 llama2-7B/baichuan2-7B           64     263     0.999     0.911     0.298    0.30    0.33
+ 152 llama2-7B/baichuan2-7B           64     512     0.954     0.898     0.279    0.29    0.31
+ 153 llama2-7B/baichuan2-7B           64     519     0.961     0.880     0.279    0.29    0.32
+ 154 llama2-7B/baichuan2-7B           64    1024     0.953     0.862     0.338    0.35    0.39
+ 155 llama2-7B/baichuan2-7B           64    1031     1.010     0.929     0.357    0.35    0.38
+ 156 llama2-7B/baichuan2-7B           64    2048     1.014     1.038     0.547    0.54    0.53
+ 157 llama2-7B/baichuan2-7B           64    2055     0.998     1.047     0.528    0.53    0.50
+ 158 llama2-7B/baichuan2-7B           64    4096     1.305     1.322     0.809    0.62    0.61
+ 159 llama2-7B/baichuan2-7B           64    5120     1.410     1.430     0.955    0.68    0.67
+ 160 chatglm2-6B/CodeGeeX-2-6B         1     256     0.932     0.855     0.228    0.24    0.27
+ 161 chatglm2-6B/CodeGeeX-2-6B         1     263     0.957     0.876     0.235    0.25    0.27
+ 162 chatglm2-6B/CodeGeeX-2-6B         1     512     0.948     0.849     0.226    0.24    0.27
+ 163 chatglm2-6B/CodeGeeX-2-6B         1     519     0.947     0.861     0.233    0.25    0.27
+ 164 chatglm2-6B/CodeGeeX-2-6B         1    1024     0.962     0.872     0.222    0.23    0.25
+ 165 chatglm2-6B/CodeGeeX-2-6B         1    1031     0.961     0.870     0.225    0.23    0.26
+ 166 chatglm2-6B/CodeGeeX-2-6B         1    2048     0.935     0.866     0.222    0.24    0.26
+ 167 chatglm2-6B/CodeGeeX-2-6B         1    2055     0.941     0.907     0.236    0.25    0.26
+ 168 chatglm2-6B/CodeGeeX-2-6B         1    4096     0.965     0.909     0.238    0.25    0.26
+ 169 chatglm2-6B/CodeGeeX-2-6B         1    5120     0.995     0.894     0.254    0.25    0.28
+ 170 chatglm2-6B/CodeGeeX-2-6B        16     256     0.966     0.881     0.249    0.26    0.28
+ 171 chatglm2-6B/CodeGeeX-2-6B        16     263     0.966     0.868     0.248    0.26    0.29
+ 172 chatglm2-6B/CodeGeeX-2-6B        16     512     0.964     0.863     0.248    0.26    0.29
+ 173 chatglm2-6B/CodeGeeX-2-6B        16     519     0.980     0.856     0.253    0.26    0.30
+ 174 chatglm2-6B/CodeGeeX-2-6B        16    1024     0.968     0.888     0.253    0.26    0.28
+ 175 chatglm2-6B/CodeGeeX-2-6B        16    1031     0.947     0.864     0.246    0.26    0.29
+ 176 chatglm2-6B/CodeGeeX-2-6B        16    2048     0.989     0.880     0.251    0.25    0.29
+ 177 chatglm2-6B/CodeGeeX-2-6B        16    2055     0.990     0.884     0.240    0.24    0.27
+ 178 chatglm2-6B/CodeGeeX-2-6B        16    4096     0.944     0.864     0.236    0.25    0.27
+ 179 chatglm2-6B/CodeGeeX-2-6B        16    5120     0.972     0.895     0.250    0.26    0.28
+ 180 chatglm2-6B/CodeGeeX-2-6B        32     256     1.062     0.930     0.261    0.25    0.28
+ 181 chatglm2-6B/CodeGeeX-2-6B        32     263     1.071     0.962     0.281    0.26    0.29
+ 182 chatglm2-6B/CodeGeeX-2-6B        32     512     1.006     0.970     0.265    0.26    0.27
+ 183 chatglm2-6B/CodeGeeX-2-6B        32     519     1.011     0.918     0.277    0.27    0.30
+ 184 chatglm2-6B/CodeGeeX-2-6B        32    1024     1.020     0.950     0.269    0.26    0.28
+ 185 chatglm2-6B/CodeGeeX-2-6B        32    1031     1.050     0.962     0.272    0.26    0.28
+ 186 chatglm2-6B/CodeGeeX-2-6B        32    2048     0.994     0.888     0.263    0.26    0.30
+ 187 chatglm2-6B/CodeGeeX-2-6B        32    2055     1.008     0.888     0.255    0.25    0.29
+ 188 chatglm2-6B/CodeGeeX-2-6B        32    4096     1.017     0.926     0.270    0.27    0.29
+ 189 chatglm2-6B/CodeGeeX-2-6B        32    5120     1.004     0.882     0.270    0.27    0.31
+ 190 chatglm2-6B/CodeGeeX-2-6B        64     256     1.015     0.904     0.284    0.28    0.31
+ 191 chatglm2-6B/CodeGeeX-2-6B        64     263     0.977     0.888     0.285    0.29    0.32
+ 192 chatglm2-6B/CodeGeeX-2-6B        64     512     1.010     0.910     0.286    0.28    0.31
+ 193 chatglm2-6B/CodeGeeX-2-6B        64     519     0.974     0.910     0.295    0.30    0.32
+ 194 chatglm2-6B/CodeGeeX-2-6B        64    1024     1.032     0.932     0.302    0.29    0.32
+ 195 chatglm2-6B/CodeGeeX-2-6B        64    1031     1.051     0.953     0.282    0.27    0.30
+ 196 chatglm2-6B/CodeGeeX-2-6B        64    2048     0.978     0.896     0.291    0.30    0.32
+ 197 chatglm2-6B/CodeGeeX-2-6B        64    2055     0.965     0.868     0.272    0.28    0.31
+ 198 chatglm2-6B/CodeGeeX-2-6B        64    4096     0.950     0.860     0.323    0.34    0.38
+ 199 chatglm2-6B/CodeGeeX-2-6B        64    5120     0.964     0.867     0.354    0.37    0.41
+ 200 starcoder-15.5B                   1     256     0.956     0.875     0.228    0.24    0.26
+ 201 starcoder-15.5B                   1     263     0.983     0.879     0.235    0.24    0.27
+ 202 starcoder-15.5B                   1     512     0.948     0.878     0.234    0.25    0.27
+ 203 starcoder-15.5B                   1     519     0.966     0.865     0.222    0.23    0.26
+ 204 starcoder-15.5B                   1    1024     0.935     0.865     0.223    0.24    0.26
+ 205 starcoder-15.5B                   1    1031     1.102     1.015     0.255    0.23    0.25
+ 206 starcoder-15.5B                   1    2048     1.142     0.987     0.254    0.22    0.26
+ 207 starcoder-15.5B                   1    2055     1.123     0.965     0.240    0.21    0.25
+ 208 starcoder-15.5B                   1    4096     1.079     0.978     0.245    0.23    0.25
+ 209 starcoder-15.5B                   1    5120     1.025     0.986     0.250    0.24    0.25
+ 210 starcoder-15.5B                  16     256     1.166     1.006     0.243    0.21    0.24
+ 211 starcoder-15.5B                  16     263     0.969     0.870     0.244    0.25    0.28
+ 212 starcoder-15.5B                  16     512     1.022     0.894     0.252    0.25    0.28
+ 213 starcoder-15.5B                  16     519     1.027     0.931     0.258    0.25    0.28
+ 214 starcoder-15.5B                  16    1024     1.022     0.933     0.256    0.25    0.27
+ 215 starcoder-15.5B                  16    1031     1.031     0.912     0.252    0.24    0.28
+ 216 starcoder-15.5B                  16    2048     1.002     0.902     0.253    0.25    0.28
+ 217 starcoder-15.5B                  16    2055     1.011     0.889     0.252    0.25    0.28
+ 218 starcoder-15.5B                  16    4096     1.032     0.915     0.249    0.24    0.27
+ 219 starcoder-15.5B                  16    5120     0.948     0.897     0.240    0.25    0.27
+ 220 starcoder-15.5B                  32     256     0.955     0.879     0.260    0.27    0.30
+ 221 starcoder-15.5B                  32     263     0.955     0.879     0.255    0.27    0.29
+ 222 starcoder-15.5B                  32     512     0.983     0.883     0.257    0.26    0.29
+ 223 starcoder-15.5B                  32     519     0.980     0.893     0.254    0.26    0.28
+ 224 starcoder-15.5B                  32    1024     0.975     0.882     0.265    0.27    0.30
+ 225 starcoder-15.5B                  32    1031     0.991     0.914     0.261    0.26    0.29
+ 226 starcoder-15.5B                  32    2048     1.007     0.953     0.269    0.27    0.28
+ 227 starcoder-15.5B                  32    2055     1.026     0.889     0.265    0.26    0.30
+ 228 starcoder-15.5B                  32    4096     1.003     0.923     0.265    0.26    0.29
+ 229 starcoder-15.5B                  32    5120     1.020     0.937     0.271    0.27    0.29
+ 230 starcoder-15.5B                  64     256     1.039     0.943     0.314    0.30    0.33
+ 231 starcoder-15.5B                  64     263     1.002     0.930     0.278    0.28    0.30
+ 232 starcoder-15.5B                  64     512     0.964     0.863     0.304    0.32    0.35
+ 233 starcoder-15.5B                  64     519     1.051     0.963     0.306    0.29    0.32
+ 234 starcoder-15.5B                  64    1024     1.049     0.941     0.304    0.29    0.32
+ 235 starcoder-15.5B                  64    1031     1.044     0.960     0.310    0.30    0.32
+ 236 starcoder-15.5B                  64    2048     1.058     0.967     0.314    0.30    0.32
+ 237 starcoder-15.5B                  64    2055     1.050     0.973     0.308    0.29    0.32
+ 238 starcoder-15.5B                  64    4096     1.052     0.959     0.348    0.33    0.36
+ 239 starcoder-15.5B                  64    5120     1.047     0.968     0.390    0.37    0.40
+ 240 JYXH                              1    2060     1.044     0.925     0.257    0.25    0.28
+ 241 JYXH                              2    2060     1.045     0.963     0.260    0.25    0.27
+ 242 JYXH                              4    2060     1.036     0.933     0.253    0.24    0.27
+ 243 JYXH                              8    2060     1.049     0.951     0.266    0.25    0.28
+ 244 JYXH                             12    2060     1.043     0.968     0.286    0.27    0.29
+ 245 JYXH                             16    2060     1.045     0.892     0.249    0.24    0.28
+ 246 JYXH                             20    2060     0.982     0.914     0.246    0.25    0.27
+ 247 JYXH                             24    2060     0.981     0.887     0.254    0.26    0.29
+ 248 JYXH                             28    2060     1.026     0.949     0.253    0.25    0.27
+ 249 JYXH                             32    2060     0.980     0.901     0.292    0.30    0.32
+ 250 JYXH                              1   18384     0.995     0.965     0.254    0.26    0.26
+ 251 JYXH                              2   18384     1.053     0.898     0.236    0.22    0.26
+ 252 JYXH                              3   18384     1.009     0.974     0.258    0.26    0.26
+ 253 JYXH                              4   18384     1.060     0.921     0.242    0.23    0.26
+ 254 JYXH                              1   34768     0.989     0.901     0.314    0.32    0.35
+ 255 JYXH                              2   34768     1.003     0.950     0.313    0.31    0.33
+ 256 JYXH                              3   34768     1.057     0.976     0.313    0.30    0.32
+ 257 JYXH                              4   34768     0.981     0.919     0.304    0.31    0.33
+ 258 JYXH                              5   34768     0.996     0.915     0.321    0.32    0.35
+ 259 JYXH                              6   34768     1.003     0.909     0.344    0.34    0.38
+ 260 JYXH                              7   34768     0.998     0.900     0.359    0.36    0.40
+ 261 JYXH                              8   34768     0.996     0.927     0.366    0.37    0.40
+ 262 JYXH                              9   34768     0.950     0.873     0.369    0.39    0.42
+ 263 JYXH                             10   34768     0.985     0.901     0.378    0.38    0.42
+ 264 JYXH                             11   34768     0.986     0.905     0.392    0.40    0.43
+ 265 JYXH                             12   34768     1.030     0.910     0.391    0.38    0.43
+ 266 JYXH                             13   34768     0.998     0.931     0.403    0.40    0.43
+ 267 JYXH                             14   34768     1.025     0.945     0.412    0.40    0.44
+ 268 JYXH                             15   34768     1.007     0.990     0.414    0.41    0.42
+ 269 JYXH                             16   34768     0.990     0.958     0.417    0.42    0.44
+ 270 JYXH                             17   34768     1.002     1.009     0.435    0.43    0.43
+ 271 JYXH                             18   34768     1.022     1.031     0.445    0.44    0.43
+ 272 JYXH                             19   34768     1.067     1.064     0.451    0.42    0.42
+ 273 JYXH                             20   34768     1.017     1.048     0.461    0.45    0.44
+ 274 JYXH                             21   34768     1.247     1.244     0.682    0.55    0.55
+ 275 JYXH                             22   34768     1.215     1.257     0.680    0.56    0.54
+ 276 JYXH                             23   34768     1.190     1.245     0.681    0.57    0.55
+ 277 JYXH                             24   34768     1.189     1.215     0.673    0.57    0.55
+ 278 JYXH                             25   34768     1.211     1.241     0.678    0.56    0.55
+ 279 JYXH                             26   34768     1.178     1.221     0.677    0.57    0.55
+ 280 JYXH                             27   34768     1.190     1.271     0.692    0.58    0.54
+ 281 JYXH                             28   34768     1.259     1.292     0.695    0.55    0.54
+ 282 JYXH                              1  133072     1.286     0.958     0.679    0.53    0.71
+ 283 JYXH                              2  133072     1.462     0.935     0.870    0.60    0.93
+ 284 JYXH                              3  133072     1.515     0.883     0.948    0.63    1.07
+ 285 JYXH                              4  133072     1.586     1.042     1.012    0.64    0.97
+ 286 JYXH                              1  264144     2.163     0.886     1.559    0.72    1.76
+ 287 JYXH                              2  264144     2.411     0.927     1.801    0.75    1.94
+ 288 JYXH                              3  264144     2.433     1.079     1.872    0.77    1.73
+ 289 JYXH                              4  264144     2.436     1.199     1.989    0.82    1.66
+ 290 llama3.1-70b                      1     256     1.070     0.883     0.238    0.22    0.27
+ 291 llama3.1-70b                      1     263     1.038     0.927     0.241    0.23    0.26
+ 292 llama3.1-70b                      1     512     0.997     0.902     0.234    0.23    0.26
+ 293 llama3.1-70b                      1     519     0.984     0.872     0.229    0.23    0.26
+ 294 llama3.1-70b                      1    1024     0.976     0.880     0.237    0.24    0.27
+ 295 llama3.1-70b                      1    1031     1.026     0.890     0.231    0.23    0.26
+ 296 llama3.1-70b                      1    2048     1.037     0.969     0.282    0.27    0.29
+ 297 llama3.1-70b                      1    2055     1.082     0.988     0.274    0.25    0.28
+ 298 llama3.1-70b                      1    4096     0.993     0.989     0.281    0.28    0.28
+ 299 llama3.1-70b                      1    5120     1.047     0.920     0.256    0.24    0.28
+ 300 llama3.1-70b                     16     256     0.983     0.879     0.245    0.25    0.28
+ 301 llama3.1-70b                     16     263     0.960     0.881     0.250    0.26    0.28
+ 302 llama3.1-70b                     16     512     0.972     0.894     0.248    0.25    0.28
+ 303 llama3.1-70b                     16     519     0.966     0.884     0.250    0.26    0.28
+ 304 llama3.1-70b                     16    1024     1.017     0.938     0.303    0.30    0.32
+ 305 llama3.1-70b                     16    1031     1.108     0.999     0.304    0.27    0.30
+ 306 llama3.1-70b                     16    2048     1.113     1.033     0.301    0.27    0.29
+ 307 llama3.1-70b                     16    2055     1.102     1.008     0.300    0.27    0.30
+ 308 llama3.1-70b                     16    4096     1.102     0.999     0.349    0.32    0.35
+ 309 llama3.1-70b                     16    5120     1.083     0.997     0.373    0.34    0.37
+ 310 llama3.1-70b                     32     256     1.003     0.921     0.268    0.27    0.29
+ 311 llama3.1-70b                     32     263     1.022     0.939     0.274    0.27    0.29
+ 312 llama3.1-70b                     32     512     1.033     0.984     0.274    0.27    0.28
+ 313 llama3.1-70b                     32     519     1.155     1.047     0.314    0.27    0.30
+ 314 llama3.1-70b                     32    1024     1.039     1.038     0.269    0.26    0.26
+ 315 llama3.1-70b                     32    1031     1.061     1.039     0.300    0.28    0.29
+ 316 llama3.1-70b                     32    2048     1.050     0.947     0.346    0.33    0.37
+ 317 llama3.1-70b                     32    2055     1.053     1.009     0.358    0.34    0.35
+ 318 llama3.1-70b                     32    4096     1.061     1.101     0.515    0.49    0.47
+ 319 llama3.1-70b                     32    5120     1.147     1.166     0.591    0.52    0.51
+ 320 llama3.1-70b                     64     256     1.003     0.904     0.287    0.29    0.32
+ 321 llama3.1-70b                     64     263     0.997     0.917     0.326    0.33    0.36
+ 322 llama3.1-70b                     64     512     1.001     0.912     0.286    0.29    0.31
+ 323 llama3.1-70b                     64     519     1.024     0.923     0.288    0.28    0.31
+ 324 llama3.1-70b                     64    1024     1.024     0.916     0.344    0.34    0.38
+ 325 llama3.1-70b                     64    1031     0.997     0.946     0.397    0.40    0.42
+ 326 llama3.1-70b                     64    2048     1.032     1.148     0.549    0.53    0.48
+ 327 llama3.1-70b                     64    2055     1.041     1.118     0.550    0.53    0.49
+ 328 llama3.1-70b                     64    4096     1.314     1.399     0.839    0.64    0.60
+ 329 llama3.1-70b                     64    5120     1.184     1.228     0.640    0.54    0.52
+ 330 codellama-34b                     1     512     1.024     0.914     0.259    0.25    0.28
+ 331 codellama-34b                     1     513     1.053     0.931     0.249    0.24    0.27
+ 332 codellama-34b                     1    1024     0.999     0.924     0.252    0.25    0.27
+ 333 codellama-34b                     1    1025     1.007     0.945     0.249    0.25    0.26
+ 334 codellama-34b                     1    2048     1.005     0.936     0.257    0.26    0.27
+ 335 codellama-34b                     1    2049     1.054     0.931     0.251    0.24    0.27
+ 336 codellama-34b                     1    4096     1.018     0.940     0.251    0.25    0.27
+ 337 codellama-34b                     1    5120     1.012     0.923     0.250    0.25    0.27
+ 338 codellama-34b                    16     512     1.042     0.939     0.266    0.26    0.28
+ 339 codellama-34b                    16     513     1.022     0.920     0.261    0.26    0.28
+ 340 codellama-34b                    16    1024     1.021     0.922     0.259    0.25    0.28
+ 341 codellama-34b                    16    1025     1.014     0.921     0.268    0.26    0.29
+ 342 codellama-34b                    16    2048     1.021     0.930     0.269    0.26    0.29
+ 343 codellama-34b                    16    2049     1.042     0.948     0.287    0.28    0.30
+ 344 codellama-34b                    16    4096     1.099     1.007     0.282    0.26    0.28
+ 345 codellama-34b                    16    5120     0.938     0.897     0.253    0.27    0.28
+ 346 codellama-34b                    32     256     1.011     0.923     0.272    0.27    0.30
+ 347 codellama-34b                    32     257     1.025     0.919     0.266    0.26    0.29
+ 348 codellama-34b                    32     512     0.999     0.912     0.267    0.27    0.29
+ 349 codellama-34b                    32     513     0.987     0.910     0.263    0.27    0.29
+ 350 codellama-34b                    32    1024     1.007     0.900     0.267    0.26    0.30
+ 351 codellama-34b                    32    1025     0.979     0.913     0.276    0.28    0.30
+ 352 codellama-34b                    32    2048     0.991     0.895     0.269    0.27    0.30
+ 353 codellama-34b                    32    2049     0.991     0.888     0.258    0.26    0.29
+ 354 codellama-34b                    32    4096     0.983     0.914     0.324    0.33    0.35
+ 355 codellama-34b                    32    5120     1.005     0.956     0.383    0.38    0.40
+ 356 codellama-34b                    64     256     0.972     0.883     0.283    0.29    0.32
+ 357 codellama-34b                    64     257     0.975     0.885     0.284    0.29    0.32
+ 358 codellama-34b                    64     512     1.000     0.922     0.288    0.29    0.31
+ 359 codellama-34b                    64     513     1.009     0.939     0.287    0.28    0.31
+ 360 codellama-34b                    64    1024     1.008     0.953     0.297    0.30    0.31
+ 361 codellama-34b                    64    1025     1.013     0.922     0.296    0.29    0.32
+ 362 codellama-34b                    64    2048     1.030     0.907     0.357    0.35    0.39
+ 363 codellama-34b                    64    2049     0.988     0.902     0.357    0.36    0.40
+ 364 codellama-34b                    64    4096     1.015     1.099     0.549    0.54    0.50
+ 365 codellama-34b                    64    5120     1.111     1.177     0.628    0.57    0.53
+ 366 llama2-7B/baichuan2-7B            1     256     1.011     0.912     0.247    0.24    0.27
+ 367 llama2-7B/baichuan2-7B            1     263     1.045     0.939     0.244    0.23    0.26
+ 368 llama2-7B/baichuan2-7B            1     512     0.997     0.909     0.246    0.25    0.27
+ 369 llama2-7B/baichuan2-7B            1     519     1.013     0.880     0.227    0.22    0.26
+ 370 llama2-7B/baichuan2-7B            1    1024     0.976     0.896     0.234    0.24    0.26
+ 371 llama2-7B/baichuan2-7B            1    1031     1.021     0.909     0.246    0.24    0.27
+ 372 llama2-7B/baichuan2-7B            1    2048     0.982     0.867     0.236    0.24    0.27
+ 373 llama2-7B/baichuan2-7B            1    2055     0.995     0.870     0.236    0.24    0.27
+ 374 llama2-7B/baichuan2-7B            1    4096     1.001     0.887     0.234    0.23    0.26
+ 375 llama2-7B/baichuan2-7B            1    5120     0.985     0.932     0.236    0.24    0.25
+ 376 llama2-7B/baichuan2-7B           16     256     0.977     0.863     0.248    0.25    0.29
+ 377 llama2-7B/baichuan2-7B           16     263     0.986     0.896     0.255    0.26    0.28
+ 378 llama2-7B/baichuan2-7B           16     512     0.995     0.908     0.249    0.25    0.27
+ 379 llama2-7B/baichuan2-7B           16     519     1.003     0.962     0.252    0.25    0.26
+ 380 llama2-7B/baichuan2-7B           16    1024     0.982     0.876     0.291    0.30    0.33
+ 381 llama2-7B/baichuan2-7B           16    1031     0.978     0.870     0.300    0.31    0.34
+ 382 llama2-7B/baichuan2-7B           16    2048     0.973     1.010     0.476    0.49    0.47
+ 383 llama2-7B/baichuan2-7B           16    2055     1.028     1.058     0.481    0.47    0.45
+ 384 llama2-7B/baichuan2-7B           16    4096     1.278     1.330     0.770    0.60    0.58
+ 385 llama2-7B/baichuan2-7B           16    5120     1.453     1.475     0.910    0.63    0.62
+ 386 llama2-7B/baichuan2-7B           32     256     1.091     0.940     0.295    0.27    0.31
+ 387 llama2-7B/baichuan2-7B           32     263     0.995     0.904     0.283    0.28    0.31
+ 388 llama2-7B/baichuan2-7B           32     512     0.991     0.895     0.317    0.32    0.35
+ 389 llama2-7B/baichuan2-7B           32     519     1.044     0.965     0.345    0.33    0.36
+ 390 llama2-7B/baichuan2-7B           32    1024     1.211     1.142     0.520    0.43    0.46
+ 391 llama2-7B/baichuan2-7B           32    1031     1.038     1.047     0.509    0.49    0.49
+ 392 llama2-7B/baichuan2-7B           32    2048     1.283     1.322     0.799    0.62    0.60
+ 393 llama2-7B/baichuan2-7B           32    2055     1.316     1.338     0.800    0.61    0.60
+ 394 llama2-7B/baichuan2-7B           32    4096     1.830     1.904     1.379    0.75    0.72
+ 395 llama2-7B/baichuan2-7B           32    5120     2.130     2.178     1.652    0.78    0.76
+ 396 llama2-7B/baichuan2-7B           64     256     0.940     0.872     0.398    0.42    0.46
+ 397 llama2-7B/baichuan2-7B           64     263     0.955     0.916     0.431    0.45    0.47
+ 398 llama2-7B/baichuan2-7B           64     512     0.983     1.022     0.535    0.54    0.52
+ 399 llama2-7B/baichuan2-7B           64     519     1.044     1.077     0.559    0.54    0.52
+ 400 llama2-7B/baichuan2-7B           64    1024     1.271     1.378     0.843    0.66    0.61
+ 401 llama2-7B/baichuan2-7B           64    1031     1.325     1.406     0.879    0.66    0.63
+ 402 llama2-7B/baichuan2-7B           64    2048     1.884     1.950     1.446    0.77    0.74
+ 403 llama2-7B/baichuan2-7B           64    2055     1.942     1.991     1.468    0.76    0.74
+ 404 llama2-7B/baichuan2-7B           64    4096     3.007     3.098     2.596    0.86    0.84
+ 405 llama2-7B/baichuan2-7B           64    5120     3.613     3.700     3.187    0.88    0.86
+ 406 llama2-13B/baichuan2-13B/Qwen-    1     256     0.997     0.878     0.234    0.24    0.27
+ 407 llama2-13B/baichuan2-13B/Qwen-    1     263     1.029     0.965     0.252    0.24    0.26
+ 408 llama2-13B/baichuan2-13B/Qwen-    1     512     1.019     0.937     0.245    0.24    0.26
+ 409 llama2-13B/baichuan2-13B/Qwen-    1     519     0.985     0.933     0.245    0.25    0.26
+ 410 llama2-13B/baichuan2-13B/Qwen-    1    1024     1.019     0.938     0.245    0.24    0.26
+ 411 llama2-13B/baichuan2-13B/Qwen-    1    1031     1.041     0.944     0.244    0.23    0.26
+ 412 llama2-13B/baichuan2-13B/Qwen-    1    2048     1.016     0.944     0.287    0.28    0.30
+ 413 llama2-13B/baichuan2-13B/Qwen-    1    2055     1.070     0.967     0.247    0.23    0.26
+ 414 llama2-13B/baichuan2-13B/Qwen-    1    4096     1.049     0.939     0.244    0.23    0.26
+ 415 llama2-13B/baichuan2-13B/Qwen-    1    5120     1.031     0.933     0.238    0.23    0.25
+ 416 llama2-13B/baichuan2-13B/Qwen-   16     256     1.037     0.936     0.252    0.24    0.27
+ 417 llama2-13B/baichuan2-13B/Qwen-   16     263     1.041     0.958     0.258    0.25    0.27
+ 418 llama2-13B/baichuan2-13B/Qwen-   16     512     1.044     0.946     0.262    0.25    0.28
+ 419 llama2-13B/baichuan2-13B/Qwen-   16     519     1.049     0.955     0.260    0.25    0.27
+ 420 llama2-13B/baichuan2-13B/Qwen-   16    1024     1.005     0.921     0.256    0.25    0.28
+ 421 llama2-13B/baichuan2-13B/Qwen-   16    1031     1.039     0.937     0.262    0.25    0.28
+ 422 llama2-13B/baichuan2-13B/Qwen-   16    2048     1.009     0.915     0.337    0.33    0.37
+ 423 llama2-13B/baichuan2-13B/Qwen-   16    2055     0.991     0.904     0.339    0.34    0.37
+ 424 llama2-13B/baichuan2-13B/Qwen-   16    4096     1.091     1.108     0.557    0.51    0.50
+ 425 llama2-13B/baichuan2-13B/Qwen-   16    5120     1.181     1.210     0.658    0.56    0.54
+ 426 llama2-13B/baichuan2-13B/Qwen-   32     256     0.985     0.884     0.264    0.27    0.30
+ 427 llama2-13B/baichuan2-13B/Qwen-   32     263     0.996     0.917     0.270    0.27    0.29
+ 428 llama2-13B/baichuan2-13B/Qwen-   32     512     1.066     0.956     0.271    0.25    0.28
+ 429 llama2-13B/baichuan2-13B/Qwen-   32     519     1.031     0.964     0.283    0.27    0.29
+ 430 llama2-13B/baichuan2-13B/Qwen-   32    1024     1.070     1.000     0.365    0.34    0.37
+ 431 llama2-13B/baichuan2-13B/Qwen-   32    1031     1.064     0.978     0.371    0.35    0.38
+ 432 llama2-13B/baichuan2-13B/Qwen-   32    2048     1.134     1.171     0.600    0.53    0.51
+ 433 llama2-13B/baichuan2-13B/Qwen-   32    2055     1.137     1.158     0.599    0.53    0.52
+ 434 llama2-13B/baichuan2-13B/Qwen-   32    4096     1.520     1.537     0.973    0.64    0.63
+ 435 llama2-13B/baichuan2-13B/Qwen-   32    5120     1.744     1.744     1.162    0.67    0.67
+ 436 llama2-13B/baichuan2-13B/Qwen-   64     256     1.040     0.993     0.346    0.33    0.35
+ 437 llama2-13B/baichuan2-13B/Qwen-   64     263     1.013     0.998     0.357    0.35    0.36
+ 438 llama2-13B/baichuan2-13B/Qwen-   64     512     1.040     0.954     0.396    0.38    0.41
+ 439 llama2-13B/baichuan2-13B/Qwen-   64     519     1.002     0.918     0.408    0.41    0.44
+ 440 llama2-13B/baichuan2-13B/Qwen-   64    1024     1.109     1.134     0.633    0.57    0.56
+ 441 llama2-13B/baichuan2-13B/Qwen-   64    1031     1.160     1.190     0.670    0.58    0.56
+ 442 llama2-13B/baichuan2-13B/Qwen-   64    2048     1.548     1.539     1.030    0.67    0.67
+ 443 llama2-13B/baichuan2-13B/Qwen-   64    2055     1.563     1.609     1.058    0.68    0.66
+ 444 llama2-13B/baichuan2-13B/Qwen-   64    4096     2.280     2.361     1.810    0.79    0.77
+ 445 llama2-13B/baichuan2-13B/Qwen-   64    5120     2.644     2.726     2.190    0.83    0.80
+ 446 Qwen3-235B/Qwen3-32B              1     256     1.058     0.968     0.266    0.25    0.27
+ 447 Qwen3-235B/Qwen3-32B              1     263     1.058     0.970     0.265    0.25    0.27
+ 448 Qwen3-235B/Qwen3-32B              1     512     1.077     0.977     0.266    0.25    0.27
+ 449 Qwen3-235B/Qwen3-32B              1     519     1.080     0.999     0.265    0.24    0.26
+ 450 Qwen3-235B/Qwen3-32B              1    1024     1.086     0.953     0.264    0.24    0.28
+ 451 Qwen3-235B/Qwen3-32B              1    1031     1.069     0.971     0.266    0.25    0.27
+ 452 Qwen3-235B/Qwen3-32B              1    2048     1.059     0.943     0.259    0.24    0.27
+ 453 Qwen3-235B/Qwen3-32B              1    2055     1.049     0.953     0.254    0.24    0.27
+ 454 Qwen3-235B/Qwen3-32B              1    4096     1.036     0.940     0.264    0.25    0.28
+ 455 Qwen3-235B/Qwen3-32B              1    5120     1.063     0.967     0.255    0.24    0.26
+ 456 Qwen3-235B/Qwen3-32B             16     256     1.028     0.958     0.268    0.26    0.28
+ 457 Qwen3-235B/Qwen3-32B             16     263     1.064     0.940     0.275    0.26    0.29
+ 458 Qwen3-235B/Qwen3-32B             16     512     1.041     0.933     0.270    0.26    0.29
+ 459 Qwen3-235B/Qwen3-32B             16     519     1.079     0.972     0.284    0.26    0.29
+ 460 Qwen3-235B/Qwen3-32B             16    1024     1.054     0.943     0.256    0.24    0.27
+ 461 Qwen3-235B/Qwen3-32B             16    1031     0.978     0.878     0.247    0.25    0.28
+ 462 Qwen3-235B/Qwen3-32B             16    2048     0.979     0.898     0.249    0.25    0.28
+ 463 Qwen3-235B/Qwen3-32B             16    2055     1.007     0.931     0.263    0.26    0.28
+ 464 Qwen3-235B/Qwen3-32B             16    4096     1.026     0.921     0.255    0.25    0.28
+ 465 Qwen3-235B/Qwen3-32B             16    5120     1.013     0.910     0.249    0.25    0.27
+ 466 Qwen3-235B/Qwen3-32B             32     256     1.007     0.882     0.262    0.26    0.30
+ 467 Qwen3-235B/Qwen3-32B             32     263     0.996     0.917     0.264    0.26    0.29
+ 468 Qwen3-235B/Qwen3-32B             32     512     1.009     0.904     0.266    0.26    0.29
+ 469 Qwen3-235B/Qwen3-32B             32     519     1.001     0.911     0.264    0.26    0.29
+ 470 Qwen3-235B/Qwen3-32B             32    1024     1.000     0.923     0.265    0.26    0.29
+ 471 Qwen3-235B/Qwen3-32B             32    1031     1.007     0.906     0.263    0.26    0.29
+ 472 Qwen3-235B/Qwen3-32B             32    2048     1.013     0.922     0.263    0.26    0.29
+ 473 Qwen3-235B/Qwen3-32B             32    2055     1.010     0.928     0.269    0.27    0.29
+ 474 Qwen3-235B/Qwen3-32B             32    4096     1.040     0.888     0.342    0.33    0.38
+ 475 Qwen3-235B/Qwen3-32B             32    5120     1.002     0.966     0.389    0.39    0.40
+ 476 Qwen3-235B/Qwen3-32B             64     256     1.010     0.895     0.288    0.28    0.32
+ 477 Qwen3-235B/Qwen3-32B             64     263     1.000     0.890     0.284    0.28    0.32
+ 478 Qwen3-235B/Qwen3-32B             64     512     0.997     0.919     0.296    0.30    0.32
+ 479 Qwen3-235B/Qwen3-32B             64     519     1.010     0.873     0.287    0.28    0.33
+ 480 Qwen3-235B/Qwen3-32B             64    1024     1.005     0.897     0.283    0.28    0.32
+ 481 Qwen3-235B/Qwen3-32B             64    1031     1.030     0.952     0.312    0.30    0.33
+ 482 Qwen3-235B/Qwen3-32B             64    2048     1.095     0.907     0.361    0.33    0.40
+ 483 Qwen3-235B/Qwen3-32B             64    2055     1.009     1.034     0.357    0.35    0.34
+ 484 Qwen3-235B/Qwen3-32B             64    4096     1.028     1.100     0.543    0.53    0.49
+ 485 Qwen3-235B/Qwen3-32B             64    5120     1.146     1.216     0.628    0.55    0.52
+ 486 Qwen3-235B/Qwen3-32B              1     256     0.995     0.910     0.237    0.24    0.26
+ 487 Qwen3-235B/Qwen3-32B              1     263     1.010     0.886     0.243    0.24    0.27
+ 488 Qwen3-235B/Qwen3-32B              1     512     1.025     0.920     0.235    0.23    0.26
+ 489 Qwen3-235B/Qwen3-32B              1     519     0.983     0.882     0.236    0.24    0.27
+ 490 Qwen3-235B/Qwen3-32B              1    1024     0.949     0.884     0.238    0.25    0.27
+ 491 Qwen3-235B/Qwen3-32B              1    1031     1.005     0.895     0.231    0.23    0.26
+ 492 Qwen3-235B/Qwen3-32B              1    2048     0.959     0.880     0.237    0.25    0.27
+ 493 Qwen3-235B/Qwen3-32B              1    2055     0.999     0.906     0.237    0.24    0.26
+ 494 Qwen3-235B/Qwen3-32B              1    4096     0.983     0.869     0.226    0.23    0.26
+ 495 Qwen3-235B/Qwen3-32B              1    5120     0.982     0.879     0.229    0.23    0.26
+ 496 Qwen3-235B/Qwen3-32B             16     256     0.951     0.893     0.243    0.26    0.27
+ 497 Qwen3-235B/Qwen3-32B             16     263     0.971     0.988     0.252    0.26    0.25
+ 498 Qwen3-235B/Qwen3-32B             16     512     1.007     0.925     0.260    0.26    0.28
+ 499 Qwen3-235B/Qwen3-32B             16     519     0.997     0.895     0.250    0.25    0.28
+ 500 Qwen3-235B/Qwen3-32B             16    1024     0.963     0.939     0.259    0.27    0.28
+ 501 Qwen3-235B/Qwen3-32B             16    1031     1.011     0.909     0.250    0.25    0.28
+ 502 Qwen3-235B/Qwen3-32B             16    2048     0.992     0.962     0.265    0.27    0.27
+ 503 Qwen3-235B/Qwen3-32B             16    2055     1.023     0.973     0.256    0.25    0.26
+ 504 Qwen3-235B/Qwen3-32B             16    4096     1.060     0.934     0.263    0.25    0.28
+ 505 Qwen3-235B/Qwen3-32B             16    5120     1.028     0.960     0.261    0.25    0.27
+ 506 Qwen3-235B/Qwen3-32B             32     256     1.031     0.946     0.272    0.26    0.29
+ 507 Qwen3-235B/Qwen3-32B             32     263     1.036     0.939     0.259    0.25    0.28
+ 508 Qwen3-235B/Qwen3-32B             32     512     1.043     0.903     0.276    0.26    0.31
+ 509 Qwen3-235B/Qwen3-32B             32     519     1.031     0.940     0.274    0.27    0.29
+ 510 Qwen3-235B/Qwen3-32B             32    1024     0.997     0.907     0.278    0.28    0.31
+ 511 Qwen3-235B/Qwen3-32B             32    1031     1.013     0.915     0.276    0.27    0.30
+ 512 Qwen3-235B/Qwen3-32B             32    2048     0.996     0.906     0.264    0.27    0.29
+ 513 Qwen3-235B/Qwen3-32B             32    2055     1.002     0.932     0.264    0.26    0.28
+ 514 Qwen3-235B/Qwen3-32B             32    4096     0.987     0.886     0.264    0.27    0.30
+ 515 Qwen3-235B/Qwen3-32B             32    5120     1.018     0.925     0.264    0.26    0.29
+ 516 Qwen3-235B/Qwen3-32B             64     256     1.091     1.030     0.344    0.32    0.33
+ 517 Qwen3-235B/Qwen3-32B             64     263     1.066     0.981     0.302    0.28    0.31
+ 518 Qwen3-235B/Qwen3-32B             64     512     1.072     0.977     0.300    0.28    0.31
+ 519 Qwen3-235B/Qwen3-32B             64     519     1.061     1.032     0.339    0.32    0.33
+ 520 Qwen3-235B/Qwen3-32B             64    1024     1.100     1.021     0.303    0.28    0.30
+ 521 Qwen3-235B/Qwen3-32B             64    1031     1.024     0.930     0.295    0.29    0.32
+ 522 Qwen3-235B/Qwen3-32B             64    2048     1.048     0.935     0.293    0.28    0.31
+ 523 Qwen3-235B/Qwen3-32B             64    2055     1.053     0.958     0.295    0.28    0.31
+ 524 Qwen3-235B/Qwen3-32B             64    4096     0.988     0.894     0.321    0.33    0.36
+ 525 Qwen3-235B/Qwen3-32B             64    5120     0.983     0.888     0.359    0.37    0.40
+ 526 Qwen3-30B                         1     256     0.981     0.869     0.236    0.24    0.27
+ 527 Qwen3-30B                         1     263     0.966     0.882     0.228    0.24    0.26
+ 528 Qwen3-30B                         1     512     0.995     0.895     0.237    0.24    0.26
+ 529 Qwen3-30B                         1     519     0.985     0.884     0.239    0.24    0.27
+ 530 Qwen3-30B                         1    1024     1.016     0.880     0.234    0.23    0.27
+ 531 Qwen3-30B                         1    1031     0.990     0.896     0.232    0.23    0.26
+ 532 Qwen3-30B                         1    2048     0.978     0.915     0.239    0.24    0.26
+ 533 Qwen3-30B                         1    2055     0.976     0.909     0.232    0.24    0.26
+ 534 Qwen3-30B                         1    4096     0.985     0.866     0.234    0.24    0.27
+ 535 Qwen3-30B                         1    5120     0.984     0.958     0.240    0.24    0.25
+ 536 Qwen3-30B                        16     256     0.985     0.903     0.287    0.29    0.32
+ 537 Qwen3-30B                        16     263     0.942     0.857     0.248    0.26    0.29
+ 538 Qwen3-30B                        16     512     0.985     0.862     0.242    0.25    0.28
+ 539 Qwen3-30B                        16     519     0.964     0.885     0.242    0.25    0.27
+ 540 Qwen3-30B                        16    1024     0.978     0.884     0.248    0.25    0.28
+ 541 Qwen3-30B                        16    1031     0.971     0.931     0.241    0.25    0.26
+ 542 Qwen3-30B                        16    2048     0.953     0.903     0.246    0.26    0.27
+ 543 Qwen3-30B                        16    2055     0.951     0.881     0.248    0.26    0.28
+ 544 Qwen3-30B                        16    4096     1.005     0.925     0.315    0.31    0.34
+ 545 Qwen3-30B                        16    5120     1.011     0.959     0.371    0.37    0.39
+ 546 Qwen3-30B                        32     256     1.005     0.886     0.259    0.26    0.29
+ 547 Qwen3-30B                        32     263     1.003     0.877     0.263    0.26    0.30
+ 548 Qwen3-30B                        32     512     1.005     0.894     0.263    0.26    0.29
+ 549 Qwen3-30B                        32     519     1.022     0.938     0.264    0.26    0.28
+ 550 Qwen3-30B                        32    1024     1.017     0.932     0.269    0.26    0.29
+ 551 Qwen3-30B                        32    1031     1.066     0.968     0.291    0.27    0.30
+ 552 Qwen3-30B                        32    2048     1.031     0.942     0.350    0.34    0.37
+ 553 Qwen3-30B                        32    2055     1.046     0.959     0.350    0.33    0.37
+ 554 Qwen3-30B                        32    4096     1.068     1.113     0.544    0.51    0.49
+ 555 Qwen3-30B                        32    5120     1.110     1.195     0.606    0.55    0.51
+ 556 Qwen3-30B                        64     256     0.973     0.873     0.286    0.29    0.33
+ 557 Qwen3-30B                        64     263     0.993     0.905     0.316    0.32    0.35
+ 558 Qwen3-30B                        64     512     1.005     0.929     0.284    0.28    0.31
+ 559 Qwen3-30B                        64     519     1.009     0.901     0.287    0.28    0.32
+ 560 Qwen3-30B                        64    1024     0.995     0.920     0.356    0.36    0.39
+ 561 Qwen3-30B                        64    1031     0.969     0.927     0.386    0.40    0.42
+ 562 Qwen3-30B                        64    2048     0.990     1.128     0.530    0.54    0.47
+ 563 Qwen3-30B                        64    2055     1.013     1.070     0.536    0.53    0.50
+ 564 Qwen3-30B                        64    4096     1.270     1.358     0.826    0.65    0.61
+ 565 Qwen3-30B                        64    5120     1.441     1.622     0.984    0.68    0.61
+ 566 Qwen3-30B                         1     256     0.999     0.892     0.298    0.30    0.33
+ 567 Qwen3-30B                         1     263     1.036     1.007     0.257    0.25    0.26
+ 568 Qwen3-30B                         1     512     1.136     0.988     0.234    0.21    0.24
+ 569 Qwen3-30B                         1     519     1.194     1.054     0.273    0.23    0.26
+ 570 Qwen3-30B                         1    1024     1.112     0.973     0.235    0.21    0.24
+ 571 Qwen3-30B                         1    1031     1.064     0.951     0.241    0.23    0.25
+ 572 Qwen3-30B                         1    2048     1.050     0.927     0.242    0.23    0.26
+ 573 Qwen3-30B                         1    2055     1.040     0.967     0.246    0.24    0.25
+ 574 Qwen3-30B                         1    4096     1.025     0.978     0.239    0.23    0.24
+ 575 Qwen3-30B                         1    5120     1.006     0.934     0.240    0.24    0.26
+ 576 Qwen3-30B                        16     256     1.024     0.942     0.271    0.26    0.29
+ 577 Qwen3-30B                        16     263     0.995     0.910     0.250    0.25    0.27
+ 578 Qwen3-30B                        16     512     1.007     0.873     0.245    0.24    0.28
+ 579 Qwen3-30B                        16     519     0.980     0.896     0.245    0.25    0.27
+ 580 Qwen3-30B                        16    1024     0.971     0.879     0.241    0.25    0.27
+ 581 Qwen3-30B                        16    1031     1.007     0.891     0.250    0.25    0.28
+ 582 Qwen3-30B                        16    2048     1.010     0.914     0.255    0.25    0.28
+ 583 Qwen3-30B                        16    2055     1.016     0.917     0.261    0.26    0.28
+ 584 Qwen3-30B                        16    4096     0.966     0.909     0.326    0.34    0.36
+ 585 Qwen3-30B                        16    5120     1.013     0.992     0.378    0.37    0.38
+ 586 Qwen3-30B                        32     256     1.024     0.953     0.272    0.27    0.29
+ 587 Qwen3-30B                        32     263     1.050     0.964     0.275    0.26    0.28
+ 588 Qwen3-30B                        32     512     1.078     0.964     0.280    0.26    0.29
+ 589 Qwen3-30B                        32     519     1.056     0.961     0.275    0.26    0.29
+ 590 Qwen3-30B                        32    1024     1.055     0.955     0.269    0.26    0.28
+ 591 Qwen3-30B                        32    1031     1.019     0.927     0.268    0.26    0.29
+ 592 Qwen3-30B                        32    2048     1.053     0.960     0.338    0.32    0.35
+ 593 Qwen3-30B                        32    2055     1.050     0.946     0.331    0.31    0.35
+ 594 Qwen3-30B                        32    4096     1.028     1.077     0.514    0.50    0.48
+ 595 Qwen3-30B                        32    5120     1.110     1.150     0.595    0.54    0.52
+ 596 Qwen3-30B                        64     256     0.996     0.888     0.287    0.29    0.32
+ 597 Qwen3-30B                        64     263     1.031     0.936     0.315    0.31    0.34
+ 598 Qwen3-30B                        64     512     1.047     0.929     0.298    0.28    0.32
+ 599 Qwen3-30B                        64     519     1.005     0.929     0.292    0.29    0.31
+ 600 Qwen3-30B                        64    1024     1.027     0.925     0.362    0.35    0.39
+ 601 Qwen3-30B                        64    1031     0.999     0.888     0.401    0.40    0.45
+ 602 Qwen3-30B                        64    2048     1.030     1.090     0.533    0.52    0.49
+ 603 Qwen3-30B                        64    2055     1.053     1.101     0.547    0.52    0.50
+ 604 Qwen3-30B                        64    4096     1.320     1.366     0.827    0.63    0.61
+ 605 Qwen3-30B                        64    5120     1.492     1.499     0.971    0.65    0.65
+ 606 Qwen3-30B                         1     256     0.950     0.854     0.232    0.24    0.27
+ 607 Qwen3-30B                         1     263     0.949     0.851     0.223    0.24    0.26
+ 608 Qwen3-30B                         1     512     0.949     0.866     0.230    0.24    0.27
+ 609 Qwen3-30B                         1     519     0.937     0.839     0.225    0.24    0.27
+ 610 Qwen3-30B                         1    1024     0.940     0.880     0.227    0.24    0.26
+ 611 Qwen3-30B                         1    1031     0.947     0.860     0.232    0.25    0.27
+ 612 Qwen3-30B                         1    2048     0.954     0.876     0.241    0.25    0.27
+ 613 Qwen3-30B                         1    2055     0.979     0.868     0.237    0.24    0.27
+ 614 Qwen3-30B                         1    4096     0.950     0.864     0.231    0.24    0.27
+ 615 Qwen3-30B                         1    5120     0.953     0.900     0.237    0.25    0.26
+ 616 Qwen3-30B                        16     256     0.963     0.879     0.246    0.26    0.28
+ 617 Qwen3-30B                        16     263     0.948     0.873     0.247    0.26    0.28
+ 618 Qwen3-30B                        16     512     0.977     0.908     0.252    0.26    0.28
+ 619 Qwen3-30B                        16     519     0.991     0.877     0.249    0.25    0.28
+ 620 Qwen3-30B                        16    1024     0.981     0.930     0.258    0.26    0.28
+ 621 Qwen3-30B                        16    1031     0.996     0.888     0.246    0.25    0.28
+ 622 Qwen3-30B                        16    2048     0.972     0.895     0.247    0.25    0.28
+ 623 Qwen3-30B                        16    2055     0.973     0.887     0.246    0.25    0.28
+ 624 Qwen3-30B                        16    4096     0.979     0.906     0.250    0.26    0.28
+ 625 Qwen3-30B                        16    5120     1.020     0.935     0.254    0.25    0.27
+ 626 Qwen3-30B                        32     256     0.985     0.927     0.291    0.29    0.31
+ 627 Qwen3-30B                        32     263     0.989     0.931     0.285    0.29    0.31
+ 628 Qwen3-30B                        32     512     1.040     0.883     0.257    0.25    0.29
+ 629 Qwen3-30B                        32     519     0.972     0.855     0.249    0.26    0.29
+ 630 Qwen3-30B                        32    1024     1.038     0.916     0.277    0.27    0.30
+ 631 Qwen3-30B                        32    1031     1.027     1.026     0.282    0.27    0.28
+ 632 Qwen3-30B                        32    2048     1.108     0.958     0.309    0.28    0.32
+ 633 Qwen3-30B                        32    2055     1.166     1.002     0.308    0.26    0.31
+ 634 Qwen3-30B                        32    4096     0.945     0.879     0.251    0.27    0.29
+ 635 Qwen3-30B                        32    5120     0.965     0.923     0.284    0.29    0.31
+ 636 Qwen3-30B                        64     256     0.982     0.938     0.293    0.30    0.31
+ 637 Qwen3-30B                        64     263     0.997     0.914     0.289    0.29    0.32
+ 638 Qwen3-30B                        64     512     1.017     0.961     0.290    0.28    0.30
+ 639 Qwen3-30B                        64     519     0.997     0.877     0.284    0.29    0.32
+ 640 Qwen3-30B                        64    1024     0.953     0.860     0.288    0.30    0.33
+ 641 Qwen3-30B                        64    1031     0.955     0.900     0.285    0.30    0.32
+ 642 Qwen3-30B                        64    2048     0.962     0.894     0.279    0.29    0.31
+ 643 Qwen3-30B                        64    2055     0.950     0.859     0.282    0.30    0.33
+ 644 Qwen3-30B                        64    4096     0.948     0.862     0.320    0.34    0.37
+ 645 Qwen3-30B                        64    5120     0.972     0.921     0.369    0.38    0.40
+ 646 Qwen3-30B                         1     256     0.976     0.882     0.236    0.24    0.27
+ 647 Qwen3-30B                         1     263     1.002     0.899     0.227    0.23    0.25
+ 648 Qwen3-30B                         1     512     0.949     0.889     0.240    0.25    0.27
+ 649 Qwen3-30B                         1     519     0.977     0.889     0.232    0.24    0.26
+ 650 Qwen3-30B                         1    1024     0.940     0.857     0.237    0.25    0.28
+ 651 Qwen3-30B                         1    1031     0.965     0.854     0.245    0.25    0.29
+ 652 Qwen3-30B                         1    2048     1.013     0.932     0.233    0.23    0.25
+ 653 Qwen3-30B                         1    2055     1.010     0.888     0.242    0.24    0.27
+ 654 Qwen3-30B                         1    4096     0.974     0.888     0.234    0.24    0.26
+ 655 Qwen3-30B                         1    5120     0.984     0.898     0.235    0.24    0.26
+ 656 Qwen3-30B                        16     256     0.983     0.895     0.252    0.26    0.28
+ 657 Qwen3-30B                        16     263     1.021     0.923     0.254    0.25    0.28
+ 658 Qwen3-30B                        16     512     0.995     0.913     0.250    0.25    0.27
+ 659 Qwen3-30B                        16     519     0.957     0.882     0.243    0.25    0.27
+ 660 Qwen3-30B                        16    1024     0.958     0.916     0.279    0.29    0.30
+ 661 Qwen3-30B                        16    1031     0.940     0.854     0.241    0.26    0.28
+ 662 Qwen3-30B                        16    2048     0.961     0.856     0.238    0.25    0.28
+ 663 Qwen3-30B                        16    2055     0.955     0.934     0.238    0.25    0.25
+ 664 Qwen3-30B                        16    4096     0.951     0.869     0.245    0.26    0.28
+ 665 Qwen3-30B                        16    5120     0.953     0.883     0.251    0.26    0.28
+ 666 Qwen3-30B                        32     256     0.999     0.935     0.259    0.26    0.28
+ 667 Qwen3-30B                        32     263     0.986     0.904     0.255    0.26    0.28
+ 668 Qwen3-30B                        32     512     0.969     0.978     0.281    0.29    0.29
+ 669 Qwen3-30B                        32     519     0.954     0.876     0.249    0.26    0.28
+ 670 Qwen3-30B                        32    1024     0.970     0.879     0.254    0.26    0.29
+ 671 Qwen3-30B                        32    1031     0.970     0.886     0.260    0.27    0.29
+ 672 Qwen3-30B                        32    2048     0.984     0.910     0.244    0.25    0.27
+ 673 Qwen3-30B                        32    2055     0.957     0.885     0.254    0.26    0.29
+ 674 Qwen3-30B                        32    4096     0.972     0.891     0.258    0.27    0.29
+ 675 Qwen3-30B                        32    5120     0.972     0.900     0.257    0.26    0.29
+ 676 Qwen3-30B                        64     256     0.989     0.906     0.287    0.29    0.32
+ 677 Qwen3-30B                        64     263     1.009     0.912     0.291    0.29    0.32
+ 678 Qwen3-30B                        64     512     0.997     0.909     0.288    0.29    0.32
+ 679 Qwen3-30B                        64     519     1.007     0.930     0.305    0.30    0.33
+ 680 Qwen3-30B                        64    1024     0.999     0.917     0.288    0.29    0.31
+ 681 Qwen3-30B                        64    1031     1.000     0.920     0.295    0.30    0.32
+ 682 Qwen3-30B                        64    2048     1.017     0.910     0.289    0.28    0.32
+ 683 Qwen3-30B                        64    2055     1.006     0.972     0.286    0.28    0.29
+ 684 Qwen3-30B                        64    4096     1.013     0.933     0.321    0.32    0.34
+ 685 Qwen3-30B                        64    5120     1.101     1.017     0.377    0.34    0.37
+
+结果 CSV: batchtest/fa34_fia_all.csv
+汇总: batchtest/fa34_fia_all_summary.md

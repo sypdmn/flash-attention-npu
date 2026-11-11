@@ -1,0 +1,2 @@
+case_id,model,layout,dtype,timing,batch,q_s,kv_s,nheads,nkv,head_dim,head_dim_v,block_size,flops,fa3_ms,fa4_ms,fia_ms,fa3_perf_ratio,fa4_perf_ratio,fa3_tflops,fa4_tflops,fia_tflops,error
+0,llama2-70B/qwen2-72b,TND,bfloat16,kernel,1,1,256,8,1,128,128,128,1048576.0,0.043199999999999995,0.065744,0.02004,0.4638888888888889,0.3048186906789973,0.024272592592592596,0.015949379411048917,0.05232415169660679,

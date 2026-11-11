@@ -1,0 +1,14 @@
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+FA3 shape= (1, 8, 128) dtype= torch.float16
+FA4 shape= (1, 8, 128) dtype= torch.float16
+FIA shape= (1, 8, 128) dtype= torch.float16
+FA3 vs FIA: max_abs_error=0.000000 mean_abs_error=0.000000
+FA4 vs FIA: max_abs_error=0.000000 mean_abs_error=0.000000
+Smoke test finished (review numerical differences above).

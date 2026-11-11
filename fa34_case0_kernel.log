@@ -1,0 +1,42 @@
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+decode 用例 1 条（q_s=1）,来自 /data1/songyp/flash-attention-npu/3.2-性能场景.md
+device=Ascend910B4-1 dtype=bfloat16 timing=kernel warmup=5 torch=2.9.0+cpu torch_npu=2.9.0
+[2026-11-05 09:33:42] [WARNING] [319633] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 09:33:42] [WARNING] [319633] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 09:33:43] [INFO] [324355] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/marker/zd_319633_20261105093342363_ascend_pt
+|/-\[2026-11-05 09:33:46] [INFO] [324417] profiler.py: CANN profiling data parsed in a total time of 0:00:03.038931
+|[2026-11-05 09:33:47] [INFO] [324355] profiler.py: All profiling data parsed in a total time of 0:00:04.561090
+marker kernel: aclnnBitwiseNot_InvertAiCpu_Invert
+[2026-11-05 09:33:49] [WARNING] [319633] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 09:33:49] [WARNING] [319633] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 09:33:50] [INFO] [328522] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_0/zd_319633_20261105093349547_ascend_pt
+|/-\[2026-11-05 09:33:53] [INFO] [328540] profiler.py: CANN profiling data parsed in a total time of 0:00:03.037309
+|[2026-11-05 09:33:54] [INFO] [328522] profiler.py: All profiling data parsed in a total time of 0:00:04.611158
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0012ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV3Pv=0.0232ms, aclnnSub_SubAiCore_Sub=0.0013ms, _ZN9SplitFuse7FAInferIu6__bf16u6__bf16fLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=0.0162ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV4Pv=0.0206ms, aclnnSub_SubAiCore_Sub=0.0015ms, _Z14WriteFARuntimePv=0.0201ms, _ZN9SplitFuse7FAInferIu6__bf16u6__bf16fLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.0210ms
+    fia kernels: FusedInferAttentionScore=0.0200ms
+>>> [001/1] case 0 llama2-70B/qwen2-72b B1 kv256 H8/1
+    fa3=0.043ms fa4=0.066ms fia=0.020ms
+
+============================================================================================================
+3.2 decode TND：kernel Duration（该次调用所有 kernel 的 Duration 之和）；性能比 = FIA耗时 / FA耗时（>1 表示 FA 快于 FIA）
+============================================================================================================
+三路都成功: 1/1
+  fa3/FIA: geomean=0.464x median=0.464x min=0.464x max=0.464x
+  fa4/FIA: geomean=0.305x median=0.305x min=0.305x max=0.305x
+
+model                                         n    FA3/FIA    FA4/FIA
+llama2-70B/qwen2-72b                          1     0.464x     0.305x
+
+  id model                             B      kv       FA3       FA4       FIA      P3      P4
+   0 llama2-70B/qwen2-72b              1     256     0.043     0.066     0.020    0.46    0.30
+
+结果 CSV: batchtest/fa34_case0_kernel.csv
+汇总: batchtest/fa34_case0_kernel_summary.md

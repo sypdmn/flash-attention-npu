@@ -1,0 +1,124 @@
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/songyp/.conda/envs/cann-8.5-li-debug/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_ops_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+decode 用例 8 条（q_s=1）,来自 /data1/songyp/flash-attention-npu/3.2-性能场景.md
+device=Ascend910B4-1 dtype=float16 timing=kernel warmup=10 torch=2.9.0+cpu torch_npu=2.9.0
+[2026-11-05 11:51:21] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:21] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:51:22] [INFO] [2066651] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/marker/zd_2064288_20261105115121948_ascend_pt
+|/-\[2026-11-05 11:51:26] [INFO] [2066670] profiler.py: CANN profiling data parsed in a total time of 0:00:03.043091
+|[2026-11-05 11:51:27] [INFO] [2066651] profiler.py: All profiling data parsed in a total time of 0:00:04.563033
+marker kernel: aclnnBitwiseNot_InvertAiCpu_Invert
+[2026-11-05 11:51:29] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:29] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:51:29] [INFO] [2068287] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_0/zd_2064288_20261105115129210_ascend_pt
+|/-\[2026-11-05 11:51:33] [INFO] [2068307] profiler.py: CANN profiling data parsed in a total time of 0:00:03.036309
+|[2026-11-05 11:51:34] [INFO] [2068287] profiler.py: All profiling data parsed in a total time of 0:00:04.608101
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV3Pv=0.0216ms, aclnnSub_SubAiCore_Sub=0.0013ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=0.0155ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0014ms, aclnnSub_SubAiCore_Sub=0.0014ms, _Z19ComputeFAMetadataV4Pv=0.0172ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0173ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.0171ms
+    fia kernels: FusedInferAttentionScore=0.0186ms
+>>> [001/8] case 0 llama2-70B/qwen2-72b B1 kv256 H8/1
+    fa3=0.041ms fa4=0.056ms fia=0.019ms
+[2026-11-05 11:51:35] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:35] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:51:35] [INFO] [2069768] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_49/zd_2064288_20261105115135109_ascend_pt
+|/-\[2026-11-05 11:51:39] [INFO] [2069796] profiler.py: CANN profiling data parsed in a total time of 0:00:03.046457
+|[2026-11-05 11:51:40] [INFO] [2069768] profiler.py: All profiling data parsed in a total time of 0:00:04.659149
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0014ms, aclnnSub_SubAiCore_Sub=0.0012ms, _Z19ComputeFAMetadataV3Pv=0.0220ms, aclnnSub_SubAiCore_Sub=0.0012ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=0.0420ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV4Pv=0.0245ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0170ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.0390ms
+    fia kernels: FusedInferAttentionScore=0.0435ms
+>>> [002/8] case 49 llama-65B/Qwen-72B B1 kv5120 H8/8
+    fa3=0.068ms fa4=0.084ms fia=0.044ms
+[2026-11-05 11:51:41] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:41] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:51:41] [INFO] [2071285] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_210/zd_2064288_20261105115141112_ascend_pt
+|/-\[2026-11-05 11:51:45] [INFO] [2071340] profiler.py: CANN profiling data parsed in a total time of 0:00:03.035965
+|[2026-11-05 11:51:46] [INFO] [2071285] profiler.py: All profiling data parsed in a total time of 0:00:04.627816
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV3Pv=0.0221ms, aclnnSub_SubAiCore_Sub=0.0013ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=0.0224ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV4Pv=0.0204ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0206ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.0264ms
+    fia kernels: FusedInferAttentionScore=0.0258ms
+>>> [003/8] case 210 starcoder-15.5B B16 kv256 H6/1
+    fa3=0.048ms fa4=0.071ms fia=0.026ms
+[2026-11-05 11:51:47] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:47] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:51:48] [INFO] [2072627] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_286/zd_2064288_20261105115147162_ascend_pt
+|/-\[2026-11-05 11:51:51] [INFO] [2072776] profiler.py: CANN profiling data parsed in a total time of 0:00:03.040301
+|[2026-11-05 11:51:52] [INFO] [2072627] profiler.py: All profiling data parsed in a total time of 0:00:04.771412
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV3Pv=0.0212ms, aclnnSub_SubAiCore_Sub=0.0013ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=1.4534ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0012ms, _Z19ComputeFAMetadataV4Pv=0.0206ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0183ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.1224ms
+    fia kernels: FusedInferAttentionScore=1.3102ms
+>>> [004/8] case 286 JYXH B1 kv264144 H12/1
+    fa3=1.479ms fa4=0.165ms fia=1.310ms
+[2026-11-05 11:51:53] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:53] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:51:54] [INFO] [2074127] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_287/zd_2064288_20261105115153409_ascend_pt
+|/-\[2026-11-05 11:51:57] [INFO] [2074179] profiler.py: CANN profiling data parsed in a total time of 0:00:03.040298
+|[2026-11-05 11:51:58] [INFO] [2074127] profiler.py: All profiling data parsed in a total time of 0:00:04.811730
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0016ms, aclnnSub_SubAiCore_Sub=0.0014ms, _Z19ComputeFAMetadataV3Pv=0.0219ms, aclnnSub_SubAiCore_Sub=0.0013ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=1.6951ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0016ms, aclnnSub_SubAiCore_Sub=0.0014ms, _Z19ComputeFAMetadataV4Pv=0.0279ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0168ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.2424ms
+    fia kernels: FusedInferAttentionScore=1.5958ms
+>>> [005/8] case 287 JYXH B2 kv264144 H12/1
+    fa3=1.721ms fa4=0.291ms fia=1.596ms
+[2026-11-05 11:51:59] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:51:59] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:52:00] [INFO] [2075625] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_404/zd_2064288_20261105115159934_ascend_pt
+|/-\[2026-11-05 11:52:03] [INFO] [2075647] profiler.py: CANN profiling data parsed in a total time of 0:00:03.036468
+|[2026-11-05 11:52:05] [INFO] [2075625] profiler.py: All profiling data parsed in a total time of 0:00:04.619281
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0016ms, aclnnSub_SubAiCore_Sub=0.0015ms, _Z19ComputeFAMetadataV3Pv=0.0233ms, aclnnSub_SubAiCore_Sub=0.0014ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=2.3253ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0018ms, aclnnSub_SubAiCore_Sub=0.0014ms, _Z19ComputeFAMetadataV4Pv=0.0213ms, aclnnSub_SubAiCore_Sub=0.0014ms, _Z14WriteFARuntimePv=0.0206ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=2.3793ms
+    fia kernels: FusedInferAttentionScore=2.3972ms
+>>> [006/8] case 404 llama2-7B/baichuan2-7B B64 kv4096 H16/16
+    fa3=2.353ms fa4=2.426ms fia=2.397ms
+[2026-11-05 11:52:06] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:52:06] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:52:07] [INFO] [2077049] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_405/zd_2064288_20261105115206273_ascend_pt
+|/-\[2026-11-05 11:52:10] [INFO] [2077069] profiler.py: CANN profiling data parsed in a total time of 0:00:03.035871
+|[2026-11-05 11:52:11] [INFO] [2077049] profiler.py: All profiling data parsed in a total time of 0:00:04.633341
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0016ms, aclnnSub_SubAiCore_Sub=0.0015ms, _Z19ComputeFAMetadataV3Pv=0.0297ms, aclnnSub_SubAiCore_Sub=0.0014ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=2.9054ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0015ms, aclnnSub_SubAiCore_Sub=0.0014ms, _Z19ComputeFAMetadataV4Pv=0.0235ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0227ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=2.9723ms
+    fia kernels: FusedInferAttentionScore=2.9983ms
+>>> [007/8] case 405 llama2-7B/baichuan2-7B B64 kv5120 H16/16
+    fa3=2.940ms fa4=3.023ms fia=2.998ms
+[2026-11-05 11:52:12] [WARNING] [2064288] profiler.py: Invalid parameter export_type: None, reset it to text.
+[2026-11-05 11:52:12] [WARNING] [2064288] profiler.py: Profiler won't be using warmup, this can skew profiler results
+[2026-11-05 11:52:13] [INFO] [2078852] profiler.py: Start parsing profiling data: /tmp/fa34_fia_tnd_decode_prof/chunk_568/zd_2064288_20261105115212358_ascend_pt
+|/-\[2026-11-05 11:52:16] [INFO] [2078879] profiler.py: CANN profiling data parsed in a total time of 0:00:03.044692
+|[2026-11-05 11:52:17] [INFO] [2078852] profiler.py: All profiling data parsed in a total time of 0:00:04.619344
+    fa3 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV3Pv=0.0198ms, aclnnSub_SubAiCore_Sub=0.0013ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_19FAInferTilingParamsS8_S8_S8_S8_l=0.0188ms
+    fa4 kernels: aclnnSub_SubAiCore_Sub=0.0013ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z19ComputeFAMetadataV4Pv=0.0204ms, aclnnSub_SubAiCore_Sub=0.0013ms, _Z14WriteFARuntimePv=0.0170ms, _ZN9SplitFuse7FAInferIDhDhfLb0ELN12KernelCommon8FaiKenel8MaskTypeE1ELNS2_11inputLayoutE1ELN7Catlass8Epilogue8LseModeTE1ELb0EEEvmPhS8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_mS8_S8_lS8_=0.0214ms
+    fia kernels: FusedInferAttentionScore=0.0231ms
+>>> [008/8] case 568 Qwen3-30B B1 kv512 H32/4
+    fa3=0.043ms fa4=0.063ms fia=0.023ms
+
+============================================================================================================
+3.2 decode TND：kernel Duration（该次调用所有 kernel 的 Duration 之和）；性能比 = FIA耗时 / FA耗时（>1 表示 FA 快于 FIA）
+============================================================================================================
+三路都成功: 8/8
+  fa3/FIA: geomean=0.719x median=0.764x min=0.453x max=1.020x
+  fa4/FIA: geomean=0.997x median=0.752x min=0.334x max=7.934x
+
+model                                         n    FA3/FIA    FA4/FIA
+llama2-70B/qwen2-72b                          1     0.453x     0.334x
+llama-65B/Qwen-72B                            1     0.641x     0.516x
+starcoder-15.5B                               1     0.532x     0.362x
+JYXH                                          2     0.906x     6.592x
+llama2-7B/baichuan2-7B                        2     1.019x     0.990x
+Qwen3-30B                                     1     0.543x     0.368x
+
+  id model                             B      kv       FA3       FA4       FIA      P3      P4
+   0 llama2-70B/qwen2-72b              1     256     0.041     0.056     0.019    0.45    0.33
+  49 llama-65B/Qwen-72B                1    5120     0.068     0.084     0.044    0.64    0.52
+ 210 starcoder-15.5B                  16     256     0.048     0.071     0.026    0.53    0.36
+ 286 JYXH                              1  264144     1.479     0.165     1.310    0.89    7.93
+ 287 JYXH                              2  264144     1.721     0.291     1.596    0.93    5.48
+ 404 llama2-7B/baichuan2-7B           64    4096     2.353     2.426     2.397    1.02    0.99
+ 405 llama2-7B/baichuan2-7B           64    5120     2.940     3.023     2.998    1.02    0.99
+ 568 Qwen3-30B                         1     512     0.043     0.063     0.023    0.54    0.37
+
+结果 CSV: batchtest/fa34_focus_fp16_kernel.csv
+汇总: batchtest/fa34_focus_fp16_kernel_summary.md
